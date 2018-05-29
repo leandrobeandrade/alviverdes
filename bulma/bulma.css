@@ -1,0 +1,31 @@
+.columns{
+	margin-top: 10px;
+}
+#um{
+	background: #7BB0A6;
+}
+#dois{
+	background: #92F22A;
+}
+#tres{
+	background: #FD5B03;
+}
+#quatro{
+	background: #64DDBB;
+}
+#cinco{
+	background: #A0B58D;
+}
+.tile {
+	margin-top: 20px;
+}
+.tile is-child notification is-primary{
+	margin-top: 50px;
+}
+#two{
+	margin-top: 150px;
+}
+.notification{
+	background: #83D6DE;
+	margin-top: 30px;
+}
