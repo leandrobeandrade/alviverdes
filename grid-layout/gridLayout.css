@@ -1,0 +1,17 @@
+.wrapper { 
+    display: grid; 
+    grid-template-columns: 25% 25% 46.5%; 
+    grid-auto-flow: column dense;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-gap: 20px; 
+    background-color: #fff; 
+    color: #444; 
+} 
+
+.box { 
+    background-color: #444; 
+    color: #fff; 
+    border-radius: 5px; 
+    padding: 20px; 
+    font-size: 150%; 
+}
