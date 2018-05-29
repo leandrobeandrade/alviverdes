@@ -1,0 +1,12 @@
+.texto {
+	column-count: 3;						/* quantidade de colunas */
+	column-gap: 10px;   					/* espaço entre as colunas */
+	column-rule-style: solid;				/* estilo da linha separadora de colunas */
+	column-rule-width: 5px;					/* espessura da linha separadora de colunas */
+	column-rule-color: red;					/* cor da linha separadora de colunas */
+	column-fill: balance;					/* especifíca o preenchimento das colunas (balance - auto) */
+/*	column-width: 100px;					   especifíca a largura daa colunas */
+}
+h1 {
+	column-span: all;						/* passa em todas as colunas (all - none) */
+}
