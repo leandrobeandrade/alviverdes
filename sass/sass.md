@@ -52,7 +52,7 @@
       background-color: red;          			}	
     }
 
-## mixins
+## mixins 
 
     @mixin teste($radius, $color: blue) {
       border-radius: $radius;
