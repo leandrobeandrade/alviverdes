@@ -10,11 +10,11 @@ A propriedade position especifica o tipo de método de posicionamento usado para
 - absolute
 - sticky
 
-Os elementos são então posicionados usando as propriedades superior, inferior, esquerda e direita. No entanto, essas propriedades **não funcionarão, a menos que a position propriedade seja definida primeiro**. Eles também funcionam de forma diferente, dependendo do valor da posição.
+Os elementos são então posicionados usando as propriedades top, bottom, left e right. No entanto, essas propriedades **não funcionarão, a menos que a propriedade position seja definida primeiro**. Eles também funcionam de forma diferente, dependendo do valor da posição.
 
 ## position: static
 
-Os elementos HTML são `position: státic` por padrão. Os elementos posicionados estáticos não são afetados pelas propriedades superior, inferior, esquerda e direita, não é posicionado de nenhuma maneira especial e está sempre posicionado de acordo com o fluxo normal da página:
+Os elementos HTML são `position: státic` por padrão. Os elementos posicionados estáticos não são afetados pelas propriedades top, bottom, left e right, não é posicionado de nenhuma maneira especial e está sempre posicionado de acordo com o fluxo normal da página:
 
     div.static {
       position: static;
@@ -23,7 +23,7 @@ Os elementos HTML são `position: státic` por padrão. Os elementos posicionado
     
 ## position: relative
 
-Um elemento com `position: relative` é posicionado em relação à sua posição normal. Definir as propriedades superior, direita, inferior e esquerda de um elemento relativamente posicionado fará com que ele seja ajustado para longe de sua posição normal. Outros conteúdos não serão ajustados para caber em qualquer lacuna deixada pelo elemento.
+Um elemento com `position: relative` é posicionado em relação à sua posição normal. Definir as propriedades top, bottom, left e right de um elemento relativamente posicionado fará com que ele seja ajustado para longe de sua posição normal. Outros conteúdos não serão ajustados para caber em qualquer lacuna deixada pelo elemento.
 
     div.relative {
       position: relative;
@@ -33,7 +33,7 @@ Um elemento com `position: relative` é posicionado em relação à sua posiçã
     
 ## position: fixed
 
-Um elemento com `position: fixed` é posicionado em relação à viewport, o que significa que ele sempre permanece no mesmo lugar, mesmo que a página seja rolada. As propriedades superior, direita, inferior e esquerda são usadas para posicionar o elemento. Um elemento fixo não deixa uma lacuna na página onde normalmente estaria localizado.
+Um elemento com `position: fixed` é posicionado em relação à viewport, o que significa que ele sempre permanece no mesmo lugar, mesmo que a página seja rolada. As propriedades top, bottom, left e right são usadas para posicionar o elemento. Um elemento fixo não deixa uma lacuna na página onde normalmente estaria localizado.
 
     div.fixed {
       position: fixed;
@@ -67,7 +67,7 @@ Um elemento com `position: absolute` é posicionado em relação ao ancestral po
     
 ## posição: sticky
 
-Um elemento com `position: sticky` é posicionado com base na posição de rolagem do usuário. Um elemento fixo alterna entre relativee fixed, dependendo da posição de rolagem. Ele é posicionado relativo até que uma determinada posição de deslocamento seja encontrada na viewport - então ele "gruda" no lugar (como position:fixed).
+Um elemento com `position: sticky` é posicionado com base na posição de rolagem do usuário. Um elemento fixo alterna entre relative e fixed, dependendo da posição de rolagem. Ele é posicionado relativo até que uma determinada posição de deslocamento seja encontrada na viewport - então ele "gruda" no lugar (como position:fixed).
 
 **Nota:** o Internet Explorer não oferece suporte ao posicionamento fixo. O Safari requer um prefixo -webkit- (veja o exemplo abaixo). Você também deve especificar pelo menos um top, right bottom ou left para que o posicionamento fixo funcione.
 
