@@ -10,38 +10,29 @@ A propriedade position especifica o tipo de método de posicionamento usado para
 - absolute
 - sticky
 
-Os elementos são então posicionados usando as propriedades superior, inferior, esquerda e direita. No entanto, essas propriedades não funcionarão, a menos que a position propriedade seja definida primeiro. Eles também funcionam de forma diferente, dependendo do valor da posição.
+Os elementos são então posicionados usando as propriedades superior, inferior, esquerda e direita. No entanto, essas propriedades **não funcionarão, a menos que a position propriedade seja definida primeiro**. Eles também funcionam de forma diferente, dependendo do valor da posição.
 
-posição: estática;
-Os elementos HTML são posicionados estáticos por padrão.
+## position: static
 
-Os elementos posicionados estáticos não são afetados pelas propriedades superior, inferior, esquerda e direita.
+Os elementos HTML são posicionados estáticos por padrão. Os elementos posicionados estáticos não são afetados pelas propriedades superior, inferior, esquerda e direita, não é posicionado de nenhuma maneira especial e está sempre posicionado de acordo com o fluxo normal da página:
 
-Um elemento com position: static;não é posicionado de nenhuma maneira especial; está sempre posicionado de acordo com o fluxo normal da página:
+    div.static {
+      position: static;
+      border: 3px solid #73AD21;
+    }
+    
+## position: relative
 
-Este elemento <div> tem a posição: static;
-Aqui está o CSS que é usado:
+Um elemento com position: relative é posicionado em relação à sua posição normal. Definir as propriedades superior, direita, inferior e esquerda de um elemento relativamente posicionado fará com que ele seja ajustado para longe de sua posição normal. Outros conteúdos não serão ajustados para caber em qualquer lacuna deixada pelo elemento.
 
-Exemplo
-div.static {
-  position: static;
-  border: 3px solid #73AD21;
-}
-posição: relativa;
-Um elemento com position: relative;é posicionado em relação à sua posição normal.
+    div.relative {
+      position: relative;
+      left: 30px;
+      border: 3px solid #73AD21;
+    }
+    
+## position: fixed
 
-Definir as propriedades superior, direita, inferior e esquerda de um elemento relativamente posicionado fará com que ele seja ajustado para longe de sua posição normal. Outros conteúdos não serão ajustados para caber em qualquer lacuna deixada pelo elemento.
-
-Este elemento <div> tem posição: relativo;
-Aqui está o CSS que é usado:
-
-Exemplo
-div.relative {
-  position: relative;
-  left: 30px;
-  border: 3px solid #73AD21;
-}
-posição: fixa;
 Um elemento com position: fixed;é posicionado em relação à viewport, o que significa que ele sempre permanece no mesmo lugar, mesmo que a página seja rolada. As propriedades superior, direita, inferior e esquerda são usadas para posicionar o elemento.
 
 Um elemento fixo não deixa uma lacuna na página onde normalmente estaria localizado.
