@@ -65,7 +65,7 @@ Um elemento com `position: absolute` é posicionado em relação ao ancestral po
       border: 3px solid #73AD21;
     }
     
-## posição: sticky
+## position: sticky
 
 Um elemento com `position: sticky` é posicionado com base na posição de rolagem do usuário. Um elemento fixo alterna entre relative e fixed, dependendo da posição de rolagem. Ele é posicionado relativo até que uma determinada posição de deslocamento seja encontrada na viewport - então ele "gruda" no lugar (como position:fixed).
 
