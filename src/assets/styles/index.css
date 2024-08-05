@@ -1,0 +1,158 @@
+/* ===== HEADER ===== */
+header {
+  margin-top: 1vh;
+}
+
+header .offcanvas {
+  height: 100px !important;
+  background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(23, 63, 17, 1) 100%);
+}
+
+header .name {
+  font-size: 2rem;
+}
+
+header .nav-link {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.active {
+  color: #BB2D3B !important;
+  background-color: #fff !important;
+}
+
+header .nav-link:hover {
+  color: #BB2D3B;
+  background-color: #fff;
+}
+
+/* ===== MAIN ===== */
+main h1:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+main img {
+  width: 100%;
+}
+
+.main-title {
+  background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(23, 63, 17, 1) 100%);
+  color: #fff;
+}
+
+.share-count {
+  margin-left: 25%;
+}
+
+.views-count {
+  margin-right: 25%;
+}
+
+.divid-share {
+  border-bottom: solid 1px #dbdbdb;
+  margin-left: 25%;
+  padding-bottom: 5%;
+}
+
+.divid-views {
+  border-bottom: solid 1px #dbdbdb;
+  margin-right: 25%;
+  padding-bottom: 5%;
+}
+
+main h1 .bi {
+  font-size: 1.5rem;
+}
+
+main .bi {
+  font-size: 15px;
+}
+
+main .bi-share {
+  margin-left: 10%;
+}
+
+main .bi-eye {
+  margin-right: 20%;
+}
+
+/* main .bi-share:hover {
+  font-size: 22px !important;
+  color: rgba(23, 63, 17, 1);
+  cursor: pointer;
+} */
+
+.overlay {
+  position: relative;
+  margin-top: -13vh;
+  background: rgba(212, 70, 0, 0.7);
+  color: #f1f1f1;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.main-img:hover .overlay {
+  opacity: 1;
+}
+
+.main-img:hover img {
+  filter: contrast(115%);
+}
+
+/* ===== SECTION ===== */
+.see {
+  color: rgba(38, 97, 33, 1);
+  text-decoration: underline;
+}
+
+section img {
+  min-height: 20vh;
+  max-height: 20vh;
+  object-fit: cover;
+}
+
+section .card:hover {
+  background-color: rgba(23, 63, 17, 1);
+  color: #fff !important;
+  cursor: pointer;
+  border: none;
+}
+
+section .card:hover img {
+  filter: contrast(115%) sepia(100%);
+  transform: scale(0.99);
+}
+
+section .card:hover .text-body-secondary {
+  color: #fff !important;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  height: 80px;
+  width: 100%;
+  background-image: url("../images/background.png");
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  background-color: #fff;
+  padding: 0 35px 5px 35px;
+  color: rgba(23, 63, 17, 1);
+  font-weight: bold;
+}
+
+/* ===== MEDIAS ===== */
+@media screen and (max-width: 600px) {
+  header .offcanvas {
+    height: 250px !important;
+    background-color: #fff !important;
+  }
+}
