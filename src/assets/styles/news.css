@@ -30,6 +30,7 @@ header .nav-link:hover {
 
 /* ===== MAIN ===== */
 main .img-fluid {
+  min-height: 20vh;
   max-height: 20vh;
   background-position: center;
   object-fit: cover;
