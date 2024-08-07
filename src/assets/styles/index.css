@@ -79,12 +79,6 @@ main .bi-eye {
   margin-right: 20%;
 }
 
-/* main .bi-share:hover {
-  font-size: 22px !important;
-  color: rgba(23, 63, 17, 1);
-  cursor: pointer;
-} */
-
 .overlay {
   position: relative;
   margin-top: -13vh;
@@ -114,6 +108,7 @@ main .bi-eye {
 section img {
   min-height: 20vh;
   max-height: 20vh;
+  width: 100%;
   object-fit: cover;
 }
 
