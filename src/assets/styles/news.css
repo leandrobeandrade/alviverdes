@@ -29,6 +29,25 @@ header .nav-link:hover {
 }
 
 /* ===== MAIN ===== */
+main .card:hover {
+  cursor: pointer;
+  border: solid 2px rgba(38, 97, 33, 1);
+}
+
+.main-card-img {
+  height: auto;
+  overflow: hidden;
+}
+
+.main-card-img img {
+  transition: transform .2s ease;
+  cursor: pointer;
+}
+
+.main-card-img:hover img {
+  transform: scale(1.2);
+}
+
 #main-card {
   height: 8vh;
 }
@@ -49,6 +68,21 @@ main .bi-share:hover {
   font-size: 22px !important;
   color: rgba(23, 63, 17, 1);
   cursor: pointer;
+}
+
+/* ===== SECTION ===== */
+section .card:hover img {
+  filter: drop-shadow(10px 10px 10px gray);
+  cursor: pointer;
+}
+
+section .card{
+  min-height: 45vh;
+}
+
+section .links a {
+  text-decoration: none;
+  color: red;
 }
 
 /* ===== FOOTER ===== */
