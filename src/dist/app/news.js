@@ -8,7 +8,26 @@
  */
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/app/news.ts":
+/*!*************************!*\
+  !*** ./src/app/news.ts ***!
+  \*************************/
+/***/ (() => {
+
+eval("\nlet textTruncate = document.querySelector('#main-card');\nfunction truncate() {\n    var _a;\n    const txt = (_a = textTruncate === null || textTruncate === void 0 ? void 0 : textTruncate.textContent) === null || _a === void 0 ? void 0 : _a.slice(0, 400);\n    if (textTruncate !== null)\n        textTruncate.textContent = `${txt} ...`;\n}\ntruncate();\n\n\n//# sourceURL=webpack://alviverdes.io/./src/app/news.ts?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
 /******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/app/news.ts"]();
 /******/ 	
 /******/ })()
 ;
