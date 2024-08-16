@@ -71,18 +71,23 @@ main .bi-share:hover {
 }
 
 /* ===== SECTION ===== */
-section .card:hover img {
+section .card:hover {
   filter: drop-shadow(10px 10px 10px gray);
   cursor: pointer;
 }
 
-section .card{
+section .card {
   min-height: 45vh;
 }
 
 section .links a {
   text-decoration: none;
   color: red;
+}
+
+section .news a {
+  text-decoration: none;
+  color: rgba(72, 171, 61, 1);
 }
 
 /* ===== FOOTER ===== */
@@ -95,11 +100,16 @@ footer {
   text-align: center;
 }
 
-footer a {
+footer .email a {
   background-color: #fff;
   padding: 0 35px 5px 35px;
   color: rgba(23, 63, 17, 1);
   font-weight: bold;
+}
+
+footer .social i {
+  font-size: 1rem;
+  color: white;
 }
 
 /* ===== MEDIAS ===== */
