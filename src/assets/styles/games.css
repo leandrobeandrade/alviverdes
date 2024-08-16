@@ -38,11 +38,29 @@ footer {
   text-align: center;
 }
 
-footer a {
+footer .social {
+  width: 100%;
+  background-color: #fff;
+  padding: 0 35px 2px 35px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+footer .bi-twitter-x {
+  font-size: 1rem;
+}
+
+footer .bi-instagram {
+  font-size: 1rem;
+  color: purple;
+}
+
+footer .email a {
   background-color: #fff;
   padding: 0 35px 5px 35px;
   color: rgba(23, 63, 17, 1);
   font-weight: bold;
+  border-radius: 4px;
 }
 
 /* ===== MEDIAS ===== */
