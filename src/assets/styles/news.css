@@ -57,17 +57,15 @@ main .card-footer {
   color: #fff;
 }
 
-main .img-fluid {
+main .right-news .img-fluid {
   min-height: 20vh;
   max-height: 20vh;
   background-position: center;
   object-fit: cover;
 }
 
-main .bi-share:hover {
-  font-size: 22px !important;
-  color: rgba(23, 63, 17, 1);
-  cursor: pointer;
+main .right-news .card:hover .img-fluid {
+  filter: contrast(115%) sepia(100%);
 }
 
 /* ===== SECTION ===== */
@@ -83,6 +81,10 @@ section .card {
 section .links a {
   text-decoration: none;
   color: red;
+}
+
+section .news a:hover {
+  margin-left: 5px;
 }
 
 section .news a {
