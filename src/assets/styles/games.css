@@ -28,6 +28,12 @@ header .nav-link:hover {
   background-color: #fff;
 }
 
+/* ---- */
+a[href="https://www.academiadasapostasbrasil.com/"], a[href="https://www.academiadasapostas.com/"] {
+  pointer-events: none;
+  cursor: text;
+}
+
 /* ===== FOOTER ===== */
 footer {
   margin-top: 20vh; /* ## */

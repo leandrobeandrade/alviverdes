@@ -68,6 +68,10 @@ main .right-news .card:hover .img-fluid {
   filter: contrast(115%) sepia(100%);
 }
 
+main .right-news .card:hover h5 {
+  text-shadow: 0px 0px 1px #90b87c;
+}
+
 /* ===== SECTION ===== */
 section .card:hover {
   filter: drop-shadow(10px 10px 10px gray);
