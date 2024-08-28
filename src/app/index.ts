@@ -9,7 +9,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 async function getUsers() {
   console.log('funfou');
   
-  /* let { data: users, error } = await supabase
+  let { data: users, error } = await supabase
     .from('users')
     .select('name, role')
 
@@ -18,7 +18,7 @@ async function getUsers() {
   } else {
     console.log('Nome dos usuários >>>>');
     console.log(users);
-  } */
+  }
 }
 
 getUsers();
