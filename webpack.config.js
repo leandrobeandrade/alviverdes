@@ -3,7 +3,8 @@ const path = require('path');
 module.exports = {
   entry: {
     index: ['./src/app/index.ts'], // index -> nome do arquivo gerado na pasta dist/app
-    news: ['./src/app/news.ts']
+    news: ['./src/app/news.ts'],
+    players: ['./src/app/players.ts']
   },
   module: {
     rules: [
