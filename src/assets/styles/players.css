@@ -130,13 +130,17 @@ section {
   height: 100%;
   overflow: hidden;
   transition: all 300ms ease-out;
-  vertical-align: top;
+  /* vertical-align: top; */
   box-sizing: border-box;
   white-space: normal;
 }
 .carousel__slide figure {
   display: flex;
   margin: 0;
+}
+.carousel__slide figcaption {
+  background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(197, 51, 51, 1) 80%, rgba(255, 0, 0, 1) 100%);
+  color: #fff;
 }
 .carousel__slide div {
   position: relative;
@@ -160,7 +164,7 @@ section {
 .carousel__slide img {
   display: block;
   flex: 1 1 auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 .carousel__slide figcaption {
   align-self: flex-end;
@@ -171,8 +175,9 @@ section {
 }
 .carousel__slide .credit {
   margin-top: 1rem;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(23, 63, 17, 1);
   display: block;
+  text-align: right;
 }
 .carousel__slide.scrollable {
   overflow-y: scroll;
