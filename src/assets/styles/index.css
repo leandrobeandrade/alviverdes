@@ -160,15 +160,6 @@ main .overlay i {
 
 .publi {
   height: 10vh;
-  background-color: red;
-}
-
-.publi-one {
-  margin-bottom: 20px;
-}
-
-.publi-two {
-  margin-top: 20px !important;
 }
 
 /* ===== SECTION ===== */
@@ -232,7 +223,15 @@ footer .email a {
 
 /* ===== MEDIAS ===== */
 @media screen and (max-width: 600px) {
-  /* body {
-    background-color: red !important;
-  } */
+  .publi {
+    background-color: red;
+  }
+  
+  .publi-one {
+    margin-bottom: 20px;
+  }
+  
+  .publi-two {
+    margin-top: 20px !important;
+  }
 }
