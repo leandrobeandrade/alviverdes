@@ -46,6 +46,12 @@ header .nav-link:hover {
   background-color: #fff;
 }
 
+.navbar-toggler:focus {
+  border-color: inherit; 
+  -webkit-box-shadow: none; 
+  box-shadow: none;
+}
+
 /* ===== MAIN ===== */
 main h1 {
   margin-top: auto;
@@ -190,6 +196,10 @@ section .card:hover .text-body-secondary {
   color: #fff !important;
 }
 
+.hr-sm {
+  display: none;
+}
+
 /* ===== FOOTER ===== */
 footer {
   margin-top: 20vh; /* ## */
@@ -228,15 +238,15 @@ footer .email a {
 /* ===== MEDIAS ===== */
 @media screen and (max-width: 600px) {
   /* HEADER */
-  .navbar-toggler {
-    outline: rgba(23, 63, 17, 1) !important; /* ######################################## */
-  }
-
   .io {
     margin-right: 5%;
   }
   
-  /* MAIN */
+  /* MAIN */  
+  h1:hover {
+    animation: none;
+  }
+
   .publi {
     background-color: red;
   }
@@ -276,5 +286,17 @@ footer .email a {
   .bi-eye {
     font-size: 19px !important;
     margin-right: 0 !important;
+  }
+
+  /* SECTION */
+  .hr-sm {
+    display: block;
+    width: 90%;
+  }
+
+  section small {
+    font-size: .7rem;
+    font-weight: bold;
+    border-bottom: dotted 1px rgba(23, 63, 17, 1);
   }
 }
