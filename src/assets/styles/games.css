@@ -46,8 +46,13 @@ header .nav-link:hover {
   background-color: #fff;
 }
 
+/* ===== MAIN ===== */
+.publi {
+  height: 10vh;
+}
+
 /* NO LINKS ACTIVE */
-a[href="https://www.academiadasapostasbrasil.com/"], a[href="https://www.academiadasapostas.com/"] {
+main a[href="https://www.academiadasapostasbrasil.com/"], main a[href="https://www.academiadasapostas.com/"] {
   pointer-events: none;
   cursor: text;
 }
@@ -89,5 +94,20 @@ footer .email a {
 
 /* ===== MEDIAS ===== */
 @media screen and (max-width: 600px) {
+  /* MAIN */  
+  h1:hover {
+    animation: none;
+  }
+
+  .publi {
+    background-color: red;
+  }
   
+  .publi-one {
+    margin-bottom: 20px;
+  }
+  
+  .publi-two {
+    margin-top: 20px !important;
+  }
 }
