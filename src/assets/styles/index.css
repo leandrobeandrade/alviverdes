@@ -299,4 +299,8 @@ footer .email a {
     font-weight: bold;
     border-bottom: dotted 1px rgba(23, 63, 17, 1);
   }
+
+  .img-invisible {
+    display: none;
+  }
 }
