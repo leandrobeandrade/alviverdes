@@ -172,6 +172,22 @@ main .bi-eye {
   display: none;
 }
 
+.blink {
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* ===== SECTION ===== */
 section img {
   min-height: 20vh;
@@ -198,6 +214,10 @@ section .card:hover .text-body-secondary {
 
 .hr-sm {
   display: none;
+}
+
+section .outros-destaques {
+    display: none;
 }
 
 /* ===== FOOTER ===== */
@@ -240,6 +260,14 @@ footer .email a {
   /* HEADER */
   .io {
     margin-right: 5%;
+  }
+
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    padding-left: 10px !important;
   }
   
   /* MAIN */  
@@ -291,7 +319,15 @@ footer .email a {
   /* SECTION */
   .hr-sm {
     display: block;
-    width: 90%;
+    /* margin-top: ; */
+  }
+
+  section .outros-destaques {
+    display: inline-block;
+  }
+
+  section h5 {
+    color: rgb(76 126 69) !important;
   }
 
   section small {
@@ -300,7 +336,29 @@ footer .email a {
     border-bottom: dotted 1px rgba(23, 63, 17, 1);
   }
 
+  section .card-mobile {
+    min-height: 140px;
+  }
+
   .img-invisible {
     display: none;
+  }
+
+  .position-absolute {
+    display: none;
+  }
+
+  /* FOOTER */
+  footer {
+    height: 200px;
+  }
+
+  footer .social {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  footer .margin-mobile {
+    margin-top: 2.5vh;
   }
 }

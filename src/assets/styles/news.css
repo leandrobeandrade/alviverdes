@@ -151,5 +151,22 @@ footer .email a {
 
 /* ===== MEDIAS ===== */
 @media screen and (max-width: 600px) {
-  
+  /* HEADER */
+  .nav-link {
+    padding-left: 10px !important;
+  }
+
+  /* FOOTER */
+  footer {
+    height: 200px;
+  }
+
+  footer .social {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  footer .margin-mobile {
+    margin-top: 2.5vh;
+  }
 }

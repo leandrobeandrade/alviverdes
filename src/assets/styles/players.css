@@ -267,6 +267,28 @@ footer .email a {
   border-radius: 4px;
 }
 
+/* ===== MEDIAS ===== */
+@media screen and (max-width: 600px) {
+  /* HEADER */
+  .nav-link {
+    padding-left: 10px !important;
+  }
+
+  /* FOOTER */
+  footer {
+    height: 200px;
+  }
+
+  footer .social {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  footer .margin-mobile {
+    margin-top: 2.5vh;
+  }
+}
+
 /* 
 https://freefrontend.com/css-carousels/
 https://codepen.io/aybukeceylan/pen/RwrRPoO */
