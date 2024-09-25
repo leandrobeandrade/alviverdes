@@ -46,6 +46,13 @@ header .nav-link:hover {
   background-color: #fff;
 }
 
+.navbar-toggler {
+  background-color: #fff !important;
+  border-color: inherit; 
+  -webkit-box-shadow: none; 
+  box-shadow: none;
+}
+
 .navbar-toggler:focus {
   border-color: inherit; 
   -webkit-box-shadow: none; 
@@ -258,10 +265,6 @@ footer .email a {
 /* ===== MEDIAS ===== */
 @media screen and (max-width: 600px) {
   /* HEADER */
-  .io {
-    margin-right: 5%;
-  }
-
   .navbar-nav {
     margin-top: 10px;
   }
@@ -361,4 +364,20 @@ footer .email a {
   footer .margin-mobile {
     margin-top: 2.5vh;
   }
+}
+
+@media screen and (orientation: landscape) {
+  /* HEADER */
+  
+
+  /* MAIN */
+  .publi {
+    background-color: rgb(119, 0, 255);
+  }
+
+  /* SECTION */
+
+
+  /* FOOTER */
+
 }
