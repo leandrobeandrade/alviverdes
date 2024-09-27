@@ -1,3 +1,7 @@
+/************
+|  FULL HD  |
+************/
+
 /* ===== BAR ===== */
 ::-webkit-scrollbar {
   width: 8px;
@@ -48,15 +52,6 @@ header .nav-link:hover {
 
 .navbar-toggler {
   background-color: #fff !important;
-  border-color: inherit; 
-  -webkit-box-shadow: none; 
-  box-shadow: none;
-}
-
-.navbar-toggler:focus {
-  border-color: inherit; 
-  -webkit-box-shadow: none; 
-  box-shadow: none;
 }
 
 /* ===== MAIN ===== */
@@ -262,8 +257,23 @@ footer .email a {
   border-radius: 4px;
 }
 
-/* ===== MEDIAS ===== */
-@media screen and (max-width: 600px) {
+/*******
+|  HD  |
+*******/
+@media only screen and (width: 1360px) {
+  html {
+    font-size: 10px;
+  }
+
+  footer .p-1 {
+    margin-top: 8%;
+  }
+}
+
+/***********
+|  MOBILE  |
+***********/
+@media only screen and (max-width: 600px) {
   /* HEADER */
   .navbar-nav {
     margin-top: 10px;
@@ -366,7 +376,7 @@ footer .email a {
   }
 }
 
-@media screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) {
   /* HEADER */
   
 

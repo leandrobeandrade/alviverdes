@@ -46,6 +46,10 @@ header .nav-link:hover {
   background-color: #fff;
 }
 
+.navbar-toggler {
+  background-color: #fff !important;
+}
+
 /* ===== MAIN ===== */
 section {
   background: #F4F4F4;
@@ -267,7 +271,9 @@ footer .email a {
   border-radius: 4px;
 }
 
-/* ===== MEDIAS ===== */
+/* ================== */
+/*       MEDIAS       */
+/* ================== */
 @media screen and (max-width: 600px) {
   /* HEADER */
   .nav-link {

@@ -46,6 +46,10 @@ header .nav-link:hover {
   background-color: #fff;
 }
 
+.navbar-toggler {
+  background-color: #fff !important;
+}
+
 /* ===== MAIN ===== */
 .publi {
   height: 10vh;
@@ -92,7 +96,9 @@ footer .email a {
   border-radius: 4px;
 }
 
-/* ===== MEDIAS ===== */
+/* ================== */
+/*       MEDIAS       */
+/* ================== */
 @media screen and (max-width: 600px) {
   /* HEADER */
   .nav-link {
