@@ -187,6 +187,10 @@ footer .email a {
     margin-top: 20px !important;
   }
 
+  main .right-news .card {
+    height: 40vh;
+  }
+
   main h5 {
     color: rgba(72, 171, 61, 1) !important;
   }
@@ -203,6 +207,30 @@ footer .email a {
 
   main .hr-sm {
     display: block;
+  }
+
+  /* SECTION */
+  section .card {
+    min-height: 38vh;
+  }
+
+  section h5 {
+    color: rgba(38, 97, 33, 1) !important;
+  }
+
+  section .position-absolute {
+    display: none;
+  }
+
+  section .col:nth-last-of-type(2) {
+    margin-top: 2vh;
+  }
+
+  section .text-success {
+    margin-top: 2vh;
+    background: linear-gradient(90deg, rgba(197, 51, 51, 1) 80%, rgba(255, 0, 0, 1) 100%);
+    color: #fff !important;
+    padding: 4px;
   }
 
   /* FOOTER */
