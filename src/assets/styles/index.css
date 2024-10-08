@@ -218,10 +218,6 @@ section h2:nth-child(1) {
   margin-bottom: 2vh;
 }
 
-section .hr-sm {
-  display: none;
-}
-
 section .outros-destaques {
     display: none;
 }
@@ -341,16 +337,8 @@ footer .email a {
   }
 
   /* SECTION */
-  section h2:nth-child(1) {
-    margin-bottom: 0;
-  }
-
-  section .hr-sm {
-    display: block;
-  }
-
   section .outros-destaques {
-    display: inline-block;
+    display: inline;
   }
 
   section h5 {
