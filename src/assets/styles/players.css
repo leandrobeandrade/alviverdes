@@ -51,9 +51,13 @@ header .nav-link:hover {
 }
 
 /* ===== MAIN ===== */
-section {
+main {
+  margin-top: 3vh;
   background: #F4F4F4;
-  padding: 50px 0;
+}
+
+main .publi {
+  height: 10vh;
 }
 
 .container {
@@ -271,13 +275,26 @@ footer .email a {
   border-radius: 4px;
 }
 
-/* ================== */
-/*       MEDIAS       */
-/* ================== */
-@media screen and (max-width: 600px) {
+/***********
+|  MOBILE  |
+***********/
+@media only screen and (max-width: 600px) {
   /* HEADER */
   .nav-link {
     padding-left: 10px !important;
+  }
+
+  /* MAIN */
+  .publi {
+    background-color: yellow;
+  }
+  
+  .publi-one {
+    margin-bottom: 20px;
+  }
+  
+  .publi-two {
+    margin-top: 20px !important;
   }
 
   /* FOOTER */
@@ -293,6 +310,22 @@ footer .email a {
   footer .margin-mobile {
     margin-top: 2.5vh;
   }
+}
+
+@media only screen and (orientation: landscape) {
+  /* HEADER */
+  
+
+  /* MAIN */
+  .publi {
+    background-color: rgb(119, 0, 255);
+  }
+
+  /* SECTION */
+
+
+  /* FOOTER */
+
 }
 
 /* 
