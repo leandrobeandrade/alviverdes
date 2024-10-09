@@ -96,10 +96,10 @@ footer .email a {
   border-radius: 4px;
 }
 
-/* ================== */
-/*       MEDIAS       */
-/* ================== */
-@media screen and (max-width: 600px) {
+/***********
+|  MOBILE  |
+***********/
+@media only screen and (max-width: 600px) {
   /* HEADER */
   .nav-link {
     padding-left: 10px !important;
@@ -111,7 +111,7 @@ footer .email a {
   }
 
   .publi {
-    background-color: red;
+    background-color: yellow;
   }
   
   .publi-one {
@@ -135,4 +135,20 @@ footer .email a {
   footer .margin-mobile {
     margin-top: 2.5vh;
   }
+}
+
+@media only screen and (orientation: landscape) {
+  /* HEADER */
+  
+
+  /* MAIN */
+  .publi {
+    background-color: rgb(119, 0, 255);
+  }
+
+  /* SECTION */
+
+
+  /* FOOTER */
+
 }
