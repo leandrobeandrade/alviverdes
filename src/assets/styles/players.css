@@ -52,25 +52,25 @@ header .nav-link:hover {
 
 /* ===== MAIN ===== */
 main {
-  margin-top: 3vh;
-  background: #F4F4F4;
+  margin-top: 1.5rem;
 }
 
 main .publi {
   height: 10vh;
 }
 
-.container {
+/* .container {
   max-width: 1044px;
   margin: 0 auto;
   padding: 0 20px;
-}
+} */
 
 .carousel {
   display: block;
   text-align: left;
   position: relative;
   margin-bottom: 22px;
+  background: #F4F4F4;
 }
 .carousel > input {
   clip: rect(1px, 1px, 1px, 1px);
@@ -101,33 +101,34 @@ main .publi {
   margin-left: 0%;
 }
 .carousel > input:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) {
-  box-shadow: 0px 0px 0px 5px rgba(0, 0, 255, 0.5);
+  box-shadow: 0px 0px 0px 2px rgba(38, 97, 33, 1);
 }
 .carousel > input:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) {
-  box-shadow: 0px 0px 0px 5px rgba(0, 0, 255, 0.5);
+  box-shadow: 0px 0px 0px 2px rgba(38, 97, 33, 1)
 }
 .carousel > input:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) {
-  box-shadow: 0px 0px 0px 5px rgba(0, 0, 255, 0.5);
+  box-shadow: 0px 0px 0px 2px rgba(38, 97, 33, 1)
 }
 .carousel > input:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) {
-  box-shadow: 0px 0px 0px 5px rgba(0, 0, 255, 0.5);
+  box-shadow: 0px 0px 0px 2px rgba(38, 97, 33, 1)
 }
 .carousel > input:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) {
-  box-shadow: 0px 0px 0px 5px rgba(0, 0, 255, 0.5);
+  box-shadow: 0px 0px 0px 2px rgba(38, 97, 33, 1)
 }
 .carousel > input:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) {
-  box-shadow: 0px 0px 0px 5px rgba(0, 0, 255, 0.5);
+  box-shadow: 0px 0px 0px 2px rgba(38, 97, 33, 1)
 }
 
 .carousel__slides {
   position: relative;
-  z-index: 1;
+  display: flex;
+  height: 70vh;
   padding: 0;
   margin: 0;
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
-  display: flex;
+  z-index: 1;
 }
 
 .carousel__slide {
@@ -189,6 +190,14 @@ main .publi {
 }
 .carousel__slide.scrollable {
   overflow-y: scroll;
+}
+
+.names {
+  font-size: 15px;
+}
+
+.birth {
+  font-size: 15px;
 }
 
 .carousel__thumbnails {
@@ -295,6 +304,10 @@ footer .email a {
   
   .publi-two {
     margin-top: 20px !important;
+  }
+
+  .carousel__slides {
+    height: 25vh;
   }
 
   /* FOOTER */
