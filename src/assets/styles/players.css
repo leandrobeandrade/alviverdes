@@ -61,6 +61,7 @@ main .publi {
 
 main .gallery {
   border: 1px solid #ccc;
+  margin-bottom: 10px;
 }
 
 main .gallery:hover {
@@ -86,7 +87,7 @@ main .desc {
 
 .overlay {
   position: relative;
-  margin-top: -50%;
+  margin-top: -17.5vh;
   background: rgba(38, 97, 33, 1);
   color: #fff;
   transition: .5s ease;
@@ -173,6 +174,21 @@ footer .email a {
   
   .publi-two {
     margin-top: 20px !important;
+  }
+
+  .gallery {
+    height: 49.3vh;
+    margin-bottom: 10px;
+  }
+
+  .desc {
+    position: relative;
+    margin-top: -5.8vh;
+  }
+
+  .overlay {
+    position: relative;
+    margin-top: -17vh;
   }
 
   /* FOOTER */
