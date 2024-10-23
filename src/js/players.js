@@ -18,3 +18,5 @@ document.getElementById('img_02')?.setAttribute('src', url);
 
 // fetch(url).then((res) => res.blob()).then(d => console.log(d));
 // const minhaPromise = (url: string) => fetch(url).then((res) => res.json());
+
+console.log(url);
