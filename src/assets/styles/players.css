@@ -62,7 +62,6 @@ main .publi {
 main .gallery {
   border: 1px solid #ccc;
   margin-bottom: 10px;
-  border: 2px solid rgba(38, 97, 33, 1);
 }
 
 main .gallery:hover {
@@ -188,8 +187,7 @@ footer .email a {
 
   .overlay {
     position: relative;
-    margin-top: -50%;
-    display: none;
+    margin-top: -41%;
   }
 
   /* FOOTER */
