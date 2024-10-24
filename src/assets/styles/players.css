@@ -183,11 +183,12 @@ footer .email a {
 
   .desc {
     position: relative;
-    margin-top: -14%;
+    margin-top: -30%;
   }
 
   .overlay {
     position: relative;
+    margin-top: -50%;
   }
 
   /* FOOTER */
