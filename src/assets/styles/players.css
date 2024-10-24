@@ -177,18 +177,18 @@ footer .email a {
   }
 
   .gallery {
-    height: 49.3vh;
+    height: 52.3vh;
     margin-bottom: 10px;
   }
 
   .desc {
     position: relative;
-    margin-top: -14%;
+    margin-top: -7%;
   }
 
   .overlay {
     position: relative;
-    margin-top: 41%;
+    margin-top: -41%;
   }
 
   /* FOOTER */
