@@ -93,7 +93,6 @@ main .desc {
   transition: .5s ease;
   opacity: 0;
   font-size: 1em;
-  padding: 10px 15px 10px 15px;
 }
 
 .gallery:hover .overlay {
@@ -187,7 +186,12 @@ footer .email a {
 
   .overlay {
     position: relative;
-    margin-top: -40%;
+    margin-top: -34%;
+    max-height: 14vh;
+  }
+
+  main h5 {
+    padding-top: 8px;
   }
 
   /* FOOTER */
