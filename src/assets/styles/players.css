@@ -186,7 +186,7 @@ footer .email a {
   }
 
   main .gallery img {
-    height: 41.6vh;
+    height: 43vh;
   }
 
   .desc {
@@ -203,8 +203,7 @@ footer .email a {
   }
 
   .overlay {
-    position: relative;
-    margin-top: -20vh;
+    margin-top: -15vh;
   }
 
   /* FOOTER */
