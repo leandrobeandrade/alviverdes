@@ -189,6 +189,10 @@ footer .email a {
     height: 43.5vh;
   }
 
+  main .gallery:hover img {
+    height: 43vh;
+  }
+
   .desc {
     display: none;
   }
@@ -203,7 +207,7 @@ footer .email a {
   }
 
   .overlay {
-    margin-top: -19.2vh;
+    margin-top: -19.1vh;
   }
 
   /* FOOTER */
