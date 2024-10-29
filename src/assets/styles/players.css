@@ -180,12 +180,13 @@ footer .email a {
     margin-top: 20px !important;
   }
 
-  main .gallery img {
-  height: 50vh;
-}
-
   .gallery {
+    height: 50vh;
     margin-bottom: 10px;
+  }
+
+  main .gallery img {
+    height: 40vh;
   }
 
   .desc {
