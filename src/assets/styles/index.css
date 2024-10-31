@@ -58,26 +58,6 @@ header .nav-link:hover {
 main h1 {
   margin-top: auto;
 }
-/* 
-h1:hover {
-  animation: mymove 60ms ease-out 0.2s 3 normal backwards;
-  animation: waviy 350ms ease-out 0.2s 1 normal backwards;
-} */
-
-/* @keyframes mymove {
-  0% {margin-top: 0;}
-  50% {margin-top: 5px;}
-  100% {margin-top: 0;}
-}
-
-@keyframes waviy {
-  0%,40%,100% {
-    transform: translateY(0)
-  }
-  20% {
-    transform: translateY(-20px)
-  }
-} */
 
 main h1 {
   cursor: pointer;
@@ -145,8 +125,9 @@ main .bi-eye {
 .overlay {
   position: relative;
   margin-top: -23.1vh;
-  background: rgba(212, 70, 0, 0.7);
-  color: #f1f1f1;
+  /* background: rgba(212, 70, 0, 0.7); */
+  background: rgb(72,171,61);
+  background: linear-gradient(180deg, rgba(72,171,61,1) 0%, rgba(38,97,33,1) 35%, rgba(23,63,17,1) 100%);
   transition: .5s ease;
   opacity: 0;
   color: #fff;
@@ -166,28 +147,16 @@ main .bi-eye {
   font-size: 20px;
 }
 
+.overlay .new {
+  color: rgba(23,63,17,1);
+}
+
 .publi {
   height: 10vh;
 }
 
 .counts-sm {
   display: none;
-}
-
-.blink {
-  animation: blink 2s infinite;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 /* ===== SECTION ===== */
