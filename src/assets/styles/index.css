@@ -127,7 +127,7 @@ main .bi-eye {
   margin-top: -23.1vh;
   /* background: rgba(212, 70, 0, 0.7); */
   background: rgb(72,171,61);
-  background: linear-gradient(180deg, rgba(72,171,61,1) 0%, rgba(38,97,33,1) 35%, rgba(23,63,17,1) 100%);
+  background: linear-gradient(180deg, rgb(222, 228, 222), rgb(190, 223, 192), rgb(139, 196, 132) 0%, rgb(82, 158, 75) 35%, rgba(23,63,17,1) 100%);
   transition: .5s ease;
   opacity: 0;
   color: #fff;
@@ -136,7 +136,7 @@ main .bi-eye {
 }
 
 .main-img:hover .overlay {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .main-img:hover img {
@@ -149,6 +149,7 @@ main .bi-eye {
 
 .overlay .new {
   color: rgba(23,63,17,1);
+  font-weight: 700;
 }
 
 .publi {
