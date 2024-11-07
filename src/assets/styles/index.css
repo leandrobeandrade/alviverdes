@@ -154,6 +154,7 @@ main .bi-eye {
 
 .publi {
   height: 10vh;
+  background-color: #DAF7A6;
 }
 
 .counts-sm {
@@ -348,7 +349,7 @@ footer .email a {
   }
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) and (max-width: 1000px) {
   /* HEADER */
   
 
