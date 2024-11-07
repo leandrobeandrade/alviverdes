@@ -251,7 +251,7 @@ footer .email a {
   }
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) and (max-width: 1000px) {
   /* HEADER */
   
 
@@ -264,5 +264,12 @@ footer .email a {
 
 
   /* FOOTER */
+  footer {
+    height: 165px;
+  }
 
+  footer .social {
+    width: 50%;
+    margin-left: 25%;
+  }
 }
