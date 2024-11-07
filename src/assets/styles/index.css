@@ -355,11 +355,45 @@ footer .email a {
   /* MAIN */
   .publi {
     background-color: rgb(119, 0, 255);
+    height: 40vh;
+    margin-bottom: 7vh;
+  }
+
+  .publi-two {
+    margin-top: 7vh !important;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .counts-md {
+    display: none;
+  }
+
+  .counts-sm {
+    display: inline-block;
+    margin-top: 7vh;
+  }
+
+  .bi-eye {
+    margin-right: 0 !important;
+  }
+
+  .bi-share {
+    margin-left: 6vh !important;
   }
 
   /* SECTION */
 
 
   /* FOOTER */
+  footer {
+    height: 165px;
+  }
 
+  footer .social {
+    width: 50%;
+    margin-left: 25%;
+  }
 }
