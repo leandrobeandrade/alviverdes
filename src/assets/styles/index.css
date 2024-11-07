@@ -350,9 +350,6 @@ footer .email a {
 }
 
 @media only screen and (orientation: landscape) and (max-width: 767px) {
-  /* HEADER */
-  
-
   /* MAIN */
   .publi {
     background-color: rgb(119, 0, 255);
