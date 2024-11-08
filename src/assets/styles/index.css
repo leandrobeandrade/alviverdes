@@ -316,12 +316,6 @@ footer .email a {
     color: rgb(76 126 69) !important;
   }
 
-  section small {
-    font-size: .7rem;
-    font-weight: bold;
-    border-bottom: dotted 1px rgba(23, 63, 17, 1);
-  }
-
   section .card-mobile {
     min-height: 140px;
   }
@@ -383,7 +377,17 @@ footer .email a {
   }
 
   /* SECTION */
+  section img {
+    max-height: 100vh !important;
+  }
 
+  section .card-text {
+    margin-top: 5vh;
+  }
+
+  section .text-body-secondary {
+    display: none;
+  }
 
   /* FOOTER */
   footer {
@@ -393,5 +397,63 @@ footer .email a {
   footer .social {
     width: 50%;
     margin-left: 25%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 915px) {
+  /* MAIN */
+  .publi {
+    height: 40vh;
+    margin-bottom: 7vh;
+  }
+
+  .publi-two {
+    margin-top: 7vh !important;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .counts-sm {
+    display: inline-block;
+    margin-top: 7vh;
+  }
+
+  .counts {
+    display: none;
+  }
+
+  /* SECTION */
+  section .card {
+    height: 70vh;
+  }
+
+  section h5 {
+    margin-top: -15px;
+  }
+
+  section img {
+    height: 100vh !important;
+  }
+
+  section .text-body-secondary {
+    background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(197, 51, 51, 1) 80%, rgba(255, 0, 0, 1) 100%);
+    font-size: 11px;
+    color: #fff !important;
+  }
+
+  /* FOOTER */
+  footer {
+    height: 160px;
+  }
+
+  footer .margin-mobile {
+    width: 200%;
+  }
+  
+  footer .socials {
+    width: 40%;
+    margin-left: 30%;
   }
 }
