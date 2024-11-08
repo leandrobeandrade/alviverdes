@@ -401,6 +401,15 @@ footer .email a {
 }
 
 @media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 915px) {
+  /* HEADER */
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    padding-left: 10px !important;
+  }
+  
   /* MAIN */
   .publi {
     height: 40vh;
