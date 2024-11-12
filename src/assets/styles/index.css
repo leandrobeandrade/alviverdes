@@ -442,14 +442,16 @@ footer .email a {
     margin-top: -15px;
   }
 
-  section img {
-    height: 100vh !important;
-  }
-
   section .text-body-secondary {
     background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(197, 51, 51, 1) 80%, rgba(255, 0, 0, 1) 100%);
     font-size: 11px;
     color: #fff !important;
+    padding: 3px 5px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .md-landscape {
+    width: 100% !important;
   }
 
   /* FOOTER */
