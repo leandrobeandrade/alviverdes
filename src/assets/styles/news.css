@@ -277,6 +277,15 @@ footer .email a {
 }
 
 @media only screen and (orientation: landscape) and (max-width: 767px) {
+  /* HEADER */
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    padding-left: 10px !important;
+  }
+
   /* MAIN */
   .publi {
     background-color: rgb(119, 0, 255);
@@ -288,8 +297,51 @@ footer .email a {
     margin-top: 7vh !important;
   }
 
-  /* SECTION */
+  main .h-100 {
+    height: 110% !important;
+  }
 
+  main .card {
+    height: 200vh;
+  }
+
+  .card-landscape {
+    margin-top: 25vh;
+  }
+
+  main .right-news .img-fluid {
+   width: 100%;
+   min-height: 155vh;
+  }
+
+  main h5 {
+    color: rgb(76 126 69) !important;
+  }
+
+  /* SECTION */
+  .position-absolute {
+    margin-bottom: -5vh;
+  }
+
+  section .card {
+    height: 50vh;
+  }
+
+  section h5 {
+    color: rgb(76 126 69) !important;
+  }
+
+  section:nth-last-child(odd) .position-absolute {
+    display: none;
+  }
+
+  .list-group .list-group-item h5 {
+    font-size: 1.1em !important;
+  }
+
+  .list-group:nth-last-child(odd) {
+    margin-top: 10vh;
+  }
 
   /* FOOTER */
   footer {
