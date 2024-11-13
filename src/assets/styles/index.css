@@ -438,18 +438,16 @@ footer .email a {
     height: 70vh;
   }
 
-  section h5 {
-    margin-top: -15px;
+  section .md-landscape {
+    width: 100% !important;
   }
 
-  section img {
-    height: 100vh !important;
+  section h5 {
+    color: rgb(76 126 69) !important;
   }
 
   section .text-body-secondary {
-    background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(197, 51, 51, 1) 80%, rgba(255, 0, 0, 1) 100%);
-    font-size: 11px;
-    color: #fff !important;
+    display: none;
   }
 
   /* FOOTER */
