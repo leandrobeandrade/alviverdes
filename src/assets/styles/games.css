@@ -139,15 +139,18 @@ footer .email a {
 
 @media only screen and (orientation: landscape) and (max-width: 767px) {
   /* HEADER */
-  
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    padding-left: 10px !important;
+  }
 
   /* MAIN */
   .publi {
     background-color: rgb(119, 0, 255);
   }
-
-  /* SECTION */
-
 
   /* FOOTER */
   footer {
