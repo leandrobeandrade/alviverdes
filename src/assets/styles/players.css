@@ -280,6 +280,13 @@ footer .email a {
 }
 
 /* Específico para os cards de jogadores (s8+)*/
+@media only screen and (min-width: 381px) and (max-width: 450px) {
+  .overlay {
+    margin-top: -17vh;
+    padding: 10px 15px 8px 15px;
+  }
+}
+
 @media only screen and (min-width: 350px) and (max-width: 380px) {
   .overlay {
     margin-top: -21vh;
