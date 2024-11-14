@@ -1,3 +1,7 @@
+/************
+|  FULL HD  |
+************/
+
 /* ===== BAR ===== */
 ::-webkit-scrollbar {
   width: 8px;
@@ -53,6 +57,7 @@ header .nav-link:hover {
 /* ===== MAIN ===== */
 .publi {
   height: 10vh;
+  background-color: #DAF7A6;
 }
 
 /* NO LINKS ACTIVE */
@@ -96,11 +101,29 @@ footer .email a {
   border-radius: 4px;
 }
 
+/*******
+|  HD  |
+*******/
+@media only screen and (min-width: 1360px) and (max-width: 1370px) {
+  html {
+    font-size: 10px;
+  }
+
+  /* FOOTER */
+  footer .p-1 {
+    margin-top: 8%;
+  }
+}
+
 /***********
 |  MOBILE  |
 ***********/
 @media only screen and (max-width: 600px) {
   /* HEADER */
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
   .nav-link {
     padding-left: 10px !important;
   }
@@ -150,6 +173,12 @@ footer .email a {
   /* MAIN */
   .publi {
     background-color: rgb(119, 0, 255);
+    height: 40vh;
+    margin-bottom: 7vh;
+  }
+
+  .publi-two {
+    margin-top: 7vh !important;
   }
 
   /* FOOTER */
@@ -160,5 +189,40 @@ footer .email a {
   footer .social {
     width: 50%;
     margin-left: 25%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 915px) {
+  /* HEADER */
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    padding-left: 10px !important;
+  }
+  
+  /* MAIN */
+  .publi {
+    height: 40vh;
+    margin-bottom: 7vh;
+  }
+
+  .publi-two {
+    margin-top: 7vh !important;
+  }
+
+  /* FOOTER */
+  footer {
+    height: 160px;
+  }
+
+  footer .margin-mobile {
+    width: 200%;
+  }
+  
+  footer .socials {
+    width: 40%;
+    margin-left: 30%;
   }
 }
