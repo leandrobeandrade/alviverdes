@@ -1,3 +1,7 @@
+/************
+|  FULL HD  |
+************/
+
 /* ===== BAR ===== */
 ::-webkit-scrollbar {
   width: 8px;
@@ -57,6 +61,7 @@ main {
 
 main .publi {
   height: 10vh;
+  background-color: #DAF7A6;
 }
 
 main .gallery {
@@ -97,30 +102,11 @@ main .gallery:hover img {
   transition: .5s ease;
   opacity: 0;
   font-size: 1em;
-  padding: 10px 15px 10px 15px;
+  padding: 10px 15px 11px 15px;
 }
 
 .gallery:hover .overlay {
   opacity: 1;
-}
-
-.responsive {
-  padding: 0 6px;
-  /* float: left; */
-  width: 24.99999%;
-}
-
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
 }
 
 /* ===== FOOTER ===== */
@@ -158,17 +144,35 @@ footer .email a {
   border-radius: 4px;
 }
 
+/*******
+|  HD  |
+*******/
+@media only screen and (min-width: 1360px) and (max-width: 1370px) {
+  html {
+    font-size: 10px;
+  }
+
+  /* FOOTER */
+  footer .p-1 {
+    margin-top: 8%;
+  }
+}
+
 /***********
 |  MOBILE  |
 ***********/
 @media only screen and (max-width: 600px) {
   /* HEADER */
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
   .nav-link {
     padding-left: 10px !important;
   }
 
   /* MAIN */
-  .publi {
+  main .publi {
     background-color: yellow;
   }
   
@@ -178,36 +182,6 @@ footer .email a {
   
   .publi-two {
     margin-top: 20px !important;
-  }
-
-  .gallery {
-    height: 50vh;
-    margin-bottom: 10px;
-  }
-
-  main .gallery img {
-    height: 43.5vh;
-  }
-
-  main .gallery:hover img {
-    height: 43vh;
-  }
-
-  .desc {
-    display: none;
-  }
-
-  .desc-mobile {
-    display: block;
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-    background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(197, 51, 51, 1) 80%, rgba(255, 0, 0, 1) 100%);
-  }
-
-  .overlay {
-    margin-top: -18.6vh;
   }
 
   /* FOOTER */
@@ -236,8 +210,19 @@ footer .email a {
   }
 
   /* MAIN */
-  .publi {
+  main .publi {
     background-color: rgb(119, 0, 255);
+    height: 40vh;
+    margin-bottom: 7vh;
+  }
+
+  .publi-two {
+    margin-top: 7vh !important;
+  }
+
+  .overlay {
+    margin-top: -43.5vh;
+    padding: 10px 15px 8px 15px;
   }
 
   /* SECTION */
@@ -254,6 +239,50 @@ footer .email a {
   }
 }
 
-/* 
-https://freefrontend.com/css-carousels/
-https://codepen.io/aybukeceylan/pen/RwrRPoO */
+@media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 915px) {
+  /* HEADER */
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    padding-left: 10px !important;
+  }
+  
+  /* MAIN */
+  main .publi {
+    height: 40vh;
+    margin-bottom: 7vh;
+  }
+
+  .publi-two {
+    margin-top: 7vh !important;
+  }
+
+  .overlay {
+    margin-top: -43.5vh;
+    padding: 10px 15px 8px 15px;
+  }
+
+  /* FOOTER */
+  footer {
+    height: 160px;
+  }
+
+  footer .margin-mobile {
+    width: 200%;
+  }
+  
+  footer .socials {
+    width: 40%;
+    margin-left: 30%;
+  }
+}
+
+/* Específico para os cards de jogadores (s8+)*/
+@media only screen and (min-width: 350px) and (max-width: 380px) {
+  .overlay {
+    margin-top: -21vh;
+    padding: 10px 15px 8px 15px;
+  }
+}
