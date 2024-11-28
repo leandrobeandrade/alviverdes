@@ -1,38 +1,25 @@
-/* import { createClient } from '@supabase/supabase-js';
-import { environment } from '../environments/env.dev';
-import create from './create';
+let mainTitle = document.querySelector('#main-title');
+let mainNew = document.querySelectorAll('.new')[0];
+let sectionCardTitle = document.querySelectorAll('.card-title');
+let sectionCardNew = document.querySelectorAll('.card-text');
 
-const supabaseUrl = environment.supabaseUrl;
-const supabaseKey = environment.supabaseKey;
-const supabase = createClient(supabaseUrl, supabaseKey);
+function truncateWords(text, length) {
+  const txt = text?.textContent?.slice(0, length);
 
-async function getUsers() {
-  console.log('funfou');
-  
-  let { data: users, error } = await supabase
-    .from('users')
-    .select('name, role')
+  if (text !== null) text.textContent = `${txt}...`;
+}
 
-  if (error) {
-    console.error('Erro ao buscar usuários:', error);
-  } else {
-    console.log('Nome dos usuários >>>>');
-    console.log(users);
+truncateWords(mainTitle, 125);
+truncateWords(mainNew, 300);
+
+// Loop pelos elementos onde o truncate são feitos em vários elementos html
+function forToTruncate(elem_html, length) {
+  for (let i = 0; i < elem_html.length; i++) {
+    const elem = elem_html[i];
+    
+    truncateWords(elem, length);
   }
 }
 
-getUsers(); */
-
-let btn = document.getElementById('btn');
-
-// btn?.addEventListener('click', create);
-
-let textTruncate = document.querySelector('#main-title');
-
-function truncateTitle(text) {
-  const txt = text?.textContent?.slice(0, 125);
-
-  if (text !== null) text.textContent = `${txt} ...`;
-}
-
-truncateTitle(textTruncate);
+forToTruncate(sectionCardTitle, 61);
+forToTruncate(sectionCardNew, 150);
