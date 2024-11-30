@@ -311,6 +311,16 @@
     <script>
         scrollCue.init();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script>
+        var { createClient } = supabase
+        const supabaseUrl = 'https://hiqvrhtdkpjkqxkrasna.supabase.co'
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhpcXZyaHRka3Bqa3F4a3Jhc25hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjA5MTI1ODEsImV4cCI6MjAzNjQ4ODU4MX0.X2jU3i1X3ua_VAU64vjQdP6erxl3B_cf622Xrx4uVJI'
+        const _supabase = createClient(supabaseUrl, supabaseKey)
+        console.log('Supabase Instance: ', _supabase)
+    </script>      
+    
 </body>
 
 </html>
