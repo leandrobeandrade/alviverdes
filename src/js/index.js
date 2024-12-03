@@ -24,9 +24,15 @@ function forToTruncate(elem_html, length) {
 forToTruncate(sectionCardTitle, 61);
 forToTruncate(sectionCardNew, 150);
 
+const journalist = document.querySelector('#journalist');
 
-// const { createClient } = supabase
-// const supabaseUrl = 'https://hiqvrhtdkpjkqxkrasna.supabase.co'
-// const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhpcXZyaHRka3Bqa3F4a3Jhc25hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjA5MTI1ODEsImV4cCI6MjAzNjQ4ODU4MX0.X2jU3i1X3ua_VAU64vjQdP6erxl3B_cf622Xrx4uVJI'
-// const _supabase = C_C(supabaseUrl, supabaseKey)
-// console.log('Supabase Instance: ', _supabase)
+// Define o agente Supabase
+async function Supabase() {
+  let users = await window?._supabase
+  .from('journalists')
+  .select('name')
+
+  journalist.innerHTML = users?.data[0];
+}
+
+setTimeout(() => Supabase(), 500);
