@@ -10,8 +10,10 @@ function truncateWords(text, length) {
   if (text !== null) text.textContent = `${txt}...`;
 }
 
-truncateWords(mainTitle, 125);
-truncateWords(mainNew, 300);
+setTimeout(() => {
+  truncateWords(mainTitle, 55);
+  truncateWords(mainNew, 300);
+}, 600);
 
 // Loop pelos elementos onde o truncate são feitos em vários elementos html
 function forToTruncate(elem_html, length) {

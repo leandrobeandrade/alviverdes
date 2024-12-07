@@ -4,6 +4,8 @@ let journalist = document.querySelector('#journalist');
 async function Supabase() {
   const agent = window?._supabase;
 
+  getMainNew(agent)
+
   let users = await agent
   .from('journalists')
   .select('name')
@@ -29,6 +31,13 @@ async function Supabase() {
   console.log(t);
   console.log(t.data.publicUrl);
   
+}
+
+async function getMainNew(agent) {
+  const title = document.querySelector('#main-title');
+  const title$ = await agent.from('news').select('title');
+
+  title.textContent = title$?.data[0].title;
 }
 
 setTimeout(() => Supabase(), 500);
