@@ -11,8 +11,8 @@ function truncateWords(text, length) {
 }
 
 setTimeout(() => {
-  truncateWords(mainTitle, 55);
-  truncateWords(mainNew, 300);
+  truncateWords(mainTitle, 50);
+  truncateWords(mainNew, 250);
 }, 600);
 
 // Loop pelos elementos onde o truncate são feitos em vários elementos html
