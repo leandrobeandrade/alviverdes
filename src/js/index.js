@@ -11,33 +11,35 @@ async function Supabase() {
   .select('name')
 
   journalist.textContent = `Por: ${users?.data[0].name} em 26/07/2024 - 14:00`;
-
-  let images = await agent
-  .from('storage.objects')
-
-  console.log(images);
-
-  const bucket = await agent
-  .storage
-  .getBucket('alviverdes-img')
-
-  console.log(bucket);
-  
-
-
-  let t = await agent.storage.from('alviverdes-img').getPublicUrl('news/p7.jpg');
-  
-  document.getElementById('img-main').setAttribute('src', t.data.publicUrl)
-  console.log(t);
-  console.log(t.data.publicUrl);
-  
 }
 
 async function getMainNew(agent) {
+  const new$ = await agent.from('news').select('*');
   const title = document.querySelector('#main-title');
-  const title$ = await agent.from('news').select('title');
+  const img = document.querySelector('#img-main');
+  const new_ = document.querySelector('#main-new');
 
-  title.textContent = title$?.data[0].title;
+  console.log(new$);
+  title.textContent = new$?.data[0].title;
+  img.setAttribute('src', new$?.data[0].image);
+  new_.textContent = new$?.data[0].new;
 }
 
 setTimeout(() => Supabase(), 500);
+
+// STORAGE
+/* let images = await agent
+.from('storage.objects')
+
+console.log(images);
+
+const bucket = await agent
+.storage
+.getBucket('alviverdes-img')
+
+console.log(bucket);
+let t = await agent.storage.from('alviverdes-img').getPublicUrl('news/p7.jpg');
+
+document.getElementById('img-main').setAttribute('src', t.data.publicUrl)
+console.log(t);
+console.log(t.data.publicUrl); */
