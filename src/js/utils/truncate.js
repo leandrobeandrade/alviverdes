@@ -1,5 +1,5 @@
 const mainTitle = document.querySelector('#main-title');
-const mainNew = document.querySelectorAll('.new')[0];
+// const mainNew = document.querySelectorAll('.new')[0];
 const sectionCardTitle = document.querySelectorAll('.card-title');
 // const sectionCardNew = document.querySelectorAll('.card-text');
 
@@ -11,8 +11,8 @@ function truncateWords(text, length) {
 }
 
 setTimeout(() => {
-  truncateWords(mainTitle, 50);
-  truncateWords(mainNew, 250);
+  // truncateWords(mainTitle, 50);
+  // truncateWords(mainNew, 250);
 }, 600);
 
 // Loop pelos elementos onde o truncate são feitos em vários elementos html

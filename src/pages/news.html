@@ -57,38 +57,38 @@
                 <div class="col-lg-2 col-md-12 col-sm-12 publi publi-one">
                     PUBLICIDADE
                 </div>
-                <div class="col-lg-8 col-md-12 col-sm-12 border rounded-2" data-cue="slideInUp" data-delay="600" data-duration="1200">
+                <div class="col-lg-8 col-md-12 col-sm-12">
+                    <div class="col-md-11 main-title text-center">
+                        <h1 class="ps-3" id="main-title"></h1>
+                    </div>
+                    <hr class="mb-3">
                     <div class="row g-0">
-                        <div class="col-md-11 main-title">
-                            <h1 class="ps-3" id="main-title"></h1>
+                        <div class="col-lg-6 text-success">
+                            <p>
+                                <i class="bi bi-person-video"></i> Por: <span class="me-2">Fulano Silva de Tal</span>
+                                <span class="ms-2 vr"></span>
+                                <span class="ms-2">26/07/2024</span> - <span>14:32</span> <i class="bi bi-clock-history"></i>
+                            </p>
                         </div>
-                        <div class="col-md-1 counts-md">
-                            <div class="row">
-                                <div class="col-6 border-end text-center">
-                                    <span class="fw-bold text-success share-count">10</span>
-                                    <div class="divid-share"></div>
-                                    <i class="bi bi-share"></i>
-                                </div>
-                                <div class="col-6 text-center">
-                                    <span class="fw-bold text-success views-count">50</span>
-                                    <div class="divid-views"></div>
-                                    <i class="bi bi-eye"></i>
-                                </div>
-                            </div>
+                        <div class="col-lg-6 text-success">
+                            <p class="counts float-end">
+                                <span><i class="bi bi-share"></i></span>
+                                <span class="fw-bold text-success">10</span>
+                                <span class="ms-2 vr"></span>
+                                <span class="ms-2"><i class="bi bi-eye"></i></span>
+                                <span class="fw-bold text-success">50</span>
+                            </p>
                         </div>
                     </div>
                     <div class="main-img">
                         <div class="main-card-img">
                             <img id="img-main" src="" class="card-img-top" alt="...">
                         </div>
-                        <div class="text-center overlay">
+                        <div class="mt-4">
                             <p class="new" id="main-new"></p>
-                            <hr>
-                            <p class="small"><i class="bi bi-person-video"></i> Por: <span>Fulano Silva de Tal</span></p>
-                            <p class="small"><span>26/07/2024</span> - <span>14:32</span> <i class="bi bi-clock-history"></i></p>
                         </div>
                     </div>
-                    <div class="col-sm-12 counts-sm">
+                    <!-- <div class="col-sm-12 counts-sm">
                         <div class="row">
                             <div class="col-sm-12 text-center text-success">
                                 <p class="for"><i class="bi bi-person-video"></i> Por: <span>Fulano Silva de Tal</span></p>
@@ -102,7 +102,7 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-lg-2 col-md-12 col-sm-12 publi publi-two">
                     PUBLICIDADE
@@ -142,7 +142,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card border-success rounded-start-0 mb-3" data-cue="slideInLeft">
+                    <div class="card border-success rounded-start-0 mb-3">
                         <div class="row g-0">
                             <div class="col-md-4 md-landscape">
                                 <img src="../assets/images/p4.jpg" class="img-fluid" alt="...">
@@ -171,7 +171,7 @@
                         </h2>
                         <hr>
                     </div>
-                    <div class="card border-success rounded-start-0 mb-3" data-cue="slideInLeft">
+                    <div class="card border-success rounded-start-0 mb-3">
                         <div class="row g-0">
                             <div class="col-md-4 md-landscape img-invisible">
                                 <img src="../assets/images/p6.jpg" class="img-fluid" alt="...">
@@ -196,7 +196,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12">
-                    <div class="card border border-success rounded-start-0 mb-3" data-cue="slideInRight">
+                    <div class="card border border-success rounded-start-0 mb-3">
                         <div class="row g-0">
                             <div class="col-md-4 md-landscape img-invisible">
                                 <img src="../assets/images/p3.jpg" class="img-fluid" alt="...">
@@ -219,7 +219,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card border border-success rounded-start-0 mb-3" data-cue="slideInRight">
+                    <div class="card border border-success rounded-start-0 mb-3">
                         <div class="row g-0">
                             <div class="col-md-4 md-landscape img-invisible">
                                 <img src="../assets/images/p5.jpg" class="img-fluid" alt="...">
@@ -242,7 +242,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card border border-success rounded-start-0 mb-3" data-cue="slideInRight">
+                    <div class="card border border-success rounded-start-0 mb-3">
                         <div class="row g-0">
                             <div class="col-md-4 md-landscape img-invisible">
                                 <img src="../assets/images/p7.jpg" class="img-fluid" alt="...">
@@ -296,11 +296,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script type="text/javascript" src="../js/news.js"></script>
     <script src="../js/utils/truncate.js"></script>
-    <script src="../assets/utils/scrollCue-2.0.0/scrollCue.min.js"></script>
+    <!-- <script src="../assets/utils/scrollCue-2.0.0/scrollCue.min.js"></script>
 
     <script>
         scrollCue.init();
-    </script>
+    </script> -->
 
     <script>
         const { createClient } = supabase;
