@@ -17,12 +17,16 @@ async function getMainNew(agent) {
   const new$ = await agent.from('news').select('*');
   const title = document.querySelector('#main-title');
   const img = document.querySelector('#img-main');
-  const new_ = document.querySelector('#main-new');
+  const p1 = document.querySelector('#parag1');
+  const p2 = document.querySelector('#parag2');
+  const p3 = document.querySelector('#parag3');
 
   console.log(new$);
   title.textContent = new$?.data[0].title;
   img.setAttribute('src', new$?.data[0].image);
-  new_.textContent = new$?.data[0].new;
+  p1.textContent = new$?.data[0].field1;
+  p2.textContent = new$?.data[0].field2;
+  p3.textContent = new$?.data[0].field3;
 }
 
 setTimeout(() => Supabase(), 500);
