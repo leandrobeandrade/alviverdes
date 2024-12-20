@@ -15,7 +15,7 @@ async function Supabase() {
 
 async function getMainNew(agent) {
   const new$ = await agent.from('news').select('*');
-  const title = document.querySelector('#main-title');
+  const title = document.querySelector('#title-main');
   const img = document.querySelector('#img-main');
   const p1 = document.querySelector('#parag1');
   const p2 = document.querySelector('#parag2');
