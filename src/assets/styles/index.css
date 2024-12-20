@@ -74,7 +74,7 @@ main .card:hover {
   transform: scale(1.2);
 }
 
-#main-card {
+.main-card {
   height: 8vh;
 }
 

@@ -1,30 +1,52 @@
-let journalist = document.querySelector('#journalist');
-let date = document.querySelector('#date');
-
-// Define o agente Supabase
-async function Supabase() {
+/**
+ * Define o agent do supabase
+ * agent inicializado no index.html
+ */
+function Supabase() {
   const agent = window?._supabase;
 
-  getMainNew(agent)
-
-  let users = await agent
-  .from('journalists')
-  .select('name')
-
-  journalist.textContent = `Por: ${users?.data[0].name}`;
-  date.textContent = new Date().toLocaleDateString();
+  getMainNew(agent);
+  getJournalist(agent);
 }
 
+/**
+ * Busca as notícias no banco de dados
+ * @param {*} agent 
+ */
 async function getMainNew(agent) {
-  // const new$ = await agent.from('news').select('*');
-  // const title = document.querySelector('#main-title');
+  const { data: news, error } = await agent.from('news').select('*');
+  const title = document.querySelector('#main-title');
+  const date = document.querySelector('#date');
+  const parag1 = document.querySelector('#parag1');
+  // const parag2 = document.querySelector('#parag2');
+  // const parag3 = document.querySelector('#parag3');
   // const img = document.querySelector('#img-main');
-  // const new_ = document.querySelector('#main-new');
 
-  // console.log(new$);
-  // title.textContent = new$?.data[0].title;
+  console.log(news);
+  date.textContent = new Date(news[0]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+  title.textContent = news[0]?.title;
+  parag1.textContent = news[0]?.field1;
+  // parag2.textContent = news[0]?.field2;
+  // parag3.textContent = news[0]?.field3;
   // img.setAttribute('src', new$?.data[0].image);
-  // new_.textContent = new$?.data[0].new;
+}
+
+/**
+ * Faz a relação entre as tabelas news e journalists pra pegar o jornalista da notícia
+ * @param {*} agent
+ */
+async function getJournalist(agent) {
+  const journalist = document.querySelector('#journalist');
+  const { data: journalist_, error_ } = await agent
+  .from('news')
+  .select(`
+    id_journalist,
+    journalists (
+      name
+    )
+  `)
+
+  journalist.textContent = journalist_[0]?.journalists?.name;
 }
 
 setTimeout(() => Supabase(), 500);
