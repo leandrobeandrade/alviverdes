@@ -17,18 +17,18 @@ async function getMainNew(agent) {
   const { data: news, error } = await agent.from('news').select('*');
   const title = document.querySelector('#main-title');
   const date = document.querySelector('#date');
+  const img = document.querySelector('#img-main');
   const parag1 = document.querySelector('#parag1');
   // const parag2 = document.querySelector('#parag2');
   // const parag3 = document.querySelector('#parag3');
-  // const img = document.querySelector('#img-main');
 
   console.log(news);
   date.textContent = new Date(news[0]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
   title.textContent = news[0]?.title;
   parag1.textContent = news[0]?.field1;
+  img.setAttribute('src', news[0]?.image);
   // parag2.textContent = news[0]?.field2;
   // parag3.textContent = news[0]?.field3;
-  // img.setAttribute('src', new$?.data[0].image);
 }
 
 /**
