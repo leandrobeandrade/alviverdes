@@ -14,21 +14,17 @@ function Supabase() {
  * @param {*} agent 
  */
 async function getMainNew(agent) {
-  const { data: news, error } = await agent.from('news').select('*');
+  const { data: news, error } = await agent.from('news').select('*').range(1, 7).order('created_at', { ascending: true });
   const title = document.querySelector('#main-title');
   const date = document.querySelector('#date');
   const img = document.querySelector('#img-main');
-  const parag1 = document.querySelector('#parag1');
-  // const parag2 = document.querySelector('#parag2');
-  // const parag3 = document.querySelector('#parag3');
+  const parag = document.querySelector('#parag');
 
   console.log(news);
-  date.textContent = new Date(news[0]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
-  title.textContent = news[0]?.title;
-  parag1.textContent = news[0]?.field1;
-  img.setAttribute('src', news[0]?.image);
-  // parag2.textContent = news[0]?.field2;
-  // parag3.textContent = news[0]?.field3;
+  date.textContent = new Date(news[6]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+  title.textContent = news[6]?.title;
+  parag.textContent = news[6]?.field1;
+  img.setAttribute('src', news[6]?.image);
 }
 
 /**
@@ -46,7 +42,7 @@ async function getJournalist(agent) {
     )
   `)
 
-  journalist.textContent = journalist_[0]?.journalists?.name;
+  journalist.textContent = journalist_[6]?.journalists?.name;
 }
 
 setTimeout(() => Supabase(), 500);

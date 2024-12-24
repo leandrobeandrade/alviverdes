@@ -17,9 +17,9 @@ async function getMainNew(agent) {
   const new$ = await agent.from('news').select('*');
   const title = document.querySelector('#title-main');
   const img = document.querySelector('#img-main');
-  const p1 = document.querySelector('#parag1');
-  const p2 = document.querySelector('#parag2');
-  const p3 = document.querySelector('#parag3');
+  const p1 = document.querySelector('#new_parag1');
+  const p2 = document.querySelector('#new_parag2');
+  const p3 = document.querySelector('#new_parag3');
 
   console.log(new$);
   title.textContent = new$?.data[0].title;

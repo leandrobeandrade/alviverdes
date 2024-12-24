@@ -1,5 +1,5 @@
 const mainTitle = document.querySelector('#main-title');
-const mainParag = document.querySelector('#parag1');
+const mainParag = document.querySelector('#parag');
 const sectionCardTitle = document.querySelectorAll('.card-title');
 // const sectionCardNew = document.querySelectorAll('.card-text');
 
