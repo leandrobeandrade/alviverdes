@@ -120,7 +120,13 @@ section h2:nth-child(1) {
 }
 
 section .outros-destaques {
-    display: none;
+  display: none;
+}
+
+section .separator {
+  margin: 2vh 0 4vh 0;
+  background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(23, 63, 17, 1) 100%);
+  padding: 2vh;
 }
 
 /* ===== FOOTER ===== */
@@ -402,4 +408,13 @@ footer .email a {
     width: 40%;
     margin-left: 30%;
   }
+}
+
+/***********
+|  LOADING  |
+***********/
+.spinner-grow {
+  margin-top: 10%;
+  width: 15rem !important;
+  height: 15rem !important;
 }
