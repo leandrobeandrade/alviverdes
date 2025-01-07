@@ -30,9 +30,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="../../index.html"><i class="bi bi-house-door"></i> Início</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="../pages/news.html"><i class="bi bi-newspaper"></i> Notícias</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="../pages/games.html"><i class="bi bi-cookie"></i> Jogos</a>
                         </li>
@@ -57,7 +57,12 @@
                 <div class="col-lg-2 col-md-12 col-sm-12 publi publi-one">
                     PUBLICIDADE
                 </div>
-                <div class="col-lg-8 col-md-12 col-sm-12">
+                <div class="text-center loading">                          <!-- LOADING -->
+                    <div class="spinner-grow text-success" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-sm-12 main-new" hidden>
                     <div class="col-md-11 main-title">
                         <h1 class="ps-3" id="title-main"></h1>
                     </div>
@@ -65,13 +70,14 @@
                     <div class="row g-0">
                         <div class="col-lg-6 text-success">
                             <p>
-                                <i class="bi bi-person-video"></i> Por: <span class="me-2">Fulano Silva de Tal</span>
+                                <i class="bi bi-person-video"></i>
+                                <span id="main_journalist"></span>
                                 <span class="ms-2 vr"></span>
-                                <span class="ms-2">26/07/2024</span> - <span>14:32</span> <i class="bi bi-clock-history"></i>
+                                <span id="main-date" class="ms-2"></span>
+                                <small><i class="bi bi-clock-history"></i></small>
                             </p>
                         </div>
                         <div class="col-lg-6 text-success">
-                            <span class="ms-2 vr"></span>
                             <p class="counts float-end">
                                 <span><i class="bi bi-share"></i></span>
                                 <span class="fw-bold text-success">10</span>
@@ -83,7 +89,7 @@
                     </div>
                     <div class="main-img">
                         <div class="main-card-img">
-                            <img id="img-main" src="" class="card-img-top" alt="...">
+                            <img src="" id="main-img" class="card-img-top" alt="Imagem da notícia">
                         </div>
                         <div class="mt-4">
                             <p class="new" id="new_parag1"></p>
@@ -119,6 +125,7 @@
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
+                    <div class="row separator"></div>
                     <h2 class="mt-5 text-success"><i class="bi bi-patch-plus"></i> Veja também</h2>
                     <hr>
                 </div>
@@ -130,7 +137,7 @@
                     <div class="card border-success rounded-start-0 mb-3">
                         <div class="row g-0">
                             <div class="col-md-4 md-landscape">
-                                <img src="../assets/images/p2.jpg" class="img-fluid" alt="...">
+                                <img src="" class="img-fluid" alt="Imagem da notícia">
                             </div>
                             <div class="col-md-8 md-landscape">
                                 <div class="card-body">
@@ -148,7 +155,7 @@
                     <div class="card border-success rounded-start-0 mb-3">
                         <div class="row g-0">
                             <div class="col-md-4 md-landscape">
-                                <img src="../assets/images/p4.jpg" class="img-fluid" alt="...">
+                                <img src="" class="img-fluid" alt="Imagem da notícia">
                             </div>
                             <div class="col-md-8 md-landscape">
                                 <div class="card-body card-mobile">
@@ -177,7 +184,7 @@
                     <div class="card border-success rounded-start-0 mb-3">
                         <div class="row g-0">
                             <div class="col-md-4 md-landscape img-invisible">
-                                <img src="../assets/images/p6.jpg" class="img-fluid" alt="...">
+                                <img src="" class="img-fluid" alt="Imagem da notícia">
                             </div>
                             <div class="col-md-8 md-landscape">
                                 <div class="card-body card-mobile">
@@ -202,7 +209,7 @@
                     <div class="card border border-success rounded-start-0 mb-3">
                         <div class="row g-0">
                             <div class="col-md-4 md-landscape img-invisible">
-                                <img src="../assets/images/p3.jpg" class="img-fluid" alt="...">
+                                <img src="" class="img-fluid" alt="Imagem da notícia">
                             </div>
                             <div class="col-md-8 md-landscape">
                                 <div class="card-body">
@@ -225,7 +232,7 @@
                     <div class="card border border-success rounded-start-0 mb-3">
                         <div class="row g-0">
                             <div class="col-md-4 md-landscape img-invisible">
-                                <img src="../assets/images/p5.jpg" class="img-fluid" alt="...">
+                                <img src="" class="img-fluid" alt="Imagem da notícia">
                             </div>
                             <div class="col-md-8 md-landscape">
                                 <div class="card-body card-mobile">
@@ -248,7 +255,7 @@
                     <div class="card border border-success rounded-start-0 mb-3">
                         <div class="row g-0">
                             <div class="col-md-4 md-landscape img-invisible">
-                                <img src="../assets/images/p7.jpg" class="img-fluid" alt="...">
+                                <img src="" class="img-fluid" alt="Imagem da notícia">
                             </div>
                             <div class="col-md-8 md-landscape">
                                 <div class="card-body card-mobile">

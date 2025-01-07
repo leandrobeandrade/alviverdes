@@ -30,9 +30,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="./index.html"><i class="bi bi-house-door"></i> Início</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="./src/pages/news.html"><i class="bi bi-newspaper"></i> Notícias</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="./src/pages/games.html"><i class="bi bi-cookie"></i> Jogos</a>
                         </li>
@@ -58,22 +58,27 @@
                     PUBLICIDADE
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12">
-                    <div class="row">
-                        <div class="col-lg-7 col-md-8 col-sm-12 main-new">
+                    <div class="text-center loading">                            <!-- LOADING -->
+                        <div class="spinner-grow text-success" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                    <div class="row row_news" hidden>
+                        <div class="col-lg-7 col-md-8 col-sm-12 main-new">  <!-- NOTÍCIA PRINCIPAL -->
                             <div class="card h-100">
                                 <div class="main-card-img">
-                                    <img src="" id="img-main" class="card-img-top" alt="...">
+                                    <img src="" id="main-img" class="card-img-top" alt="Imagem da notícia">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title" id="main-title"></h5>
                                     <div class="card-text main-card">
-                                        <p id="parag"></p>
+                                        <p id="main-parag"></p>
                                     </div>
                                 </div>
                                 <div class="card-footer">
                                     <small><i class="bi bi-person-video"></i></small>
-                                    <small><span id="journalist"></span></small>
-                                    <small id="date" class="float-end"></small>
+                                    <small><span id="main_journalist"></span></small>
+                                    <small id="main-date" class="float-end"></small>
                                     <small><i class="bi bi-clock-history float-end me-1"></i></small>
                                 </div>
                             </div>
@@ -83,24 +88,22 @@
                             <hr>
                         </div>
 
-                        <div class="col-lg-5 col-md-4 col-sm-12 right-news">
+                        <div class="col-lg-5 col-md-4 col-sm-12 right-news">    <!-- NOTÍCIAS LATERAIS -->
                             <div class="card mb-3 card-landscape">
                                 <div class="row g-0">
                                     <div class="col-md-4 col-sm-12">
-                                        <img src="./src/assets/images/p2.jpg" class="img-fluid" alt="...">
+                                        <img src="" id="img1" class="img-fluid" alt="Imagem da notícia">
                                     </div>
                                     <div class="col-md-8 col-sm-12">
                                         <div class="card-body">
-                                            <h5 class="card-title">Murilo participa de treino</h5>
-                                            <p class="card-text">
-                                                Zagueiro participou normalmente do treina desta quinta-feira, mas segue como dúvida...
-                                            </p>
+                                            <h5 class="card-title" id="title1"></h5>
+                                            <p class="card-text" id="parag1"></p>
                                             <div class="position-absolute bottom-0 end-0 me-4">
                                                 <p class="card-text">
                                                     <small class="text-body-secondary">
                                                         <p>
-                                                            Por: <span class="me-2">Fulano da Silva de Tal</span>
-                                                            <span>26/07/2024</span> - <span>14:00</span> <i class="bi bi-clock-history"></i>
+                                                            <!-- Por: <span class="me-2" id="journalist1"></span> -->
+                                                            <i class="bi bi-clock-history"></i> <span id="date1"></span>
                                                         </p>
                                                     </small>
                                                 </p>
@@ -112,20 +115,18 @@
                             <div class="card mb-3">
                                 <div class="row g-0">
                                     <div class="col-md-4 col-sm-12">
-                                        <img src="./src/assets/images/p3.jpg" class="img-fluid" alt="...">
+                                        <img src="" id="img2" class="img-fluid" alt="Imagem da notícia">
                                     </div>
                                     <div class="col-md-8 col-sm-12">
                                         <div class="card-body">
-                                            <h5 class="card-title">Retorno e trabalho intenso</h5>
-                                            <p class="card-text">
-                                                Time retornou aos treinamentos após viajem a Fortaleza, confira os detalhes...
-                                            </p>
+                                            <h5 class="card-title" id="title2"></h5>
+                                            <p class="card-text" id="parag2"></p>
                                             <div class="position-absolute bottom-0 end-0 me-4">
                                                 <p class="card-text">
                                                     <small class="text-body-secondary">
                                                         <p>
-                                                            Por: <span class="me-2">Fulano da Silva de Tal</span>
-                                                            <span>26/07/2024</span> - <span>12:37</span> <i class="bi bi-clock-history"></i>
+                                                            <!-- Por: <span class="me-2">Fulano da Silva de Tal</span> -->
+                                                            <i class="bi bi-clock-history"></i> <span id="date2"></span>
                                                         </p>
                                                     </small>
                                                 </p>
@@ -137,20 +138,18 @@
                             <div class="card">
                                 <div class="row g-0">
                                     <div class="col-md-4 col-sm-12">
-                                        <img src="./src/assets/images/p4.jpg" class="img-fluid" alt="...">
+                                        <img src="" id="img3" class="img-fluid" alt="Imagem da notícia">
                                     </div>
                                     <div class="col-md-8 col-sm-12">
                                         <div class="card-body">
-                                            <h5 class="card-title">Abel realiza treino tático</h5>
-                                            <p class="card-text">
-                                                Treinador promoveu treinamentos com jogadas ensaiadas e finalizações...
-                                            </p>
+                                            <h5 class="card-title" id="title3"></h5>
+                                            <p class="card-text" id="parag3"></p>
                                             <div class="position-absolute bottom-0 end-0 me-4">
                                                 <p class="card-text">
                                                     <small class="text-body-secondary">
                                                         <p>
-                                                            Por: <span class="me-2">Fulano da Silva de Tal</span>
-                                                            <span>26/07/2024</span> - <span>12:37</span> <i class="bi bi-clock-history"></i>
+                                                            <!-- Por: <span class="me-2">Fulano da Silva de Tal</span> -->
+                                                            <i class="bi bi-clock-history"></i> <span id="date3"></span>
                                                         </p>
                                                     </small>
                                                 </p>
@@ -175,64 +174,46 @@
                 <div class="col-md-2"></div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="./src/assets/images/p5.jpg" class="card-img-top" alt="...">
+                        <img src="" id="img4" class="card-img-top" alt="Imagem da notícia">
                         <div class="card-body">
-                            <h5 class="card-title">Crias da acadêmia renovam contrato</h5>
-                            <p class="card-text">
-                                Atacante Luighi e o zagueiro Michel assinam renovação de contrato...
-                            </p>
-                            <div class="position-absolute bottom-0 end-0 me-4">
-                                <p class="card-text">
-                                    <small class="text-body-secondary">
-                                        <p>
-                                            Por: <span class="me-2">Fulano da Silva de Tal</span>
-                                            <span>26/07/2024</span> - <span>09:15</span> <i class="bi bi-clock-history"></i>
-                                        </p>
-                                    </small>
-                                </p>
-                            </div>
+                            <h5 class="card-title" id="title4"></h5>
+                            <p class="card-text" id="parag4"></p>
+                        </div>
+                        <div class="card-footer">
+                            <small><i class="bi bi-person-video"></i></small>
+                            <small><span id="journalist_new4"></span></small>
+                            <small id="date4" class="float-end"></small>
+                            <small><i class="bi bi-clock-history float-end me-1"></i></small>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="./src/assets/images/p6.jpg" class="card-img-top" alt="...">
+                        <img src="" id="img5" class="card-img-top" alt="Imagem da notícia">
                         <div class="card-body">
-                            <h5 class="card-title">Elenco reforça poder mental da equipe</h5>
-                            <p class="card-text">
-                                Jogadores reafirmam o mental de toda a equipe em jogos decisivos...
-                            </p>
-                            <div class="position-absolute bottom-0 end-0 me-4">
-                                <p class="card-text">
-                                    <small class="text-body-secondary">
-                                        <p>
-                                            Por: <span class="me-2">Fulano da Silva de Tal</span>
-                                            <span>25/07/2024</span> - <span>15:22</span> <i class="bi bi-clock-history"></i>
-                                        </p>
-                                    </small>
-                                </p>
-                            </div>
+                            <h5 class="card-title" id="title5"></h5>
+                            <p class="card-text" id="parag5"></p>
+                        </div>
+                        <div class="card-footer">
+                            <small><i class="bi bi-person-video"></i></small>
+                            <small><span id="journalist_new5"></span></small>
+                            <small id="date5" class="float-end"></small>
+                            <small><i class="bi bi-clock-history float-end me-1"></i></small>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="./src/assets/images/p7.jpg" class="card-img-top" alt="...">
+                        <img src="" id="img6" class="card-img-top" alt="Imagem da notícia">
                         <div class="card-body">
-                            <h5 class="card-title">Reapresentação e regenerativo</h5>
-                            <p class="card-text">
-                                Elenco se reapresenta e jogadores que atuaram na última partida fazem treino regenerativo...
-                            </p>
-                            <div class="position-absolute bottom-0 end-0 me-4">
-                                <p class="card-text">
-                                    <small class="text-body-secondary">
-                                        <p>
-                                            Por: <span class="me-2">Fulano da Silva de Tal</span>
-                                            <span>25/07/2024</span> - <span>10:37</span> <i class="bi bi-clock-history"></i>
-                                        </p>
-                                    </small>
-                                </p>
-                            </div>
+                            <h5 class="card-title" id="title6"></h5>
+                            <p class="card-text" id="parag6"></p>
+                        </div>
+                        <div class="card-footer">
+                            <small><i class="bi bi-person-video"></i></small>
+                            <small><span id="journalist_new6"></span></small>
+                            <small id="date6" class="float-end"></small>
+                            <small><i class="bi bi-clock-history float-end me-1"></i></small>
                         </div>
                     </div>
                 </div>
@@ -246,6 +227,7 @@
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8 col-sm-12">
+                    <div class="row separator"></div>
                     <h2 class="text-success"><i class="bi bi-journal-plus"></i> Mais matérias</h2>
                     <hr>
                     <div class="row news">
@@ -295,6 +277,40 @@
         </div>
     </section>
 
+    <section>
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 col-sm-12">
+                    <div class="row separator"></div>
+                    <h2 class="text-success"><i class="bi bi-file-play"></i> Sessão de Vídeos</h2>
+                    <hr>
+                    <div class="row videos">
+                        <div class="col-md-6">
+                            <div class="ratio ratio-16x9" data-cue="fadeIn">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/qvA_CVIknDc?si=MX0YKbuSkVjL6rU5" 
+                                    title="YouTube video player" frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="ratio ratio-16x9" data-cue="fadeIn">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/c1UNv1G8eOI?si=eVaiylSLrw4I39B6" 
+                                    title="YouTube video player" frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container-fluid">
             <div class="row">
@@ -321,17 +337,16 @@
     <script src="./src/js/index.js"></script>
     <script src="./src/js/utils/truncate.js"></script>
     <script src="./src/assets/utils/scrollCue-2.0.0/scrollCue.min.js"></script>
-    <script>
-        scrollCue.init();
-    </script>
 
     <script>
         const { createClient } = supabase;
         const supabaseUrl = 'https://hiqvrhtdkpjkqxkrasna.supabase.co';
         const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhpcXZyaHRka3Bqa3F4a3Jhc25hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjA5MTI1ODEsImV4cCI6MjAzNjQ4ODU4MX0.X2jU3i1X3ua_VAU64vjQdP6erxl3B_cf622Xrx4uVJI';
         _supabase = createClient(supabaseUrl, supabaseKey);
+
+        scrollCue.init();
     </script>
-    
+        
 </body>
 
 </html>
