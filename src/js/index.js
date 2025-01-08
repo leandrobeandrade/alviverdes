@@ -64,7 +64,7 @@ async function getJournalist(agent) {
 }
 
 /** 
- * Função para exibir a notícia principal
+ * Exibe a notícia principal
  */
 function mainNew(new_main) {
   const title = document.querySelector('#main-title');
@@ -81,7 +81,7 @@ function mainNew(new_main) {
 }
 
 /**
- * Função para exibir as notícias laterais
+ * Exibe as notícias laterais
  */
 function new1(new1) {
   const title = document.querySelector('#title1');
@@ -126,7 +126,7 @@ function new3(new3) {
 }
 
 /** 
- * Função para exibir as notícias abaixo
+ * Exibe as notícias abaixo
  */
 function new4(new4) {
   const title = document.querySelector('#title4');
@@ -171,7 +171,7 @@ function new6(new6) {
 }
 
 /**
- * Função que redireciona para a página da notícia
+ * Redireciona para a página da notícia
  * @param {HTMLElement} html_elem elemento html que será clicado 
  * @param {string} id id da notícia
  */
@@ -182,7 +182,7 @@ function toNew(html_elem, id) {
 }
 
 /**
- * Função para exibir o loader
+ * Exibe o loader
  */
 function loader() {
   document.querySelectorAll('.row_news')[0].hidden = false;

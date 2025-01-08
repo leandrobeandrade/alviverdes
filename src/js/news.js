@@ -9,6 +9,8 @@ function Supabase() {
 
   getMainNew(agent);
   getJournalistMainNew(agent);
+  otherNews(agent);
+  getJournalists(agent);
   loader();
 }
 
@@ -49,8 +51,12 @@ async function getJournalistMainNew(agent) {
   else main_journalist.textContent = journalist[0]?.journalists?.name;
 }
 
-async function AllNews(agent) {
-  const { data: news, error } = await agent.from('news').select('*').range(1, 7).order('created_at', { ascending: true });
+/**
+ * Busca as notícias no banco de dados
+ * @param {Supabase} agent 
+ */
+async function otherNews(agent) {
+  const { data: news, error } = await agent.from('news').select('*').range(1, 7).neq('id', params.get('new')).order('created_at', { ascending: true });
 
   console.log(news);
 
@@ -60,9 +66,59 @@ async function AllNews(agent) {
     new1(news);
     new2(news);
     new3(news);
-    new4(news);
-    new5(news);
-    new6(news);
+    // new4(news);
+    // new5(news);
+    // new6(news);
+  }
+}
+
+/**
+ * Busca o jornalista no banco de dados
+ * @param {Supabase} agent 
+ * @param {string} id 
+ * @returns o jornalista relacionado a notícia
+ */
+async function getJournalist(agent, id) {
+  const { data: journalist, error } = await agent
+    .from('journalists')
+    .select('*').eq('id', id);
+
+  console.log(journalist);
+
+  if (error) alert('Erro ao buscar jornalista');
+  else return journalist[0];
+}
+
+/**
+ * Busca os jornalistas no banco de dados
+ * @param {Supabase} agent 
+ */
+async function getJournalists(agent) {
+  const { data: journalists, error } = await agent
+    .from('news')
+    .select(`
+      id_journalist,
+      journalists(name)
+    `).range(1, 7).neq('id', params.get('new'));
+
+  console.log(journalists);
+
+  if (error) alert('Erro ao buscar jornalistas');
+  else {
+    const journalist_new1 = document.querySelector('#journalist_new1');
+    const journalist_new2 = document.querySelector('#journalist_new2');
+    const journalist_new3 = document.querySelector('#journalist_new3');
+    // const journalist_new4 = document.querySelector('#journalist_new4');
+    // const journalist_new5 = document.querySelector('#journalist_new5');
+    // const journalist_new6 = document.querySelector('#journalist_new6');
+
+    journalist_new1.textContent = journalists[2]?.journalists?.name;
+    journalist_new2.textContent = journalists[3]?.journalists?.name;
+    journalist_new3.textContent = journalists[4]?.journalists?.name;
+    // journalist_new4.textContent = journalists[5]?.journalists?.name;
+    // journalist_new5.textContent = journalists[6]?.journalists?.name;
+    // journalist_new6.textContent = journalists[7]?.journalists?.name;
+    
   }
 }
 
@@ -80,6 +136,40 @@ function mainNew(new_) {
   parag1.textContent = new_[0]?.field1;
   parag2.textContent = new_[0]?.field2;
   parag3.textContent = new_[0]?.field3;
+}
+
+function new1(news) {
+  const title1 = document.querySelector('#title1');
+  const img1 = document.querySelector('#img1');
+  const parag1 = document.querySelector('#parag1');
+  const date1 = document.querySelector('#date1');
+
+  title1.textContent = news[0]?.title;
+  img1.src = news[0]?.image;
+  parag1.textContent = news[0]?.field1;
+  date1.textContent = new Date(news[0]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+}
+
+function new2(news) { 
+  const title2 = document.querySelector('#title2');
+  const img2 = document.querySelector('#img2');
+  const parag2 = document.querySelector('#parag2');
+  const date2 = document.querySelector('#date2');
+
+  title2.textContent = news[1]?.title;
+  img2.src = news[1]?.image;
+  parag2.textContent = news[1]?.field1;
+  date2.textContent = new Date(news[1]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+}
+
+function new3(news) { 
+  const title3 = document.querySelector('#title3');
+  const img3 = document.querySelector('#img3');
+  const date3 = document.querySelector('#date3');
+
+  title3.textContent = news[2]?.title;
+  img3.src = news[2]?.image;
+  date3.textContent = new Date(news[2]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
 }
 
 /**
