@@ -45,6 +45,8 @@ setTimeout(() => {
   truncateWords(parag3, 75);
   // forToTruncateWords(sectionCardTitle, 31);
   // forToTruncate(sectionCardNew, 180);
+  console.log('Truncate words');
+  
 }, 950);
 
 /////////////////////////////////////////
