@@ -6,6 +6,9 @@ const title2 = document.querySelector('#title2');
 const parag2 = document.querySelector('#parag2');
 const title3 = document.querySelector('#title3');
 const parag3 = document.querySelector('#parag3');
+const parag4 = document.querySelector('#parag4');
+const parag5 = document.querySelector('#parag5');
+const parag6 = document.querySelector('#parag6');
 
 // const sectionCardTitle = document.querySelectorAll('.card-title');
 // const sectionCardNew = document.querySelectorAll('.card-text');
@@ -43,10 +46,12 @@ setTimeout(() => {
   truncateWords(parag2, 75);
   truncateWords(title3, 55);
   truncateWords(parag3, 75);
+  truncateWords(parag4, 75);
+  truncateWords(parag5, 75);
+  truncateWords(parag6, 75);
   // forToTruncateWords(sectionCardTitle, 31);
   // forToTruncate(sectionCardNew, 180);
   console.log('Truncate words');
-  
 }, 950);
 
 /////////////////////////////////////////

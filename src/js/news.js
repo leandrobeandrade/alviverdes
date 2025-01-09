@@ -66,9 +66,9 @@ async function otherNews(agent) {
     new1(news);
     new2(news);
     new3(news);
-    // new4(news);
-    // new5(news);
-    // new6(news);
+    new4(news);
+    new5(news);
+    new6(news);
   }
 }
 
@@ -108,17 +108,16 @@ async function getJournalists(agent) {
     const journalist_new1 = document.querySelector('#journalist_new1');
     const journalist_new2 = document.querySelector('#journalist_new2');
     const journalist_new3 = document.querySelector('#journalist_new3');
-    // const journalist_new4 = document.querySelector('#journalist_new4');
-    // const journalist_new5 = document.querySelector('#journalist_new5');
-    // const journalist_new6 = document.querySelector('#journalist_new6');
+    const journalist_new4 = document.querySelector('#journalist_new4');
+    const journalist_new5 = document.querySelector('#journalist_new5');
+    const journalist_new6 = document.querySelector('#journalist_new6');
 
-    journalist_new1.textContent = journalists[2]?.journalists?.name;
-    journalist_new2.textContent = journalists[3]?.journalists?.name;
-    journalist_new3.textContent = journalists[4]?.journalists?.name;
-    // journalist_new4.textContent = journalists[5]?.journalists?.name;
-    // journalist_new5.textContent = journalists[6]?.journalists?.name;
-    // journalist_new6.textContent = journalists[7]?.journalists?.name;
-    
+    journalist_new1.textContent = journalists[0]?.journalists?.name;
+    journalist_new2.textContent = journalists[1]?.journalists?.name;
+    journalist_new3.textContent = journalists[2]?.journalists?.name;
+    journalist_new4.textContent = journalists[3]?.journalists?.name;
+    journalist_new5.textContent = journalists[4]?.journalists?.name;
+    journalist_new6.textContent = journalists[5]?.journalists?.name; 
   }
 }
 
@@ -165,11 +164,49 @@ function new2(news) {
 function new3(news) { 
   const title3 = document.querySelector('#title3');
   const img3 = document.querySelector('#img3');
+  const parag3 = document.querySelector('#parag3');
   const date3 = document.querySelector('#date3');
 
   title3.textContent = news[2]?.title;
   img3.src = news[2]?.image;
+  parag3.textContent = news[2]?.field1;
   date3.textContent = new Date(news[2]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+}
+
+function new4(news) {
+  const title4 = document.querySelector('#title4');
+  const img4 = document.querySelector('#img4');
+  const parag4 = document.querySelector('#parag4');
+  const date4 = document.querySelector('#date4');
+
+  title4.textContent = news[3]?.title;
+  img4.src = news[3]?.image;
+  parag4.textContent = news[3]?.field1;
+  date4.textContent = new Date(news[3]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+}
+
+function new5(news) {
+  const title5 = document.querySelector('#title5');
+  const img5 = document.querySelector('#img5');
+  const parag5 = document.querySelector('#parag5');
+  const date5 = document.querySelector('#date5');
+
+  title5.textContent = news[4]?.title;
+  img5.src = news[4]?.image;
+  parag5.textContent = news[4]?.field1;
+  date5.textContent = new Date(news[4]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+}
+
+function new6(news) {
+  const title6 = document.querySelector('#title6');
+  const img6 = document.querySelector('#img6');
+  const parag6 = document.querySelector('#parag6');
+  const date6 = document.querySelector('#date6');
+
+  title6.textContent = news[5]?.title;
+  img6.src = news[5]?.image;
+  parag6.textContent = news[5]?.field1;
+  date6.textContent = new Date(news[5]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
 }
 
 /**
