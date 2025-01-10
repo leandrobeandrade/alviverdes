@@ -147,6 +147,8 @@ function new1(news) {
   img1.src = news[0]?.image;
   parag1.textContent = news[0]?.field1;
   date1.textContent = new Date(news[0]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+
+  toNew(title1, news[0]?.id);
 }
 
 function new2(news) { 
@@ -159,6 +161,8 @@ function new2(news) {
   img2.src = news[1]?.image;
   parag2.textContent = news[1]?.field1;
   date2.textContent = new Date(news[1]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+
+  toNew(title2, news[1]?.id);
 }
 
 function new3(news) { 
@@ -171,6 +175,8 @@ function new3(news) {
   img3.src = news[2]?.image;
   parag3.textContent = news[2]?.field1;
   date3.textContent = new Date(news[2]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+
+  toNew(title3, news[2]?.id);
 }
 
 function new4(news) {
@@ -183,6 +189,8 @@ function new4(news) {
   img4.src = news[3]?.image;
   parag4.textContent = news[3]?.field1;
   date4.textContent = new Date(news[3]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+
+  toNew(title4, news[3]?.id);
 }
 
 function new5(news) {
@@ -195,6 +203,8 @@ function new5(news) {
   img5.src = news[4]?.image;
   parag5.textContent = news[4]?.field1;
   date5.textContent = new Date(news[4]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+
+  toNew(title5, news[4]?.id);
 }
 
 function new6(news) {
@@ -207,6 +217,19 @@ function new6(news) {
   img6.src = news[5]?.image;
   parag6.textContent = news[5]?.field1;
   date6.textContent = new Date(news[5]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+
+  toNew(title6, news[5]?.id);
+}
+
+/**
+ * Redireciona a página para a notícia
+ * @param {HTMLElement} html_elem elemento html que será clicado 
+ * @param {string} id id da notícia
+ */
+function toNew(html_elem, id) {
+  html_elem.addEventListener('click', () => {
+    window.location.href = `news.html?new=${id}`;
+  });
 }
 
 /**
