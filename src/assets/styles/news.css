@@ -91,6 +91,10 @@ main img {
   background-color: #DAF7A6;
 }
 
+.bi-share {
+  cursor: pointer;
+}
+
 /* ===== SECTION ===== */
 section img {
   min-height: 20vh;
@@ -99,12 +103,15 @@ section img {
   object-fit: cover;
 }
 
-section .card:hover {
+section .g-0 .col-md-8:hover {
   background-color: rgba(23, 63, 17, 1);
   color: #fff !important;
-  cursor: pointer;
   border: none;
 }
+
+section .card .card-body .card-title:hover {
+  cursor: pointer;
+ }
 
 section .card:hover img {
   filter: contrast(115%) sepia(100%);
@@ -162,6 +169,10 @@ footer .email a {
   color: rgba(23, 63, 17, 1);
   font-weight: bold;
   border-radius: 4px;
+}
+
+footer a {
+  text-decoration: none;
 }
 
 /*******

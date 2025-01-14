@@ -190,6 +190,10 @@ footer .email a {
   border-radius: 4px;
 }
 
+footer a {
+  text-decoration: none;
+}
+
 /*******
 |  HD  |
 *******/
