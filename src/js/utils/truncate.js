@@ -51,7 +51,7 @@ setTimeout(() => {
   truncateWords(parag6, 75);
   // forToTruncateWords(sectionCardTitle, 31);
   // forToTruncate(sectionCardNew, 180);
-}, 950);
+}, 1200);
 
 /////////////////////////////////////////
 

@@ -11,6 +11,7 @@ function Supabase() {
   getJournalistMainNew(agent);
   otherNews(agent);
   getJournalists(agent);
+  viewsCount();
   loader();
 }
 
@@ -99,7 +100,7 @@ async function getJournalists(agent) {
     .select(`
       id_journalist,
       journalists(name)
-    `).range(1, 7).neq('id', params.get('new'));
+    `).range(1, 7).neq('id', params.get('new')).order('created_at', { ascending: true });
 
   console.log(journalists);
 
@@ -230,6 +231,38 @@ function toNew(html_elem, id) {
   html_elem.addEventListener('click', () => {
     window.location.href = `news.html?new=${id}`;
   });
+}
+
+/**
+ * Atualiza o contador de views da notícia principal
+ */
+function viewsCount() {
+  let views = document.querySelector('#views');
+
+  views.textContent = 73;
+  // const agent = window?._supabase;
+
+  // agent
+  //   .from('news')
+  //   .update({ views: agent.sql('views + 1') })
+  //   .eq('id', params.get('new'))
+  //   .then(() => console.log('Views atualizadas'))
+  //   .catch(() => console.log('Erro ao atualizar views'));
+}
+
+/**
+ * Função para compartilhar a notícia no navegador !!!
+ */
+function share() {
+	if (navigator.share !== undefined) {
+		navigator.share({
+			title: 'alviverdes.io',
+			text: 'Confira essa notícia no site alviverdes.io',
+			url: 'https://alviverdes.io/news.html?new=1',
+		})
+		.then(() => console.log('Successful share'))
+		.catch((error) => alert('Error sharing', String(error)));
+	}
 }
 
 /**

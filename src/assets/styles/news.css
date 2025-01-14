@@ -91,6 +91,10 @@ main img {
   background-color: #DAF7A6;
 }
 
+.bi-share {
+  cursor: pointer;
+}
+
 /* ===== SECTION ===== */
 section img {
   min-height: 20vh;
@@ -165,6 +169,10 @@ footer .email a {
   color: rgba(23, 63, 17, 1);
   font-weight: bold;
   border-radius: 4px;
+}
+
+footer a {
+  text-decoration: none;
 }
 
 /*******
