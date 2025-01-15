@@ -239,29 +239,21 @@ function toNew(html_elem, id) {
 async function viewsCount(agent) {
   let views = document.querySelector('#views');
 
-  const { data: news, errors } = await agent
-  .from('news')
-  .update({ views: views_count })
-  .eq('id', params.get('new'))
-  .select();
-
-  if (errors) {
-    console.log(errors);
-  } else {
-    
-  }
-
-  console.log('>>> ', datas);
-  
-
-  const { data, error } = await agent
+  const { data, error } = await agent // busca a notícia com a view atualizada
   .from('news')
   .select('*')
   .eq('id', params.get('new'));
 
   if (error) views.textContent = 1;
-  
-  views.textContent = data[0]?.views;
+  else {
+    views.textContent = data[0]?.views;
+
+    await agent
+    .from('news')
+    .update({ views: data[0]?.views + 1 }) // atualiza a view no banco para a view atual + 1
+    .eq('id', params.get('new'))
+    .select();
+  }
 }
 
 /**
