@@ -11,7 +11,7 @@ function Supabase() {
   getJournalistMainNew(agent);
   otherNews(agent);
   getJournalists(agent);
-  viewsCount();
+  viewsCount(agent);
   loader();
 }
 
@@ -22,7 +22,7 @@ setTimeout(() => Supabase(), 700);
  * @param {Supabase} agent
  */
 async function getMainNew(agent) {
-  let { data: new_, error } = await agent
+  const { data: new_, error } = await agent
   .from('news')
   .select('*').eq('id', params.get('new'));
   
@@ -236,18 +236,24 @@ function toNew(html_elem, id) {
 /**
  * Atualiza o contador de views da notícia principal
  */
-function viewsCount() {
+async function viewsCount(agent) {
   let views = document.querySelector('#views');
 
-  views.textContent = 73;
-  // const agent = window?._supabase;
+  const { data, error } = await agent // busca a notícia com a view atualizada
+  .from('news')
+  .select('*')
+  .eq('id', params.get('new'));
 
-  // agent
-  //   .from('news')
-  //   .update({ views: agent.sql('views + 1') })
-  //   .eq('id', params.get('new'))
-  //   .then(() => console.log('Views atualizadas'))
-  //   .catch(() => console.log('Erro ao atualizar views'));
+  if (error) views.textContent = 1;
+  else {
+    views.textContent = data[0]?.views;
+
+    await agent
+    .from('news')
+    .update({ views: data[0]?.views + 1 }) // atualiza a view no banco para a view atual + 1
+    .eq('id', params.get('new'))
+    .select();
+  }
 }
 
 /**
