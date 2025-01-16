@@ -42,14 +42,32 @@
                     </ul>
                 </div>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                    <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal">
+                        Sobre nós
+                    </button>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Buscar</button>
+                        <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Search" disabled>
+                        <button class="btn btn-success" type="submit" disabled>Buscar</button>
                     </form>
                 </div>
             </div>
         </nav>
     </header>
+
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalLabel">Sobre o Alviverdes.io</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat excepturi aperiam autem ullam. 
+                    Saepe voluptatum ad impedit eos necessitatibus quaerat neque. Ad, quo provident. Explicabo nostrum quaerat tenetur quod nesciunt.
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main>
         <div class="container-fluid">
