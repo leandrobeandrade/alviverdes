@@ -231,8 +231,24 @@ footer a {
 ***********/
 @media only screen and (max-width: 600px) {
   /* HEADER */
+  header .nav-item {
+    margin-right: 0;
+  }
+
   .nav-link {
     padding-left: 10px !important;
+  }
+
+  .navbar-collapse {
+    margin-top: 1vh;
+  }
+
+  header .btn-link {
+    margin: 2% 35%;
+  }
+
+  .vr {
+    display: none !important;
   }
 
   /* MAIN */
@@ -315,12 +331,16 @@ footer a {
 
 @media only screen and (orientation: landscape) and (max-width: 767px) {
   /* HEADER */
-  .navbar-nav {
-    margin-top: 10px;
+  header .nav-item {
+    margin-right: 0;
   }
 
   .nav-link {
     padding-left: 10px !important;
+  }
+
+  .navbar-collapse {
+    margin-top: 1vh;
   }
 
   /* MAIN */

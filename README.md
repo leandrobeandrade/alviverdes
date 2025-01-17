@@ -1,7 +1,7 @@
 # Alviverdes.io
 
-- xiomi - S8+
-- samsung - S20 Ultra
+- xiomi - S8+ (600px)
+- samsung - S20 Ultra (767px)
 
 
 <!-- https://www.escoladnc.com.br/blog/como-subir-um-projeto-nodejs-para-producao-na-vercel/ -->
