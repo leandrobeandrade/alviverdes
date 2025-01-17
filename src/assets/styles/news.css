@@ -54,6 +54,24 @@ header .nav-link:hover {
   background-color: #fff !important;
 }
 
+.vr {
+  color: #fff;
+}
+
+header .btn-link {
+  color: #fff;
+  font-weight: bold;
+}
+
+header .btn-link:hover {
+  color: rgba(197, 51, 51, 1);
+  text-decoration: none;
+}
+
+.modal .modal-header {
+  background: linear-gradient(180deg, rgba(23, 63, 17, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(72, 171, 61, 1) 100%);
+}
+
 /* ===== MAIN ===== */
 main h1 {
   margin-top: -0.9%;
