@@ -21,7 +21,7 @@
                     <img src="../assets/images/alviverdes.png" alt="Alviverde Imponente">
                 </a>
                 <span class="text-light name">Alviverdes<span class="fw-bold">.io</span></span>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav, #navbar"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -42,14 +42,50 @@
                     </ul>
                 </div>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                    <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal">
+                        Sobre nós
+                    </button>
+                    <span class="vr ms-2 me-4"></span>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Buscar</button>
+                        <input class="form-control me-2" type="search" placeholder="Procurar Notícias" aria-label="Search" disabled>
+                        <button class="btn btn-success" type="submit" disabled>Buscar</button>
                     </form>
                 </div>
             </div>
         </nav>
     </header>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header text-white">
+                    <h1 class="modal-title fs-5" id="modalLabel">Sobre o Alviverdes.io</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat excepturi aperiam autem ullam. 
+                        Saepe voluptatum ad impedit eos necessitatibus quaerat neque. Ad, quo provident. Explicabo nostrum quaerat tenetur quod nesciunt.
+                    </p>
+                    <hr>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dignissimos suscipit expedita necessitatibus dolorum reprehenderit 
+                        sit quisquam molestias et consectetur consequatur nemo itaque perspiciatis in reiciendis maxime nihil repellat vitae?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae assumenda fuga vitae excepturi, incidunt amet dolore tempora 
+                        eligendi voluptates ducimus in, reiciendis similique eos necessitatibus numquam, fugiat harum alias ratione!
+                    </p>
+                    <hr>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed iure enim officiis facere sequi commodi nihil blanditiis, adipisci hic 
+                        labore placeat consequuntur, debitis rerum illo omnis tenetur? Iure, quasi suscipit?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main>
         <div class="container-fluid">
