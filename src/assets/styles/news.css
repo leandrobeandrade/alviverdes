@@ -69,7 +69,7 @@ header .btn-link:hover {
 }
 
 .modal .modal-header {
-  background: linear-gradient(180deg, rgba(23, 63, 17, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(72, 171, 61, 1) 100%);
+  background: linear-gradient(90deg, rgba(23, 63, 17, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(72, 171, 61, 1) 100%);
 }
 
 /* ===== MAIN ===== */

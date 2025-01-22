@@ -4,253 +4,253 @@
 
 /* ===== BAR ===== */
 ::-webkit-scrollbar {
-    width: 8px;
-    background: #fff;
+  width: 8px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-track {
+  background-color: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(23, 63, 17, 1) 100%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(23, 63, 17, 1) 100%);
+}
+
+/* ::-webkit-scrollbar-button {
+  background: rgba(212, 70, 0, 0.7);
+} */
+
+/* ===== HEADER ===== */
+header nav {
+  background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(23, 63, 17, 1) 100%);
+}
+
+header .name {
+  font-size: 2rem;
+}
+
+header .nav-item {
+  margin-right: 10px;
+}
+
+header .nav-link {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.active {
+  color: rgba(23, 63, 17, 1) !important;
+  background-color: #fff !important;
+  box-shadow: 0px 0px 0px 1px red inset;
+}
+
+header .nav-link:hover {
+  color: rgba(23, 63, 17, 1);
+  background-color: #fff;
+}
+
+.navbar-toggler {
+  background-color: #fff !important;
+}
+
+.vr {
+  color: #fff;
+}
+
+header .btn-link {
+  color: #fff;
+  font-weight: bold;
+}
+
+header .btn-link:hover {
+  color: rgba(197, 51, 51, 1);
+  text-decoration: none;
+}
+
+.modal .modal-header {
+  background: linear-gradient(90deg, rgba(23, 63, 17, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(72, 171, 61, 1) 100%);
+}
+
+/* ===== SECTION ===== */
+.publi {
+  height: 10vh;
+  background-color: #DAF7A6;
+}
+
+h2 {
+  background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(197, 51, 51, 1) 80%, rgba(255, 0, 0, 1) 100%);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 20vh; /* ## */
+  height: 80px;
+  width: 100%;
+  background-image: url("../images/background.png");
+  color: white;
+  text-align: center;
+}
+
+footer .social {
+  width: 100%;
+  background-color: #fff;
+  padding: 0 35px 2px 35px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+footer .bi-twitter-x {
+  font-size: 1rem;
+}
+
+footer .bi-instagram {
+  font-size: 1rem;
+  color: purple;
+}
+
+footer .email a {
+  background-color: #fff;
+  padding: 0 35px 5px 35px;
+  color: rgba(23, 63, 17, 1);
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+/*******
+|  HD  |
+*******/
+@media only screen and (min-width: 1360px) and (max-width: 1370px) {
+  html {
+    font-size: 10px;
   }
-  
-  ::-webkit-scrollbar-track {
-    background-color: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(23, 63, 17, 1) 100%);
+
+  /* FOOTER */
+  footer .p-1 {
+    margin-top: 8%;
   }
-  
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(23, 63, 17, 1) 100%);
-  }
-  
-  /* ::-webkit-scrollbar-button {
-    background: rgba(212, 70, 0, 0.7);
-  } */
-  
-  /* ===== HEADER ===== */
-  header nav {
-    background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(23, 63, 17, 1) 100%);
-  }
-  
-  header .name {
-    font-size: 2rem;
-  }
-  
+}
+
+/***********
+|  MOBILE  |
+***********/
+@media only screen and (max-width: 600px) {
+  /* HEADER */
   header .nav-item {
-    margin-right: 10px;
+    margin-right: 0;
   }
-  
-  header .nav-link {
-    font-size: 1.4rem;
-    color: #fff;
-    font-weight: bold;
+
+  .nav-link {
+    padding-left: 10px !important;
   }
-  
-  .active {
-    color: rgba(23, 63, 17, 1) !important;
-    background-color: #fff !important;
-    box-shadow: 0px 0px 0px 1px red inset;
+
+  .navbar-collapse {
+    margin-top: 1vh;
   }
-  
-  header .nav-link:hover {
-    color: rgba(23, 63, 17, 1);
-    background-color: #fff;
-  }
-  
-  .navbar-toggler {
-    background-color: #fff !important;
-  }
-  
-  .vr {
-    color: #fff;
-  }
-  
+
   header .btn-link {
-    color: #fff;
-    font-weight: bold;
+    margin: 2% 35%;
   }
-  
-  header .btn-link:hover {
-    color: rgba(197, 51, 51, 1);
-    text-decoration: none;
+
+  .vr {
+    display: none !important;
   }
-  
-  .modal .modal-header {
-    background: linear-gradient(180deg, rgba(23, 63, 17, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(72, 171, 61, 1) 100%);
-  }
-  
-  /* ===== MAIN ===== */
+
+  /* SECTION */
   .publi {
-    height: 10vh;
-    background-color: #DAF7A6;
+    background-color: yellow;
   }
   
-  /* ===== FOOTER ===== */
+  .publi-one {
+    margin-bottom: 20px;
+  }
+  
+  .publi-two {
+    margin-top: 20px !important;
+  }
+
+  /* FOOTER */
   footer {
-    margin-top: 20vh; /* ## */
-    height: 80px;
-    width: 100%;
-    background-image: url("../images/background.png");
-    color: white;
-    text-align: center;
+    height: 200px;
   }
-  
+
   footer .social {
-    width: 100%;
-    background-color: #fff;
-    padding: 0 35px 2px 35px;
-    font-weight: bold;
-    border-radius: 4px;
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  footer .margin-mobile {
+    margin-top: 2.5vh;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 767px) {
+  /* HEADER */
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    padding-left: 10px !important;
+  }
+
+  /* SECTION */
+  .publi {
+    background-color: rgb(119, 0, 255);
+    height: 40vh;
+    margin-bottom: 7vh;
+  }
+
+  .publi-two {
+    margin-top: 7vh !important;
+  }
+
+  /* FOOTER */
+  footer {
+    height: 165px;
+  }
+
+  footer .social {
+    width: 50%;
+    margin-left: 25%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 915px) {
+  /* HEADER */
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    padding-left: 10px !important;
   }
   
-  footer .bi-twitter-x {
-    font-size: 1rem;
+  /* SECTION */
+  .publi {
+    height: 40vh;
+    margin-bottom: 7vh;
+  }
+
+  .publi-two {
+    margin-top: 7vh !important;
+  }
+
+  /* FOOTER */
+  footer {
+    height: 160px;
+  }
+
+  footer .margin-mobile {
+    width: 200%;
   }
   
-  footer .bi-instagram {
-    font-size: 1rem;
-    color: purple;
+  footer .socials {
+    width: 40%;
+    margin-left: 30%;
   }
-  
-  footer .email a {
-    background-color: #fff;
-    padding: 0 35px 5px 35px;
-    color: rgba(23, 63, 17, 1);
-    font-weight: bold;
-    border-radius: 4px;
-  }
-  
-  footer a {
-    text-decoration: none;
-  }
-  
-  /*******
-  |  HD  |
-  *******/
-  @media only screen and (min-width: 1360px) and (max-width: 1370px) {
-    html {
-      font-size: 10px;
-    }
-  
-    /* FOOTER */
-    footer .p-1 {
-      margin-top: 8%;
-    }
-  }
-  
-  /***********
-  |  MOBILE  |
-  ***********/
-  @media only screen and (max-width: 600px) {
-    /* HEADER */
-    header .nav-item {
-      margin-right: 0;
-    }
-  
-    .nav-link {
-      padding-left: 10px !important;
-    }
-  
-    .navbar-collapse {
-      margin-top: 1vh;
-    }
-  
-    header .btn-link {
-      margin: 2% 35%;
-    }
-  
-    .vr {
-      display: none !important;
-    }
-  
-    /* MAIN */
-    h1:hover {
-      animation: none;
-    }
-  
-    .publi {
-      background-color: yellow;
-    }
-    
-    .publi-one {
-      margin-bottom: 20px;
-    }
-    
-    .publi-two {
-      margin-top: 20px !important;
-    }
-  
-    /* FOOTER */
-    footer {
-      height: 200px;
-    }
-  
-    footer .social {
-      width: 80%;
-      margin-left: 10%;
-    }
-  
-    footer .margin-mobile {
-      margin-top: 2.5vh;
-    }
-  }
-  
-  @media only screen and (orientation: landscape) and (max-width: 767px) {
-    /* HEADER */
-    .navbar-nav {
-      margin-top: 10px;
-    }
-  
-    .nav-link {
-      padding-left: 10px !important;
-    }
-  
-    /* MAIN */
-    .publi {
-      background-color: rgb(119, 0, 255);
-      height: 40vh;
-      margin-bottom: 7vh;
-    }
-  
-    .publi-two {
-      margin-top: 7vh !important;
-    }
-  
-    /* FOOTER */
-    footer {
-      height: 165px;
-    }
-  
-    footer .social {
-      width: 50%;
-      margin-left: 25%;
-    }
-  }
-  
-  @media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 915px) {
-    /* HEADER */
-    .navbar-nav {
-      margin-top: 10px;
-    }
-  
-    .nav-link {
-      padding-left: 10px !important;
-    }
-    
-    /* MAIN */
-    .publi {
-      height: 40vh;
-      margin-bottom: 7vh;
-    }
-  
-    .publi-two {
-      margin-top: 7vh !important;
-    }
-  
-    /* FOOTER */
-    footer {
-      height: 160px;
-    }
-  
-    footer .margin-mobile {
-      width: 200%;
-    }
-    
-    footer .socials {
-      width: 40%;
-      margin-left: 30%;
-    }
-  }
+}
