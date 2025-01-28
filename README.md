@@ -1,6 +1,6 @@
 # Alviverdes.io
 
-- xiomi - S8+ (600px)
+- xiaomi - S8+ (600px)
 - samsung - S20 Ultra (767px)
 
 

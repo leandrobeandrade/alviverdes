@@ -106,6 +106,11 @@ main .card-title:hover {
 main .card-footer {
   background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(197, 51, 51, 1) 80%, rgba(255, 0, 0, 1) 100%);
   color: #fff;
+  max-height: 5vh;
+}
+
+main .card-footer p {
+  margin-top: -1vh;
 }
 
 main .right-news .img-fluid {
