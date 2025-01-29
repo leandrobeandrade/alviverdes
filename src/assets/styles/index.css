@@ -103,16 +103,6 @@ main .card-title:hover {
   color: rgb(43, 114, 32);
 }
 
-main .card-footer {
-  background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(197, 51, 51, 1) 80%, rgba(255, 0, 0, 1) 100%);
-  color: #fff;
-  max-height: 5vh;
-}
-
-main .card-footer p {
-  margin-top: -1vh;
-}
-
 main .right-news .img-fluid {
   min-height: 20vh;
   max-height: 20vh;
@@ -126,6 +116,20 @@ main .right-news .card:hover .img-fluid {
 
 main .right-news .card:hover h5 {
   text-shadow: 0px 0px 1px #90b87c;
+}
+
+main .card-footer {
+  color: #000;
+  max-height: 5vh;
+}
+
+main .card-footer p {
+  margin-top: -1vh;
+}
+
+.footer-main {
+  color: #fff !important;
+  background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(197, 51, 51, 1) 80%, rgba(255, 0, 0, 1) 100%);
 }
 
 .publi {

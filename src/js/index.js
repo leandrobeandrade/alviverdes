@@ -49,6 +49,8 @@ async function getJournalist(agent) {
 
   const main_journalist = document.querySelector('#main_journalist');
   const journalist_new1 = document.querySelector('#journalist_new1');
+  const journalist_new2 = document.querySelector('#journalist_new2');
+  const journalist_new3 = document.querySelector('#journalist_new3');
   const journalist_new4 = document.querySelector('#journalist_new4');
   const journalist_new5 = document.querySelector('#journalist_new5');
   const journalist_new6 = document.querySelector('#journalist_new6');
@@ -58,6 +60,8 @@ async function getJournalist(agent) {
   } else {
     main_journalist.textContent = journalist_[6]?.journalists?.name;
     journalist_new1.textContent = journalist_[5]?.journalists?.name;
+    journalist_new2.textContent = journalist_[5]?.journalists?.name;
+    journalist_new3.textContent = journalist_[5]?.journalists?.name;
     journalist_new4.textContent = journalist_[2]?.journalists?.name;
     journalist_new5.textContent = journalist_[3]?.journalists?.name;
     journalist_new6.textContent = journalist_[4]?.journalists?.name;
