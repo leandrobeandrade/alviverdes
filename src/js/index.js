@@ -7,7 +7,6 @@ function Supabase() {
 
   getAllNews(agent);
   getJournalist(agent);
-  loader();
 }
 
 setTimeout(() => Supabase(), 700);
@@ -49,6 +48,9 @@ async function getJournalist(agent) {
   console.log(journalist_);
 
   const main_journalist = document.querySelector('#main_journalist');
+  const journalist_new1 = document.querySelector('#journalist_new1');
+  const journalist_new2 = document.querySelector('#journalist_new2');
+  const journalist_new3 = document.querySelector('#journalist_new3');
   const journalist_new4 = document.querySelector('#journalist_new4');
   const journalist_new5 = document.querySelector('#journalist_new5');
   const journalist_new6 = document.querySelector('#journalist_new6');
@@ -57,6 +59,9 @@ async function getJournalist(agent) {
     alert('Erro ao buscar jornalistas');
   } else {
     main_journalist.textContent = journalist_[6]?.journalists?.name;
+    journalist_new1.textContent = journalist_[5]?.journalists?.name;
+    journalist_new2.textContent = journalist_[5]?.journalists?.name;
+    journalist_new3.textContent = journalist_[5]?.journalists?.name;
     journalist_new4.textContent = journalist_[2]?.journalists?.name;
     journalist_new5.textContent = journalist_[3]?.journalists?.name;
     journalist_new6.textContent = journalist_[4]?.journalists?.name;
@@ -182,9 +187,13 @@ function toNew(html_elem, id) {
 }
 
 /**
- * Exibe o loader
+ * Exibe o loader até que a página esteja completamente carregada
  */
 function loader() {
   document.querySelectorAll('.row_news')[0].hidden = false;
   document.querySelectorAll('.loading')[0].style.display = 'none';
 }
+
+window.addEventListener('load', (event) => {
+  loader();
+});
