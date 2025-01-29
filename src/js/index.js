@@ -7,7 +7,6 @@ function Supabase() {
 
   getAllNews(agent);
   getJournalist(agent);
-  loader();
 }
 
 setTimeout(() => Supabase(), 700);
@@ -184,9 +183,13 @@ function toNew(html_elem, id) {
 }
 
 /**
- * Exibe o loader
+ * Exibe o loader até que a página esteja completamente carregada
  */
 function loader() {
   document.querySelectorAll('.row_news')[0].hidden = false;
   document.querySelectorAll('.loading')[0].style.display = 'none';
 }
+
+window.addEventListener('load', (event) => {
+  loader();
+});

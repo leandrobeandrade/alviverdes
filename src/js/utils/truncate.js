@@ -37,21 +37,24 @@ function forToTruncateWords(elem_html, length) {
   }
 }
 
-setTimeout(() => {
-  truncateWords(mainTitle, 65);
-  truncateWords(mainParag, 260);
-  truncateWords(title1, 55);
-  truncateWords(parag1, 75);
-  truncateWords(title2, 55);
-  truncateWords(parag2, 75);
-  truncateWords(title3, 55);
-  truncateWords(parag3, 75);
-  truncateWords(parag4, 75);
-  truncateWords(parag5, 75);
-  truncateWords(parag6, 75);
-  // forToTruncateWords(sectionCardTitle, 31);
-  // forToTruncate(sectionCardNew, 180);
-}, 1200);
+window.addEventListener('load', (event) => {
+  setTimeout(() => {
+    truncateWords(mainTitle, 65);
+    truncateWords(mainParag, 260);
+    truncateWords(title1, 55);
+    truncateWords(parag1, 75);
+    truncateWords(title2, 55);
+    truncateWords(parag2, 75);
+    truncateWords(title3, 55);
+    truncateWords(parag3, 75);
+    truncateWords(parag4, 75);
+    truncateWords(parag5, 75);
+    truncateWords(parag6, 75);
+    // forToTruncateWords(sectionCardTitle, 31);
+    // forToTruncate(sectionCardNew, 180);
+  }, 1000);
+});
+
 
 /////////////////////////////////////////
 

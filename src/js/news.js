@@ -12,7 +12,6 @@ function Supabase() {
   otherNews(agent);
   getJournalists(agent);
   viewsCount(agent);
-  loader();
 }
 
 setTimeout(() => Supabase(), 700);
@@ -278,3 +277,7 @@ function loader() {
   document.querySelectorAll('.main-new')[0].hidden = false;
   document.querySelectorAll('.loading')[0].style.display = 'none';
 }
+
+window.addEventListener('load', (event) => {
+  loader();
+});
