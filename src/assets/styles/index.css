@@ -175,6 +175,10 @@ section .card-img-top {
   object-fit: cover;
 }
 
+section .smalls {
+  display: none;
+}
+
 section .separator {
   margin: 2vh 0 4vh 0;
   background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(23, 63, 17, 1) 100%);
@@ -330,17 +334,29 @@ footer a {
     font-size: 1rem;
   }
 
+  section .larges {
+    display: none;
+  }
+
+  section .smalls {
+    display: inline-flex;
+  }
+
+  section .card-footer {
+    font-size: 13px
+  }
+
+  section .hrs {
+    display: block;
+    margin-top: -1vh !important;
+  }
+
   section .video-2 {
     margin-top: 2vh;
   }
 
   .separator, .hr-videos {
     display: none !important;
-  }
-
-  section .hrs {
-    display: block;
-    margin-top: -1vh !important;
   }
 
   /* FOOTER */
