@@ -60,11 +60,11 @@ async function getJournalist(agent) {
   } else {
     main_journalist.textContent = journalist_[6]?.journalists?.name;
     journalist_new1.textContent = journalist_[5]?.journalists?.name;
-    journalist_new2.textContent = journalist_[5]?.journalists?.name;
-    journalist_new3.textContent = journalist_[5]?.journalists?.name;
+    journalist_new2.textContent = journalist_[4]?.journalists?.name;
+    journalist_new3.textContent = journalist_[3]?.journalists?.name;
     journalist_new4.textContent = journalist_[2]?.journalists?.name;
-    journalist_new5.textContent = journalist_[3]?.journalists?.name;
-    journalist_new6.textContent = journalist_[4]?.journalists?.name;
+    journalist_new5.textContent = journalist_[1]?.journalists?.name;
+    journalist_new6.textContent = journalist_[0]?.journalists?.name;
   }
 }
 
