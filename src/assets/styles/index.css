@@ -181,6 +181,10 @@ section .separator {
   padding: 2vh;
 }
 
+section .hrs {
+  display: none;
+}
+
 /* ===== FOOTER ===== */
 footer {
   margin-top: 20vh; /* ## */
@@ -320,6 +324,23 @@ footer a {
     background: linear-gradient(90deg, rgba(197, 51, 51, 1) 80%, rgba(255, 0, 0, 1) 100%);
     color: #fff !important;
     padding: 4px;
+  }
+
+  section .news a {
+    font-size: 1rem;
+  }
+
+  section .video-2 {
+    margin-top: 2vh;
+  }
+
+  .separator, .hr-videos {
+    display: none !important;
+  }
+
+  section .hrs {
+    display: block;
+    margin-top: -1vh !important;
   }
 
   /* FOOTER */
