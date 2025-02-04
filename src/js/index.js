@@ -54,6 +54,9 @@ async function getJournalist(agent) {
   const journalist_new4 = document.querySelector('#journalist_new4');
   const journalist_new5 = document.querySelector('#journalist_new5');
   const journalist_new6 = document.querySelector('#journalist_new6');
+  const journalist_new4_small = document.querySelector('#journalist_new4_small');
+  const journalist_new5_small = document.querySelector('#journalist_new5_small');
+  const journalist_new6_small = document.querySelector('#journalist_new6_small');
 
   if (error_) {
     alert('Erro ao buscar jornalistas');
@@ -65,6 +68,9 @@ async function getJournalist(agent) {
     journalist_new4.textContent = journalist_[2]?.journalists?.name;
     journalist_new5.textContent = journalist_[1]?.journalists?.name;
     journalist_new6.textContent = journalist_[0]?.journalists?.name;
+    journalist_new4_small.textContent = journalist_[2]?.journalists?.name;
+    journalist_new5_small.textContent = journalist_[1]?.journalists?.name;
+    journalist_new6_small.textContent = journalist_[0]?.journalists?.name;
   }
 }
 
@@ -138,13 +144,23 @@ function new4(new4) {
   const img = document.querySelector('#img4');
   const parag = document.querySelector('#parag4');
   const date = document.querySelector('#date4');
+  const title_small = document.querySelector('#title4_small');
+  const img_small = document.querySelector('#img4_small');
+  const parag_small = document.querySelector('#parag4_small');
+  const date_small = document.querySelector('#date4_small');
 
   date.textContent = new Date(new4[2]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
   title.textContent = new4[2]?.title;
   parag.textContent = new4[2]?.field1;
   img.setAttribute('src', new4[2]?.image);
 
+  date_small.textContent = new Date(new4[2]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+  title_small.textContent = new4[2]?.title;
+  parag_small.textContent = new4[2]?.field1;
+  img_small.setAttribute('src', new4[2]?.image);
+
   toNew(title, new4[2]?.id);
+  toNew(title_small, new4[2]?.id);
 }
 
 function new5(new5) {
@@ -152,13 +168,23 @@ function new5(new5) {
   const img = document.querySelector('#img5');
   const parag = document.querySelector('#parag5');
   const date = document.querySelector('#date5');
+  const title_small = document.querySelector('#title5_small');
+  const img_small = document.querySelector('#img5_small');
+  const parag_small = document.querySelector('#parag5_small');
+  const date_small = document.querySelector('#date5_small');
 
   date.textContent = new Date(new5[1]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
   title.textContent = new5[1]?.title;
   parag.textContent = new5[1]?.field1;
   img.setAttribute('src', new5[1]?.image);
 
+  date_small.textContent = new Date(new5[1]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+  title_small.textContent = new5[1]?.title;
+  parag_small.textContent = new5[1]?.field1;
+  img_small.setAttribute('src', new5[1]?.image);
+
   toNew(title, new5[1]?.id);
+  toNew(title_small, new5[1]?.id);
 }
 
 function new6(new6) {
@@ -166,13 +192,23 @@ function new6(new6) {
   const img = document.querySelector('#img6');
   const parag = document.querySelector('#parag6');
   const date = document.querySelector('#date6');
+  const title_small = document.querySelector('#title6_small');
+  const img_small = document.querySelector('#img6_small');
+  const parag_small = document.querySelector('#parag6_small');
+  const date_small = document.querySelector('#date6_small');
 
   date.textContent = new Date(new6[0]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
   title.textContent = new6[0]?.title;
   parag.textContent = new6[0]?.field1;
   img.setAttribute('src', new6[0]?.image);
 
+  date_small.textContent = new Date(new6[0]?.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+  title_small.textContent = new6[0]?.title;
+  parag_small.textContent = new6[0]?.field1;
+  img_small.setAttribute('src', new6[0]?.image);
+
   toNew(title, new6[0]?.id);
+  toNew(title_small, new6[0]?.id);
 }
 
 /**

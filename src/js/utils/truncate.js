@@ -41,11 +41,11 @@ window.addEventListener('load', (event) => {
   setTimeout(() => {
     truncateWords(mainTitle, 65);
     truncateWords(mainParag, 260);
-    truncateWords(title1, 55);
+    truncateWords(title1, 50);
     truncateWords(parag1, 75);
-    truncateWords(title2, 55);
+    truncateWords(title2, 50);
     truncateWords(parag2, 75);
-    truncateWords(title3, 55);
+    truncateWords(title3, 50);
     truncateWords(parag3, 75);
     truncateWords(parag4, 75);
     truncateWords(parag5, 75);
