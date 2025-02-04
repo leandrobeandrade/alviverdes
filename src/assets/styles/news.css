@@ -105,6 +105,10 @@ main img {
   background-color: #DAF7A6;
 }
 
+.counts {
+  text-align: right;
+}
+
 .bi-share {
   cursor: pointer;
 }
@@ -197,12 +201,6 @@ footer a {
     font-size: 10px;
   }
 
-  /* MAIN */
-  .overlay {
-    margin-top: -32.5vh;
-    padding: 2px;
-  }
-
   /* FOOTER */
   footer .p-1 {
     margin-top: 8%;
@@ -229,10 +227,6 @@ footer a {
   header .btn-link {
     margin: 2% 35%;
   }
-
-  .vr {
-    display: none !important;
-  }
   
   /* MAIN */  
   h1:hover {
@@ -251,24 +245,25 @@ footer a {
     margin-top: 20px !important;
   }
 
-  .overlay {
-    display: none;
-  }
-
-  .counts-md {
-    display: none;
-  }
-
-  .counts-sm {
-    display: inline;
+  #title-main {
+    text-align: center;
   }
 
   .for {
     margin-top: 1vh;
   }
 
+  .infos {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
   .times, .counts {
     margin-top: -1vh;
+  }
+
+  .counts {
+    text-align: center;
   }
 
   .bi-share {
@@ -276,7 +271,7 @@ footer a {
   }
 
   .bi-eye {
-    font-size: 19px !important;
+    font-size: 15px !important;
     margin-right: 0 !important;
   }
 
@@ -299,6 +294,14 @@ footer a {
 
   .position-absolute {
     display: none;
+  }
+
+  section .card-footer {
+    font-size: 0.8rem;
+  }
+
+  section .float-end {
+    margin-top: 3px;
   }
 
   /* FOOTER */
@@ -335,19 +338,6 @@ footer a {
 
   .publi-two {
     margin-top: 7vh !important;
-  }
-
-  .overlay {
-    display: none;
-  }
-
-  .counts-md {
-    display: none;
-  }
-
-  .counts-sm {
-    display: inline-block;
-    margin-top: 7vh;
   }
 
   .bi-eye {
@@ -400,19 +390,6 @@ footer a {
 
   .publi-two {
     margin-top: 7vh !important;
-  }
-
-  .overlay {
-    display: none;
-  }
-
-  .counts-sm {
-    display: inline-block;
-    margin-top: 7vh;
-  }
-
-  .counts {
-    display: none;
   }
 
   /* SECTION */

@@ -118,13 +118,12 @@ main .right-news .card:hover h5 {
   text-shadow: 0px 0px 1px #90b87c;
 }
 
-main .card-footer {
+main .bg-body-tertiary {
   color: #000;
-  max-height: 5vh;
-}
-
-main .card-footer p {
-  margin-top: -1vh;
+  height: 4vh;
+  margin-top: 1vh;
+  border-top: 1px solid #e3e3e4;
+  font-size: 0.9rem;
 }
 
 .footer-main {
@@ -176,10 +175,18 @@ section .card-img-top {
   object-fit: cover;
 }
 
+section .smalls {
+  display: none;
+}
+
 section .separator {
   margin: 2vh 0 4vh 0;
   background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(23, 63, 17, 1) 100%);
   padding: 2vh;
+}
+
+section .hrs {
+  display: none;
 }
 
 /* ===== FOOTER ===== */
@@ -262,7 +269,7 @@ footer a {
 
   /* MAIN */
   main .h-100 {
-    height: 60vh !important;
+    height: 71vh !important;
   }
 
   .publi {
@@ -277,8 +284,8 @@ footer a {
     margin-top: 20px !important;
   }
 
-  main .right-news .card {
-    height: 43vh;
+  .footer-main {
+    font-size: 0.8rem;
   }
 
   main h5 {
@@ -293,6 +300,14 @@ footer a {
     background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(197, 51, 51, 1) 80%, rgba(255, 0, 0, 1) 100%);
     color: #fff !important;
     padding: 2px;
+  }
+
+  main .bg-body-tertiary {
+    font-size: 0.8rem;
+  }
+
+  main .bg-body-tertiary .dates {
+    margin-left: 10%;
   }
 
   main .hr-sm {
@@ -323,6 +338,35 @@ footer a {
     padding: 4px;
   }
 
+  section .news a {
+    font-size: 1rem;
+  }
+
+  section .larges {
+    display: none;
+  }
+
+  section .smalls {
+    display: inline-flex;
+  }
+
+  section .card-footer {
+    font-size: 13px
+  }
+
+  section .hrs {
+    display: block;
+    margin-top: -1vh !important;
+  }
+
+  section .video-2 {
+    margin-top: 2vh;
+  }
+
+  .separator, .hr-videos {
+    display: none !important;
+  }
+
   /* FOOTER */
   footer {
     height: 200px;
@@ -335,6 +379,10 @@ footer a {
 
   footer .margin-mobile {
     margin-top: 2.5vh;
+  }
+
+  .float-end {
+    margin-top: 0.4vh;
   }
 }
 
@@ -477,4 +525,19 @@ footer a {
   margin-top: 10%;
   width: 15rem !important;
   height: 15rem !important;
+}
+
+/* Específico para os cards de jogadores (s20)*/
+@media only screen and (min-width: 381px) and (max-width: 450px) {
+  main .h-100 {
+    height: 55vh !important;
+  }
+
+  main .bg-body-tertiary {
+    height: 4vh;
+  }
+
+  main .bg-body-tertiary .dates {
+    margin-left: 21%;
+  }
 }

@@ -274,8 +274,10 @@ function share() {
  * Função para exibir o loader
  */
 function loader() {
-  document.querySelectorAll('.main-new')[0].hidden = false;
-  document.querySelectorAll('.loading')[0].style.display = 'none';
+  setTimeout(() => {
+    document.querySelectorAll('.main-new')[0].hidden = false;
+    document.querySelectorAll('.loading')[0].style.display = 'none';
+  }, 700);
 }
 
 window.addEventListener('load', (event) => {
