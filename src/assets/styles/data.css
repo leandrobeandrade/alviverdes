@@ -208,6 +208,14 @@ footer a {
     padding-left: 10px !important;
   }
 
+  header .btn-link {
+    margin: 2% 42%;
+  }
+
+  .vr {
+    display: none !important;
+  }
+
   /* SECTION */
   .publi {
     background-color: rgb(119, 0, 255);
@@ -238,6 +246,14 @@ footer a {
 
   .nav-link {
     padding-left: 10px !important;
+  }
+
+  header .btn-link {
+    margin: 2% 44%;
+  }
+
+  .vr {
+    display: none !important;
   }
   
   /* SECTION */

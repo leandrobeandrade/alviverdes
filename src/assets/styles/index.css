@@ -323,10 +323,6 @@ footer a {
     color: rgba(38, 97, 33, 1) !important;
   }
 
-  section .position-absolute {
-    display: none;
-  }
-
   section .col:nth-last-of-type(2) {
     margin-top: 2vh;
   }
@@ -400,6 +396,14 @@ footer a {
     margin-top: 1vh;
   }
 
+  header .btn-link {
+    margin: 2% 42%;
+  }
+
+  .vr {
+    display: none !important;
+  }
+
   /* MAIN */
   .publi {
     background-color: rgb(119, 0, 255);
@@ -416,11 +420,19 @@ footer a {
   }
 
   main .card {
-    height: 200vh;
+    height: 193vh;
   }
 
   .card-landscape {
     margin-top: 25vh;
+  }
+
+  main .bg-body-tertiary {
+    height: 12vh;
+  }
+
+  main .bg-body-tertiary .dates {
+    margin-left: 53%;
   }
 
   main .right-news .img-fluid {
@@ -433,10 +445,6 @@ footer a {
   }
 
   /* SECTION */
-  .position-absolute {
-    margin-bottom: -5vh;
-  }
-
   section .card {
     height: 50vh;
   }
@@ -445,16 +453,30 @@ footer a {
     color: rgb(76 126 69) !important;
   }
 
-  section:nth-last-child(odd) .position-absolute {
-    display: none;
-  }
-
   .list-group .list-group-item h5 {
     font-size: 1.1em !important;
   }
 
   .list-group:nth-last-child(odd) {
     margin-top: 10vh;
+  }
+
+  section .card-footer {
+    font-size: 0.5em;
+  }
+
+  section .hrs {
+    display: block;
+    margin-top: -1vh !important;
+    margin-bottom: -9vh;
+  }
+
+  section .video-2 {
+    margin-top: 10vh;
+  }
+
+  .card-footer {
+    font-size: 0.8rem;
   }
 
   /* FOOTER */
@@ -477,6 +499,14 @@ footer a {
   .nav-link {
     padding-left: 10px !important;
   }
+
+  header .btn-link {
+    margin: 2% 44%;
+  }
+
+  .vr {
+    display: none !important;
+  }
   
   /* MAIN */
   .publi {
@@ -488,10 +518,6 @@ footer a {
     margin-top: 7vh !important;
   }
 
-  .position-absolute {
-    display: none;
-  }
-
   main h5 {
     color: rgb(76 126 69) !important;
     margin-top: -10px;
@@ -501,6 +527,10 @@ footer a {
   section h5 {
     color: rgb(76 126 69) !important;
     font-size: 1em;
+  }
+
+  section .card-footer {
+    font-size: 0.7em;
   }
 
   /* FOOTER */
@@ -527,10 +557,10 @@ footer a {
   height: 15rem !important;
 }
 
-/* Específico para os cards de jogadores (s20)*/
+/* Específico para (s20)*/
 @media only screen and (min-width: 381px) and (max-width: 450px) {
   main .h-100 {
-    height: 55vh !important;
+    height: 57vh !important;
   }
 
   main .bg-body-tertiary {
@@ -539,5 +569,35 @@ footer a {
 
   main .bg-body-tertiary .dates {
     margin-left: 21%;
+  }
+}
+
+/* Específico para (S20 - deitado) */
+@media only screen and (orientation: landscape) and (max-width: 915px) {
+  main .right-news .card {
+    height: 44vh;
+  }
+
+  main .bg-body-tertiary, #parag1, #parag2, #parag3 {
+    display: none;
+  }
+}
+
+/* Específico para (S8 - deitado) */
+@media only screen and (orientation: landscape) and (max-width: 740px) and (height: 360px) {
+  main .h-100 {
+    height: 170vh !important;
+  }
+
+  main .right-news .card {
+    height: 193vh !important;
+  }
+
+  main .bg-body-tertiary, #parag1, #parag2, #parag3 {
+    display: block;
+  }
+
+  main .bg-body-tertiary p {
+    margin-top: 7px;
   }
 }
