@@ -227,6 +227,10 @@ footer a {
   header .btn-link {
     margin: 2% 35%;
   }
+
+  .vr {
+    display: none !important;
+  }
   
   /* MAIN */  
   h1:hover {
@@ -328,6 +332,14 @@ footer a {
   .nav-link {
     padding-left: 10px !important;
   }
+
+  header .btn-link {
+    margin: 2% 42%;
+  }
+
+  .vr {
+    display: none !important;
+  }
   
   /* MAIN */
   .publi {
@@ -338,6 +350,10 @@ footer a {
 
   .publi-two {
     margin-top: 7vh !important;
+  }
+
+  .counts {
+    margin-top: -11vh;
   }
 
   .bi-eye {
@@ -381,6 +397,14 @@ footer a {
   .nav-link {
     padding-left: 10px !important;
   }
+
+  header .btn-link {
+    margin: 2% 44%;
+  }
+
+  .vr {
+    display: none !important;
+  }
   
   /* MAIN */
   .publi {
@@ -390,6 +414,10 @@ footer a {
 
   .publi-two {
     margin-top: 7vh !important;
+  }
+
+  .counts {
+    margin-top: -11vh;
   }
 
   /* SECTION */
@@ -431,4 +459,22 @@ footer a {
   margin-top: 10%;
   width: 15rem !important;
   height: 15rem !important;
+}
+
+/* Específico para (S20 - deitado) */
+@media only screen and (orientation: landscape) and (max-width: 915px) {
+  section .card {
+    height: 79vh;
+  }
+
+  section .card .card-footer {
+    font-size: 0.7rem;
+  }
+}
+
+/* Específico para (S8 - deitado) */
+@media only screen and (orientation: landscape) and (max-width: 740px) and (height: 360px) {
+  section .card {
+    height: 144vh;
+  }
 }
