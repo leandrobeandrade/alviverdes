@@ -462,19 +462,12 @@ footer a {
 }
 
 /* Específico para (S20 - deitado) */
-@media only screen and (orientation: landscape) and (max-width: 915px) {
+@media only screen and (orientation: landscape) and (max-width: 915px) and (height: 412px) {
   section .card {
     height: 79vh;
   }
 
   section .card .card-footer {
     font-size: 0.7rem;
-  }
-}
-
-/* Específico para (S8 - deitado) */
-@media only screen and (orientation: landscape) and (max-width: 740px) and (height: 360px) {
-  section .card {
-    height: 144vh;
   }
 }

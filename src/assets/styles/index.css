@@ -420,7 +420,7 @@ footer a {
   }
 
   main .card {
-    height: 193vh;
+    height: 197vh;
   }
 
   .card-landscape {
@@ -432,7 +432,7 @@ footer a {
   }
 
   main .bg-body-tertiary .dates {
-    margin-left: 53%;
+    margin-left: 50%;
   }
 
   main .right-news .img-fluid {
@@ -573,31 +573,12 @@ footer a {
 }
 
 /* Específico para (S20 - deitado) */
-@media only screen and (orientation: landscape) and (max-width: 915px) {
+@media only screen and (orientation: landscape) and (max-width: 915px) and (height: 412px) {
   main .right-news .card {
     height: 44vh;
   }
 
   main .bg-body-tertiary, #parag1, #parag2, #parag3 {
     display: none;
-  }
-}
-
-/* Específico para (S8 - deitado) */
-@media only screen and (orientation: landscape) and (max-width: 740px) and (height: 360px) {
-  main .h-100 {
-    height: 170vh !important;
-  }
-
-  main .right-news .card {
-    height: 193vh !important;
-  }
-
-  main .bg-body-tertiary, #parag1, #parag2, #parag3 {
-    display: block;
-  }
-
-  main .bg-body-tertiary p {
-    margin-top: 7px;
   }
 }
