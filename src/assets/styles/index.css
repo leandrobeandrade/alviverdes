@@ -591,6 +591,7 @@ footer a {
 
   main .right-news .card {
     height: 193vh !important;
+    margin-bottom: 30vh !important;
   }
 
   main .bg-body-tertiary, #parag1, #parag2, #parag3 {
