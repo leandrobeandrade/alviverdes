@@ -588,11 +588,13 @@ footer a {
   main .h-100 {
     height: 170vh !important;
   }
+  
+  main .publi-one {
+    background-color: red;
+  }
 
   main .right-news .card {
     height: 193vh !important;
-    margin-top: 30vh !important;
-    margin-bottom: 30vh !important;
   }
 
   main .bg-body-tertiary, #parag1, #parag2, #parag3 {
