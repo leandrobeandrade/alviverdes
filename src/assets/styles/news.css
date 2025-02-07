@@ -462,7 +462,7 @@ footer a {
 }
 
 /* Específico para (S20 - deitado) */
-@media only screen and (orientation: landscape) and (max-width: 915px) and (height: 412px) {
+@media only screen and (orientation: landscape) and (max-width: 915px) and (max-height: 412px) {
   section .card {
     height: 79vh;
   }
