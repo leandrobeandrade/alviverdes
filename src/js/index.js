@@ -230,6 +230,4 @@ function loader() {
   document.querySelectorAll('.loading')[0].style.display = 'none';
 }
 
-window.addEventListener('load', (event) => {
-  loader();
-});
+window.addEventListener('load', (event) => loader());
