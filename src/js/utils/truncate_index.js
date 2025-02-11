@@ -10,9 +10,6 @@ const parag4 = document.querySelector('#parag4');
 const parag5 = document.querySelector('#parag5');
 const parag6 = document.querySelector('#parag6');
 
-// const sectionCardTitle = document.querySelectorAll('.card-title');
-// const sectionCardNew = document.querySelectorAll('.card-text');
-
 /**
  * Função de truncar os textos conforme o tamanho passado
  * @param {HTMLElement} text Elemento html que contém o texto
@@ -50,27 +47,5 @@ window.addEventListener('load', (event) => {
     truncateWords(parag4, 75);
     truncateWords(parag5, 75);
     truncateWords(parag6, 75);
-    // forToTruncateWords(sectionCardTitle, 31);
-    // forToTruncate(sectionCardNew, 180);
   }, 1000);
 });
-
-
-/////////////////////////////////////////
-
-// STORAGE
-/* let images = await agent
-.from('storage.objects')
-
-console.log(images);
-
-const bucket = await agent
-.storage
-.getBucket('alviverdes-img')
-
-console.log(bucket);
-let t = await agent.storage.from('alviverdes-img').getPublicUrl('news/p7.jpg');
-
-document.getElementById('img-main').setAttribute('src', t.data.publicUrl)
-console.log(t);
-console.log(t.data.publicUrl); */

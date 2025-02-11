@@ -5,24 +5,22 @@
 // const supabaseKey = environment.supabaseKey
 // const supabase = createClient(supabaseUrl, supabaseKey)
 
-async function create() {
-  try {
-    // let { data: users, error } = await supabase
-    //   .from('users')
-    //   .select('name')
 
-    console.log('users');
-  } catch (error) {
-    console.log(error);
-  }
-}
+/////////////////////////////////////////
 
-function teste() {
-  alert('!!!');
-}
+// STORAGE
+/* let images = await agent
+.from('storage.objects')
 
-let btn = document.getElementById('tes');
+console.log(images);
 
-btn?.addEventListener('click', teste);
+const bucket = await agent
+.storage
+.getBucket('alviverdes-img')
 
-export default create;
+console.log(bucket);
+let t = await agent.storage.from('alviverdes-img').getPublicUrl('news/p7.jpg');
+
+document.getElementById('img-main').setAttribute('src', t.data.publicUrl)
+console.log(t);
+console.log(t.data.publicUrl); */
