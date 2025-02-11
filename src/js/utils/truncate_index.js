@@ -49,34 +49,3 @@ window.addEventListener('load', (event) => {
     truncateWords(parag6, 75);
   }, 1000);
 });
-
-function onResize() {
-  const larguraTela = screen.width;
-  const alturaTela = screen.height;
-  
-  console.log(`Resolução da tela: ${larguraTela} x ${alturaTela}`);
-}
-
-window.addEventListener('resize', (event) => {
-  onResize();
-});
-
-
-/////////////////////////////////////////
-
-// STORAGE
-/* let images = await agent
-.from('storage.objects')
-
-console.log(images);
-
-const bucket = await agent
-.storage
-.getBucket('alviverdes-img')
-
-console.log(bucket);
-let t = await agent.storage.from('alviverdes-img').getPublicUrl('news/p7.jpg');
-
-document.getElementById('img-main').setAttribute('src', t.data.publicUrl)
-console.log(t);
-console.log(t.data.publicUrl); */

@@ -50,6 +50,19 @@ window.addEventListener('load', (event) => {
       truncateWords(parag5, 140);
       truncateWords(title6, 60);
       truncateWords(parag6, 140);
+    } else if (screen.width === 915) {
+      truncateWords(title1, 35);
+      truncateWords(parag1, 110);
+      truncateWords(title2, 35);
+      truncateWords(parag2, 110);
+      truncateWords(title3, 35);
+      truncateWords(parag3, 110);
+      truncateWords(title4, 35);
+      truncateWords(parag4, 110);
+      truncateWords(title5, 35);
+      truncateWords(parag5, 110);
+      truncateWords(title6, 35);
+      truncateWords(parag6, 110);
     } else {
       truncateWords(title1, 35);
       truncateWords(parag1, 110);
@@ -66,11 +79,3 @@ window.addEventListener('load', (event) => {
     }
   }, 1000);
 });
-
-function screenSizes() {
-  const width = screen.width;
-  const height = screen.height;
-  
-  console.log(`Resolução da tela: ${width} x ${height}`);
-  return 
-}
