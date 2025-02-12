@@ -4,8 +4,9 @@
  */
 function Supabase() {
   const agent = window?._supabase;
+  const toast = window?._toast;
 
-  getAllNews(agent);
+  getAllNews(agent, toast);
   getJournalist(agent);
 }
 
@@ -14,14 +15,15 @@ setTimeout(() => Supabase(), 700);
 /**
  * Busca as notícias no banco de dados
  * @param {Supabase} agent
+ * @param {Toast} toast
  */
-async function getAllNews(agent) {
+async function getAllNews(agent, toast) {
   const { data: news, error } = await agent.from('news').select('*').range(1, 7).order('created_at', { ascending: true });
 
   console.log(news);
 
   if (error) {
-    alert('Erro ao buscar notícias');
+    showToaster();
   } else {
     mainNew(news);
     new1(news);
@@ -231,3 +233,24 @@ function loader() {
 }
 
 window.addEventListener('load', (event) => loader());
+
+/**
+ * Exibe um toaster de erro e desabilita a página
+ */
+function showToaster() {
+  const toast = window?._toast;
+
+  toast({
+    text: 'Erro ao buscar notícias! Tente novamente mais tarde.',
+    duration: 10000,
+    position: 'center',
+    style: { background: 'linear-gradient(to right, #45A43B, #1C4B17)', color: '#ffffff', marginTop: '50vh' }
+  }).showToast();
+
+  document.querySelector('main').style.opacity = 0.1;
+  document.querySelector('section').style.opacity = 0.1;
+  document.querySelectorAll('section')[1].style.opacity = 0.1;
+  document.querySelectorAll('section')[2].style.opacity = 0.1;
+  document.body.style.pointerEvents = 'none';
+  document.querySelector('header').style.pointerEvents = 'auto';
+}
