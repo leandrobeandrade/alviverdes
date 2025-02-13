@@ -52,17 +52,17 @@ window.addEventListener('load', (event) => {
       truncateWords(parag6, 140);
     } else if (screen.width === 915) {
       truncateWords(title1, 35);
-      truncateWords(parag1, 110);
+      truncateWords(parag1, 125);
       truncateWords(title2, 35);
-      truncateWords(parag2, 110);
+      truncateWords(parag2, 125);
       truncateWords(title3, 35);
-      truncateWords(parag3, 110);
+      truncateWords(parag3, 125);
       truncateWords(title4, 35);
-      truncateWords(parag4, 110);
+      truncateWords(parag4, 125);
       truncateWords(title5, 35);
-      truncateWords(parag5, 110);
+      truncateWords(parag5, 125);
       truncateWords(title6, 35);
-      truncateWords(parag6, 110);
+      truncateWords(parag6, 125);
     } else {
       truncateWords(title1, 35);
       truncateWords(parag1, 110);
