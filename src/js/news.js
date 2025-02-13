@@ -27,7 +27,7 @@ async function getMainNew(agent) {
   
   console.log(new_);
   
-  if (error) showToaster();
+  if (error || new_.length === 0) showToaster();
   else mainNew(new_);
 }
 
