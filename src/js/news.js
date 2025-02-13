@@ -27,7 +27,7 @@ async function getMainNew(agent) {
   
   console.log(new_);
   
-  if (error) alert('Erro ao buscar notícia');
+  if (error) showToaster();
   else mainNew(new_);
 }
 
@@ -280,6 +280,24 @@ function loader() {
   }, 700);
 }
 
-window.addEventListener('load', (event) => {
-  loader();
-});
+window.addEventListener('load', (event) => loader());
+
+/**
+ * Exibe um toaster de erro e desabilita a página
+ */
+function showToaster() {
+  const toast = window?._toast;
+
+  toast({
+    text: 'Erro ao buscar notícias! Tente novamente mais tarde.',
+    duration: 10000,
+    position: 'center',
+    style: { background: 'linear-gradient(to right, #45A43B, #1C4B17)', color: '#ffffff', marginTop: '50vh' }
+  }).showToast();
+
+  document.querySelector('main').style.opacity = 0.1;
+  document.querySelector('section').style.opacity = 0.1;
+  document.body.style.pointerEvents = 'none';
+  document.querySelector('header').style.pointerEvents = 'auto';
+  document.querySelector('footer').style.pointerEvents = 'auto';
+}

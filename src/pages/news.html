@@ -14,6 +14,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="../assets/utils/scrollCue-2.0.0/scrollCue.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
     <title>Alviverdes.io</title>
 </head>
 
@@ -309,6 +310,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="../js/news.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../assets/utils/scrollCue-2.0.0/scrollCue.min.js"></script>
     <script src="../js/utils/truncate_news.js"></script>
     <script>
@@ -316,6 +318,7 @@
         const supabaseUrl = 'https://hiqvrhtdkpjkqxkrasna.supabase.co';
         const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhpcXZyaHRka3Bqa3F4a3Jhc25hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjA5MTI1ODEsImV4cCI6MjAzNjQ4ODU4MX0.X2jU3i1X3ua_VAU64vjQdP6erxl3B_cf622Xrx4uVJI';
         _supabase = createClient(supabaseUrl, supabaseKey);
+        _toast = Toastify;
         
         scrollCue.init();
     </script>
