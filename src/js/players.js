@@ -5,9 +5,11 @@
 // const supabaseKey = environment.supabaseKey;
 // const supabase = createClient(supabaseUrl, supabaseKey);
 
-const url = 'https://hiqvrhtdkpjkqxkrasna.supabase.co/storage/v1/object/sign/alviverdes-img/p7.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhbHZpdmVyZGVzLWltZy9wNy5qcGciLCJpYXQiOjE3MjQ4MTA5OTEsImV4cCI6MTcyNTQxNTc5MX0.fdDwNvDakv3p8mJ00l7FFZB_1zDveiiIIgE01AMnZdY&t=2024-08-28T02%3A09%3A52.312Z';
+// const url = 'https://hiqvrhtdkpjkqxkrasna.supabase.co/storage/v1/object/sign/alviverdes-img/p7.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhbHZpdmVyZGVzLWltZy9wNy5qcGciLCJpYXQiOjE3MjQ4MTA5OTEsImV4cCI6MTcyNTQxNTc5MX0.fdDwNvDakv3p8mJ00l7FFZB_1zDveiiIIgE01AMnZdY&t=2024-08-28T02%3A09%3A52.312Z';
+// console.log(url);
 
-document.getElementById('img_02')?.setAttribute('src', url);
+// document.getElementById('img_02')?.setAttribute('src', url);
+
 
 // const { data } = supabase.storage.from('alviverdes-img').getPublicUrl(url);
 
@@ -19,4 +21,20 @@ document.getElementById('img_02')?.setAttribute('src', url);
 // fetch(url).then((res) => res.blob()).then(d => console.log(d));
 // const minhaPromise = (url: string) => fetch(url).then((res) => res.json());
 
-console.log(url);
+
+// STORAGE
+/* let images = await agent
+.from('storage.objects')
+
+console.log(images);
+
+const bucket = await agent
+.storage
+.getBucket('alviverdes-img')
+
+console.log(bucket);
+let t = await agent.storage.from('alviverdes-img').getPublicUrl('news/p7.jpg');
+
+document.getElementById('img-main').setAttribute('src', t.data.publicUrl)
+console.log(t);
+console.log(t.data.publicUrl); */
