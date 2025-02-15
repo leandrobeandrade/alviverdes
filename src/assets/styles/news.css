@@ -476,10 +476,10 @@ footer a {
   }
 
   section .card .footer-landscape {
-    margin-top: 5.5vh;
+    margin-top: 2.5vh;
   }
 
   section .card .teste {
-    margin-top: -1vh !important;
+    margin-top: -4vh !important;
   }
 }
