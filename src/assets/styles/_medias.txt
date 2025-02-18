@@ -1,0 +1,8 @@
+# Arquivo com descrição de medias queries utilizadas no projeto
+
+- (full hd) padrão para notebooks e televisores de alta resolução
+- (hd) @media only screen and (min-width: 1360px) and (max-width: 1370px)
+- mobiles
+    - @media only screen and (max-width: 600px) - celulares em comum na posição retrato (em pé)
+    - @media only screen and (orientation: landscape) and (max-width: 767px) and (max-height: 360px) celular em posição paisagem (deitada) - [S8, Xiaomi poco]
+    - @media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 915px) celular em posição paisagem - [S20 ultra, S21]
