@@ -382,11 +382,11 @@ footer a {
   }
 
   section .card .footer-landscape {
-    margin-top: 0 !important;
+    margin-top: 10px !important;
   }
 
   section .card .specif {
-    margin-top: -5vh !important;
+    margin-top: -25px !important;
   }
 
   /* FOOTER */
