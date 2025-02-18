@@ -381,6 +381,14 @@ footer a {
     display: none;
   }
 
+  section .card .footer-landscape {
+    margin-top: 4vh;
+  }
+
+  section .card .specif {
+    margin-top: -2.5vh !important;
+  }
+
   /* FOOTER */
   footer {
     height: 165px;
