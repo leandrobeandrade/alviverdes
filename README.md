@@ -24,4 +24,4 @@ Entre em contato conosco através das nossas redes sociais ou envie um e-mail pa
 
 ---
 
-Acompanhe o Palmeiras de perto com o Alviverdes.io, o seu portal de notícias do Verdão!
+> Acompanhe o Palmeiras de perto com o Alviverdes.io, o seu portal de notícias do Verdão!
