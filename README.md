@@ -1,4 +1,4 @@
-# Alviverdes.io
+# Alviverdes.io :newspaper:	
 
 Site esportivo com notícias relacionadas ao clube de futebol Sociedade Esportiva Palmeiras.
 
@@ -12,7 +12,7 @@ Fique por dentro das últimas novidades, resultados de jogos, transferências e 
 - **Jogos**: Calendário de jogos, resultados e tabelas de classificação.
 - **Elenco**: Informações detalhadas sobre os jogadores do Palmeiras, incluindo estatísticas e histórico de carreira.
 - **História**: Um mergulho na rica história do Palmeiras, desde sua fundação até os dias atuais.
-- **Multimídia**: Fotos e vídeos exclusivos dos bastidores, treinos e jogos do Verdão.
+- ~~**Multimídia**: Fotos e vídeos exclusivos dos bastidores, treinos e jogos do Verdão.~~
 
 ## Sobre Nós
 
