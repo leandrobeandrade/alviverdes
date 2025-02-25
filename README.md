@@ -14,7 +14,7 @@ Fique por dentro das últimas novidades, resultados de jogos, transferências e 
 - **História**: Um mergulho na rica história do Palmeiras, desde sua fundação até os dias atuais.
 - ~~**Multimídia**: Fotos e vídeos exclusivos dos bastidores, treinos e jogos do Verdão.~~
 
-## Sobre Nós
+## Sobre Nós 💚
 
 O Alviverdes.io é feito por torcedores apaixonados pelo Palmeiras, para torcedores apaixonados pelo Palmeiras. Nossa missão é proporcionar uma experiência completa e envolvente para todos os palmeirenses, trazendo conteúdo de qualidade e atualizado diariamente.
 
