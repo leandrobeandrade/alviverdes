@@ -252,6 +252,7 @@ function showToaster() {
   document.querySelectorAll('section')[1].style.opacity = 0.1;
   document.querySelectorAll('section')[2].style.opacity = 0.1;
   document.body.style.pointerEvents = 'none';
+  document.body.style.overflow = 'hidden';
   document.querySelector('header').style.pointerEvents = 'auto';
   document.querySelector('footer').style.pointerEvents = 'auto';
 }
