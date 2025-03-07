@@ -296,8 +296,10 @@ function showToaster() {
   }).showToast();
 
   document.querySelector('main').style.opacity = 0.1;
+  document.querySelector('main').style.height = '100vh';
   document.querySelector('section').style.opacity = 0.1;
   document.body.style.pointerEvents = 'none';
+  document.body.style.overflow = 'hidden';
   document.querySelector('header').style.pointerEvents = 'auto';
   document.querySelector('footer').style.pointerEvents = 'auto';
 }
