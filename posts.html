@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="icon" sizes="40x40" href="./src/assets/images/alviverdes.png" />
+    <link rel="stylesheet" href="./src/assets/styles/posts.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <title>Alviverdes.io</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./src/assets/images/alviverdes.png" alt="Alviverde Imponente">
+                </a>
+                <span class="text-light name">Alviverdes<span class="fw-bold">.io</span></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav, #navbar"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html"><i class="bi bi-house-door"></i> Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./src/pages/games.html"><i class="bi bi-cookie"></i> Jogos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./src/pages/players.html"><i class="bi bi-person-rolodex"></i> Elenco</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./src/pages/data.html"><i class="bi bi-list-ol"></i> Dados</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 col-md-12 col-sm-12">
+                    <h1 class="text-center mb-4">Postagens de notícias</h1>
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Título da notícia *</label>
+                        <input type="text" class="form-control" id="title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="field1" class="form-label">1° Parágrafo *</label>
+                        <textarea class="form-control" id="field1" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="field2" class="form-label">2° Parágrafo</label>
+                        <textarea class="form-control" id="field2" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="field3" class="form-label">3° Parágrafo</label>
+                        <textarea class="form-control" id="field3" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="text/javascript" src="./src/js/posts.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="text/javascript">
+        const _0x43647b=_0x1ca5;(function(_0x34c042,_0x4d76db){const _0x317f3c=_0x1ca5,_0x4b36cb=_0x34c042();while(!![]){try{const _0x3f64f3=-parseInt(_0x317f3c(0x17d))/0x1+parseInt(_0x317f3c(0x187))/0x2+parseInt(_0x317f3c(0x17e))/0x3+-parseInt(_0x317f3c(0x184))/0x4*(-parseInt(_0x317f3c(0x186))/0x5)+-parseInt(_0x317f3c(0x185))/0x6*(parseInt(_0x317f3c(0x180))/0x7)+parseInt(_0x317f3c(0x182))/0x8+parseInt(_0x317f3c(0x17c))/0x9*(-parseInt(_0x317f3c(0x17f))/0xa);if(_0x3f64f3===_0x4d76db)break;else _0x4b36cb['push'](_0x4b36cb['shift']());}catch(_0x47136b){_0x4b36cb['push'](_0x4b36cb['shift']());}}}(_0x4570,0xe73b8));function _0x1ca5(_0x300479,_0x5a7fd1){const _0x4570d3=_0x4570();return _0x1ca5=function(_0x1ca5c5,_0x3f235e){_0x1ca5c5=_0x1ca5c5-0x17c;let _0x4fa05b=_0x4570d3[_0x1ca5c5];return _0x4fa05b;},_0x1ca5(_0x300479,_0x5a7fd1);}const {createClient}=supabase,sbUrl=_0x43647b(0x181),sbKey=_0x43647b(0x183);_supabase=createClient(sbUrl,sbKey),_toast=Toastify;function _0x4570(){const _0x148258=['https://hiqvrhtdkpjkqxkrasna.supabase.co','13423448AXBSDR','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhpcXZyaHRka3Bqa3F4a3Jhc25hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjA5MTI1ODEsImV4cCI6MjAzNjQ4ODU4MX0.X2jU3i1X3ua_VAU64vjQdP6erxl3B_cf622Xrx4uVJI','1923808BWBWCY','3678906AlAKGl','15aVvSux','969840ZDNZUd','9vknJiQ','1132040SRwDgQ','1244337sOGRsk','13281670QWmoYf','7HdXPtb'];_0x4570=function(){return _0x148258;};return _0x4570();}
+    </script>
+        
+</body>
+
+</html>

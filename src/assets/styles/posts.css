@@ -1,0 +1,57 @@
+/************
+|  FULL HD  |
+************/
+
+/* ===== BAR ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-track {
+  background-color: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(23, 63, 17, 1) 100%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(23, 63, 17, 1) 100%);
+}
+
+/* ::-webkit-scrollbar-button {
+    background: rgba(212, 70, 0, 0.7);
+  } */
+
+/* ===== HEADER ===== */
+header nav {
+  background: linear-gradient(90deg, rgba(72, 171, 61, 1) 0%, rgba(38, 97, 33, 1) 35%, rgba(23, 63, 17, 1) 100%);
+}
+
+header .name {
+  font-size: 2rem;
+}
+
+header .nav-item {
+  margin-right: 10px;
+}
+
+header .nav-link {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.active {
+  color: rgba(23, 63, 17, 1) !important;
+  background-color: #fff !important;
+  box-shadow: 0px 0px 0px 1px red inset;
+}
+
+header .nav-link:hover {
+  color: rgba(23, 63, 17, 1);
+  background-color: #fff;
+}
+
+.navbar-toggler {
+  background-color: #fff !important;
+}
+
+/* ===== FORM ===== */
