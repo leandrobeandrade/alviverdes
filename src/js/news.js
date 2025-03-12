@@ -256,7 +256,7 @@ async function viewsCount(agent) {
 }
 
 /**
- * Função para compartilhar a notícia no navegador !!!
+ * Função para compartilhar a notícia no navegador
  */
 function share() {
 	if (navigator.share !== undefined) {
