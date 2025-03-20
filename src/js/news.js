@@ -2,7 +2,7 @@ let params = new URLSearchParams(document.location.search.substring(1));
 
 /**
  * Define o agent do supabase
- * agent inicializado no index.html
+ * agent inicializado no news.html
  */
 function Supabase() {
   const agent = window?._supabase;
