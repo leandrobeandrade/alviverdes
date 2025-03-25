@@ -252,7 +252,7 @@ function showToaster() {
 
   toast({
     text: 'Erro ao buscar notícias! Tente novamente mais tarde.',
-    duration: 10000,
+    duration: -1,
     position: 'center',
     style: { background: 'linear-gradient(to right, #45A43B, #1C4B17)', color: '#ffffff', marginTop: '50vh' }
   }).showToast();

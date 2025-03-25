@@ -25,8 +25,6 @@ async function getMainNew(agent) {
   .from('news')
   .select('*').eq('id', params.get('new'));
   
-  console.log(new_);
-  
   if (error || new_.length === 0) showToaster();
   else mainNew(new_);
 }
@@ -43,8 +41,6 @@ async function getJournalistMainNew(agent) {
       journalists(name)
     `).eq('id', params.get('new'));
 
-  console.log(journalist);
-
   const main_journalist = document.querySelector('#main_journalist');
 
   if (error) alert('Erro ao buscar jornalista');
@@ -53,12 +49,11 @@ async function getJournalistMainNew(agent) {
 
 /**
  * Busca as notícias no banco de dados
- * @param {Supabase} agent 
+ * @param {Supabase} agent
  */
 async function otherNews(agent) {
-  const { data: news, error } = await agent.from('news').select('*').range(1, 7).neq('id', params.get('new')).order('created_at', { ascending: true });
-
-  console.log(news);
+  const others_news = parseInt(params.get('new'));
+  const { data: news, error } = await agent.from('news').select('*').range(others_news - 7, others_news - 1).neq('id', params.get('new')).order('created_at', { ascending: true });
 
   if (error) {
     alert('Erro ao buscar notícias');
@@ -73,35 +68,17 @@ async function otherNews(agent) {
 }
 
 /**
- * Busca o jornalista no banco de dados
- * @param {Supabase} agent 
- * @param {string} id 
- * @returns o jornalista relacionado a notícia
- */
-async function getJournalist(agent, id) {
-  const { data: journalist, error } = await agent
-    .from('journalists')
-    .select('*').eq('id', id);
-
-  console.log(journalist);
-
-  if (error) alert('Erro ao buscar jornalista');
-  else return journalist[0];
-}
-
-/**
  * Busca os jornalistas no banco de dados
  * @param {Supabase} agent 
  */
 async function getJournalists(agent) {
+  const others_news = parseInt(params.get('new'));
   const { data: journalists, error } = await agent
     .from('news')
     .select(`
       id_journalist,
       journalists(name)
-    `).range(1, 7).neq('id', params.get('new')).order('created_at', { ascending: true });
-
-  console.log(journalists);
+    `).range(others_news - 7, others_news - 1).neq('id', params.get('new')).order('created_at', { ascending: true });
 
   if (error) alert('Erro ao buscar jornalistas');
   else {
@@ -290,7 +267,7 @@ function showToaster() {
 
   toast({
     text: 'Erro ao buscar notícias! Tente novamente mais tarde.',
-    duration: 10000,
+    duration: -1,
     position: 'center',
     style: { background: 'linear-gradient(to right, #45A43B, #1C4B17)', color: '#ffffff', marginTop: '50vh' }
   }).showToast();
