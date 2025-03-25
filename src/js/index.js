@@ -12,19 +12,24 @@ function Supabase() {
 setTimeout(() => Supabase(), 700);
 
 /**
- * Busca as notícias no banco de dados
+ * Busca a quantidade total de notícias para fazer o range com as últimas 7 notícias
  * @param {Supabase} agent
- * @param {Toast} toast
  * count: quantidade total de notícias
  * head: retorna apenas a quantidade de notícias
+ */
+async function getCountTotalNews(agent) {
+  const { data, count } = await agent.from('news').select('*', { count: 'exact', head: true });
+  return count;
+}
+
+/**
+ * Busca as notícias no banco de dados
+ * @param {Supabase} agent
  * range: retorna as notícias de acordo com o range, inicia com zero
  */
 async function getAllNews(agent) {
-  const { data, count } = await agent.from('news').select('*', { count: 'exact', head: true });
+  const count = await getCountTotalNews(agent);
   const { data: news, error } = await agent.from('news').select('*').range(count - 7, count).order('created_at', { ascending: true });
-
-  console.log(count);
-  console.log(news);
 
   if (error) {
     showToaster();
@@ -44,12 +49,13 @@ async function getAllNews(agent) {
  * @param {Supabase} agent
  */
 async function getJournalist(agent) {
+  const count = await getCountTotalNews(agent);
   const { data: journalist_, error_ } = await agent
     .from('news')
     .select(`
       id_journalist,
       journalists(name)
-    `).range(1, 7).order('created_at', { ascending: true });
+    `).range(count - 7, count).order('created_at', { ascending: true });
 
   console.log(journalist_);
 
