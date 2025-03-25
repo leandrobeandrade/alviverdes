@@ -4,9 +4,8 @@
  */
 function Supabase() {
   const agent = window?._supabase;
-  const toast = window?._toast;
 
-  getAllNews(agent, toast);
+  getAllNews(agent);
   getJournalist(agent);
 }
 
@@ -16,10 +15,15 @@ setTimeout(() => Supabase(), 700);
  * Busca as notícias no banco de dados
  * @param {Supabase} agent
  * @param {Toast} toast
+ * count: quantidade total de notícias
+ * head: retorna apenas a quantidade de notícias
+ * range: retorna as notícias de acordo com o range, inicia com zero
  */
-async function getAllNews(agent, toast) {
-  const { data: news, error } = await agent.from('news').select('*').range(1, 7).order('created_at', { ascending: true });
+async function getAllNews(agent) {
+  const { data, count } = await agent.from('news').select('*', { count: 'exact', head: true });
+  const { data: news, error } = await agent.from('news').select('*').range(count - 7, count).order('created_at', { ascending: true });
 
+  console.log(count);
   console.log(news);
 
   if (error) {

@@ -31,6 +31,6 @@ async function postNews() {
 }
 
 /**
- * Envia a notícia para o banco de dados
+ * Envia a notícia para o banco de dados ao clicar no botão
  */
 document.getElementById('post').addEventListener('click', () => postNews());
