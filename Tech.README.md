@@ -2,15 +2,19 @@
 
 Este documento fornece uma visão geral técnica do projeto.
 
+## Tecnologias Utilizadas
+- Linguagem de Programação: **JavaScript**
+- Frameworks css: **[Bootstrap](https://getbootstrap.com/)**
+- Back-end: **[Supabase](https://supabase.com/)**
+- Banco de dados: **[PostgreSQL](https://www.postgresql.org/)**
+- Deploy: **[Vercel](https://vercel.com/)**
+- Outras:
+    - [scrollCue](https://prjct-samwest.github.io/scrollCue/)
+    - [toastify-js](https://www.npmjs.com/package/toastify-js)
+
 ## Estrutura do Projeto
 - **/src**: Contém o código-fonte do projeto.
 - **/docs**: Contém a documentação do projeto.
-
-## Tecnologias Utilizadas
-- **Linguagem de Programação**: [JavaScript]
-- **Frameworks**: [Bootstrap]
-- **Banco de Dados**: [PostgreSQL, SupaBase]
-- **Deploy**: Vercel
 
 ## Configuração do Ambiente
 1. Clone o repositório:

@@ -53,30 +53,45 @@
         <div class="container-fluid mt-4">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3 col-md-12 col-sm-12">
-                    <h1 class="text-center mb-4 text-success border-bottom border-success">Postagens de notícias</h1>
-                    <div class="mb-3">
-                        <label for="title" class="form-label fw-bold">Título da notícia *</label>
-                        <input type="text" class="form-control" id="title">
-                    </div>
-                    <div class="mb-3">
-                        <label for="field1" class="form-label fw-bold">1° Parágrafo *</label>
-                        <textarea class="form-control" id="field1" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="field2" class="form-label fw-bold">2° Parágrafo</label>
-                        <textarea class="form-control" id="field2" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="field3" class="form-label fw-bold">3° Parágrafo</label>
-                        <textarea class="form-control" id="field3" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="formFile" class="form-label fw-bold">Imagem</label>
-                        <input class="form-control" type="file" id="formFile">
-                      </div>
-                    <div class="text-center mt-4">
-                        <button type="button" class="btn btn-success" id="post">Criar notícia</button>
-                    </div>
+                    <h1 class="text-center mb-4 text-success border-bottom border-success pb-1">Postagens de notícias</h1>
+                    <form method="post" id="postForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="title" class="form-label fw-bold">Título da notícia *</label>
+                            <input type="text" class="form-control" id="title" required="required">
+                            <div class="invalid-feedback">
+                                Por favor, insira um título válido.
+                            </div>
+                        </div>
+                        <!-- <div class="mb-3">
+                            <label for="field1" class="form-label fw-bold">1° Parágrafo *</label>
+                            <textarea class="form-control" id="field1" rows="3" required></textarea>
+                            <div class="invalid-feedback">
+                                Por favor, insira um parágrafo válido.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="field2" class="form-label fw-bold">2° Parágrafo</label>
+                            <textarea class="form-control" id="field2" rows="3" required></textarea>
+                            <div class="invalid-feedback">
+                                Por favor, insira um parágrafo válido.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="field3" class="form-label fw-bold">3° Parágrafo</label>
+                            <textarea class="form-control" id="field3" rows="3" required></textarea>
+                            <div class="invalid-feedback">
+                                Por favor, insira um parágrafo válido.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label fw-bold">Imagem</label>
+                            <input class="form-control" type="file" id="formFile">
+                          </div> -->
+                        <div class="text-center mt-4">
+                            <button type="button" class="btn btn-success" id="post">Criar notícia</button>
+                            <button type="button" class="btn btn-danger" id="reset">Limpar formulário</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
