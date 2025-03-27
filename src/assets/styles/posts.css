@@ -55,9 +55,9 @@ header .nav-link:hover {
 }
 
 /* ===== FORM ===== */
-input:invalid {
-  display: inline-block;
-  font-size: 1.2rem;
+.invalid {
+  display: none;
+  font-size: 1rem;
   color: red;
 }
 
