@@ -4,23 +4,32 @@
  */
 function Supabase() {
   const agent = window?._supabase;
-  const toast = window?._toast;
 
-  getAllNews(agent, toast);
+  getAllNews(agent);
   getJournalist(agent);
 }
 
 setTimeout(() => Supabase(), 700);
 
 /**
+ * Busca a quantidade total de notícias para fazer o range com as últimas 7 notícias
+ * @param {Supabase} agent
+ * count: quantidade total de notícias
+ * head: retorna apenas a quantidade de notícias
+ */
+async function getCountTotalNews(agent) {
+  const { data, count } = await agent.from('news').select('*', { count: 'exact', head: true });
+  return count;
+}
+
+/**
  * Busca as notícias no banco de dados
  * @param {Supabase} agent
- * @param {Toast} toast
+ * range: retorna as notícias de acordo com o range, inicia com zero
  */
-async function getAllNews(agent, toast) {
-  const { data: news, error } = await agent.from('news').select('*').range(1, 7).order('created_at', { ascending: true });
-
-  console.log(news);
+async function getAllNews(agent) {
+  const count = await getCountTotalNews(agent);
+  const { data: news, error } = await agent.from('news').select('*').range(count - 7, count).order('created_at', { ascending: true });
 
   if (error) {
     showToaster();
@@ -40,12 +49,13 @@ async function getAllNews(agent, toast) {
  * @param {Supabase} agent
  */
 async function getJournalist(agent) {
+  const count = await getCountTotalNews(agent);
   const { data: journalist_, error_ } = await agent
     .from('news')
     .select(`
       id_journalist,
       journalists(name)
-    `).range(1, 7).order('created_at', { ascending: true });
+    `).range(count - 7, count).order('created_at', { ascending: true });
 
   console.log(journalist_);
 
@@ -242,7 +252,7 @@ function showToaster() {
 
   toast({
     text: 'Erro ao buscar notícias! Tente novamente mais tarde.',
-    duration: 10000,
+    duration: -1,
     position: 'center',
     style: { background: 'linear-gradient(to right, #45A43B, #1C4B17)', color: '#ffffff', marginTop: '50vh' }
   }).showToast();

@@ -31,6 +31,11 @@ async function postNews() {
 }
 
 /**
- * Envia a notícia para o banco de dados
+ * Envia a notícia para o banco de dados ao clicar no botão
  */
-document.getElementById('post').addEventListener('click', () => postNews());
+document.getElementById('post').addEventListener('click', () => console.log('postNews()'));
+
+/**
+ * Reseta os campos do formulário
+ */
+document.getElementById('reset').addEventListener('click', () => window.location.reload());

@@ -54,6 +54,13 @@ header .nav-link:hover {
   background-color: #fff !important;
 }
 
+/* ===== FORM ===== */
+input:invalid {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: red;
+}
+
 /***********
 |  MOBILE  |
 ***********/
