@@ -6,7 +6,6 @@ let agent_;
 setTimeout(() => {
   const agent = window?._supabase;
   agent_= agent;
-  
 }, 700);
 
 /**
@@ -38,7 +37,10 @@ async function postNews() {
       .select()
   
     if (error) console.log(error);
-    else console.log(data);
+    else {
+      showToaster();
+      console.log(data);
+    }
   }
 }
 
@@ -51,3 +53,18 @@ document.getElementById('post').addEventListener('click', () => postNews());
  * Reseta os campos do formulário
  */
 document.getElementById('reset').addEventListener('click', () => window.location.reload());
+
+/**
+ * Exibe um toaster de erro e desabilita a página
+ */
+function showToaster() {
+  const toast = window?._toast;
+
+  toast({
+    text: 'Notícia criada com sucesso!',
+    duration: 5000,
+    gravity: 'top',
+    position: 'right',
+    style: { background: 'linear-gradient(to right, #45A43B, #1C4B17)', color: '#ffffff', marginTop: '10vh' }
+  }).showToast();
+}
