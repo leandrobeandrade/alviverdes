@@ -1,13 +1,15 @@
 let agent;
-const toast = window?._toast;
-
+let toast;
 /**
- * Define o agent do supabase
- * agent inicializado no posts.html
- */
+ * Define o agent do supabase e toast
+ * ambos inicializados no posts.html
+*/
 setTimeout(() => {
   const agent_ = window?._supabase;
+  const toast_ = window?._toast;
+
   agent = agent_;
+  toast = toast_;
 }, 700);
 
 // Cria a notícia no banco de dados
