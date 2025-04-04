@@ -1,5 +1,7 @@
 let agent;
 let toast;
+let timestamp;
+
 /**
  * Define o agent do supabase e toast
  * ambos inicializados no posts.html
@@ -19,7 +21,7 @@ async function postNews() {
   const field2_ = document.getElementById('field2').value;
   const field3_ = document.getElementById('field3').value;
   const file = document.getElementById('file-img').files[0];
-  const fileString = 'https://hiqvrhtdkpjkqxkrasna.supabase.co/storage/v1/object/public/alviverdes-img/news/' + file.name;
+  const fileString = 'https://hiqvrhtdkpjkqxkrasna.supabase.co/storage/v1/object/public/alviverdes-img/news/' + createTimestamp() + file.name;
   const invalid = document.getElementsByClassName('invalid');
 
   for (let i = 0; i < invalid.length; i++) {
@@ -50,7 +52,7 @@ async function postNews() {
 
 // Faz o upload da imagem para o banco de dados
 async function uploadFile(file) {
-  const { data, error } = await agent.storage.from('alviverdes-img').upload(`news/${file.name}`, file);
+  const { data, error } = await agent.storage.from('alviverdes-img').upload(`news/${timestamp}${file.name}`, file);
 
   if (error) showToasterError();
 }
@@ -81,4 +83,10 @@ function showToasterError() {
     position: 'right',
     style: { background: 'red', color: '#ffffff', marginTop: '10vh' }
   }).showToast();
+}
+
+// Cria um timestamp para o arquivo
+// para evitar que o arquivo seja sobrescrito ou duplicado
+function createTimestamp() {
+  timestamp = new Date().getTime();
 }
