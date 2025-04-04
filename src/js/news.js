@@ -53,6 +53,10 @@ async function getJournalistMainNew(agent) {
  */
 async function otherNews(agent) {
   const others_news = parseInt(params.get('new'));
+  console.log(others_news);
+  console.log(others_news - 7);
+  console.log(others_news - 1);
+  
   const { data: news, error } = await agent.from('news').select('*').range(others_news - 7, others_news - 1).neq('id', params.get('new')).order('created_at', { ascending: true });
 
   if (error) {
@@ -209,9 +213,7 @@ function toNew(html_elem, id) {
   });
 }
 
-/**
- * Atualiza o contador de views da notícia principal
- */
+// Atualiza o contador de views da notícia principal
 async function viewsCount(agent) {
   let views = document.querySelector('#views');
 
@@ -232,9 +234,7 @@ async function viewsCount(agent) {
   }
 }
 
-/**
- * Função para compartilhar a notícia no navegador !!!
- */
+// Função para compartilhar a notícia no navegador
 function share() {
 	if (navigator.share !== undefined) {
 		navigator.share({
@@ -247,9 +247,7 @@ function share() {
 	}
 }
 
-/**
- * Função para exibir o loader
- */
+// Função para exibir o loader
 function loader() {
   setTimeout(() => {
     document.querySelectorAll('.main-new')[0].hidden = false;
@@ -259,9 +257,7 @@ function loader() {
 
 window.addEventListener('load', (event) => loader());
 
-/**
- * Exibe um toaster de erro e desabilita a página
- */
+// Exibe um toaster de erro e desabilita a página
 function showToaster() {
   const toast = window?._toast;
 
