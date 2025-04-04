@@ -21,9 +21,10 @@ async function postNews() {
   const field2_ = document.getElementById('field2').value;
   const field3_ = document.getElementById('field3').value;
   const file = document.getElementById('file-img').files[0];
-  const fileString = 'https://hiqvrhtdkpjkqxkrasna.supabase.co/storage/v1/object/public/alviverdes-img/news/' + createTimestamp() + file.name;
   const invalid = document.getElementsByClassName('invalid');
-
+  timestamp = new Date().getTime();
+  const fileString = `https://hiqvrhtdkpjkqxkrasna.supabase.co/storage/v1/object/public/alviverdes-img/news/${timestamp}-${file.name}`;
+  
   for (let i = 0; i < invalid.length; i++) {
     const element = invalid[i];
     element.style.display = 'none';
@@ -52,7 +53,7 @@ async function postNews() {
 
 // Faz o upload da imagem para o banco de dados
 async function uploadFile(file) {
-  const { data, error } = await agent.storage.from('alviverdes-img').upload(`news/${timestamp}${file.name}`, file);
+  const { data, error } = await agent.storage.from('alviverdes-img').upload(`news/${timestamp}-${file.name}`, file);
 
   if (error) showToasterError();
 }
@@ -83,10 +84,4 @@ function showToasterError() {
     position: 'right',
     style: { background: 'red', color: '#ffffff', marginTop: '10vh' }
   }).showToast();
-}
-
-// Cria um timestamp para o arquivo
-// para evitar que o arquivo seja sobrescrito ou duplicado
-function createTimestamp() {
-  timestamp = new Date().getTime();
 }
