@@ -23,8 +23,8 @@ async function postNews() {
   const file = document.getElementById('file-img').files[0];
   const invalid = document.getElementsByClassName('invalid');
   timestamp = new Date().getTime();
-  const fileString = `https://hiqvrhtdkpjkqxkrasna.supabase.co/storage/v1/object/public/alviverdes-img/news/${timestamp}-${file.name}`;
-  
+  const fileString = `https://hiqvrhtdkpjkqxkrasna.supabase.co/storage/v1/object/public/alviverdes-img/news/${timestamp}-${file?.name}`;
+
   for (let i = 0; i < invalid.length; i++) {
     const element = invalid[i];
     element.style.display = 'none';
@@ -34,6 +34,7 @@ async function postNews() {
   if (!field1_) invalid[1].style.display = 'inline-block';
   if (!field2_) invalid[2].style.display = 'inline-block';
   if (!field3_) invalid[3].style.display = 'inline-block';
+  if (!file) { uploadFile(null); invalid[4].style.display = 'inline-block'; }
   else {
     const { data, error } = await agent
       .from('news')
@@ -42,7 +43,7 @@ async function postNews() {
       ])
       .select()
   
-    if (error) showToasterError();
+    if (error) showToasterErrorNew();
     else {
       showToasterSuccess();
       uploadFile(file);
@@ -51,11 +52,14 @@ async function postNews() {
   }
 }
 
-// Faz o upload da imagem para o banco de dados
+// Faz o upload da imagem para o banco de dados se a imagem for selecionada
 async function uploadFile(file) {
-  const { data, error } = await agent.storage.from('alviverdes-img').upload(`news/${timestamp}-${file.name}`, file);
+  if (!file) return;
+  else {
+    const { data, error } = await agent.storage.from('alviverdes-img').upload(`news/${timestamp}-${file?.name}`, file);
 
-  if (error) showToasterError();
+    if (error) showToasterErrorImage();
+  }
 }
 
 // Envia a notícia para o banco de dados ao clicar no botão
@@ -76,9 +80,20 @@ function showToasterSuccess() {
 }
 
 // Exibe um toaster de erro na criação da notícia
-function showToasterError() {
+function showToasterErrorNew() {
   toast({
     text: 'Erro ao criar notícia! Houve algum erro inesperado.',
+    duration: 5000,
+    gravity: 'top',
+    position: 'right',
+    style: { background: 'red', color: '#ffffff', marginTop: '10vh' }
+  }).showToast();
+}
+
+// Exibe um toaster de erro no upload da imagem
+function showToasterErrorImage() {
+  toast({
+    text: 'Erro ao carregar imagem! Houve algum erro inesperado.',
     duration: 5000,
     gravity: 'top',
     position: 'right',

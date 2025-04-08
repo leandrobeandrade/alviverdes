@@ -111,6 +111,8 @@ main .card-title:hover {
 main .right-news .img-fluid {
   min-height: 20vh;
   max-height: 20vh;
+  min-width: -webkit-fill-available;
+  max-width: -webkit-fill-available;
   background-position: center;
   object-fit: cover;
 }
