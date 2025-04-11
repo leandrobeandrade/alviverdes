@@ -1,4 +1,4 @@
-# Tech README
+# 💻 Tech README
 
 Este documento fornece uma visão geral técnica do projeto.
 
