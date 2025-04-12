@@ -2,7 +2,7 @@
 
 Este documento fornece uma visão geral técnica do projeto.
 
-## Tecnologias Utilizadas
+## :razor: Tecnologias Utilizadas
 - Linguagem de Programação: **JavaScript**
 - Frameworks css: **[Bootstrap](https://getbootstrap.com/)**
 - Back-end: **[Supabase](https://supabase.com/)**
