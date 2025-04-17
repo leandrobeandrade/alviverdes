@@ -53,7 +53,7 @@
                     <span class="vr ms-2 me-4"></span>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" id="search" placeholder="Procurar Notícias" aria-label="Search">
-                        <button class="btn btn-success" type="button" id="send" data-bs-target="#modalFilter">Buscar</button>
+                        <button type="button" class="btn btn-success" id="send" data-bs-toggle="modal" data-bs-target="#modalFilter">Buscar</button>
                     </form>
                 </div>
             </div>
@@ -61,14 +61,11 @@
     </header>
 
     <!-- MODAL Sobre -->
-    
-    
-    <!-- MODAL Filter -->
-    <div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalAbout" tabindex="-1" aria-labelledby="modalAboutLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header text-white">
-                    <h1 class="modal-title fs-5" id="modalLabel">Sobre o Alviverdes.io</h1>
+                    <h1 class="modal-title fs-5" id="modalAboutLabel">Sobre o Alviverdes.io</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -91,6 +88,19 @@
                         labore placeat consequuntur, debitis rerum illo omnis tenetur? Iure, quasi suscipit?
                     </p>
                 </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Modal Filter -->
+    <div class="modal fade" id="modalFilter" tabindex="-1" aria-labelledby="modalFilterLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header text-white">
+                    <h1 class="modal-title fs-5" id="modalFilterLabel">Notícias</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalFilterBody"></div>
             </div>
         </div>
     </div>

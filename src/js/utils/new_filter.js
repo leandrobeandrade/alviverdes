@@ -9,8 +9,6 @@ async function filterNews() {
   let { data: news, error } = await agent
   .from('news')
   .select()
-
-  // Filters
   .like('title', `%${getValueFilter()}%`)
 
   if (error) {
@@ -20,6 +18,7 @@ async function filterNews() {
     alert('Nenhuma notícia encontrada!');
     console.log('Nenhuma notícia encontrada!');
   } else {
+    showNews(news);
     console.log(news);
   }
 }
@@ -33,9 +32,29 @@ function getValueFilter() {
 // Funcao que dispara os filtros 
 document.querySelector('#send').addEventListener('click', (event) => {
   if (getValueFilter() === '') {
-    alert('Digite algo para filtrar!');
+    alert('Digite algo no campo de busca!');
   } else {
     filterNews();
   }
   event.preventDefault();
 })
+
+/** 
+ * Funcao que mostra o modal com as noticias filtradas
+ * @param {Array} news - Array de objetos de notícias filtradas
+ */
+function showNews(news) {
+  const modalContent = document.querySelector('#modalFilterBody');
+  modalContent.innerHTML = ''; // Limpa o conteúdo anterior
+
+  news.forEach((item) => {
+    const newsItem = document.createElement('div');
+    newsItem.classList.add('news-item');
+    newsItem.innerHTML = `
+      <ul>
+        <li>${item.title}</li>
+      </ul>
+    `;
+    modalContent.appendChild(newsItem);
+  });
+}
