@@ -45,16 +45,30 @@ document.querySelector('#send').addEventListener('click', (event) => {
  */
 function showNews(news) {
   const modalContent = document.querySelector('#modalFilterBody');
-  modalContent.innerHTML = ''; // Limpa o conteúdo anterior
+  pathname = window.location.pathname;
+  let aTag;  
 
   news.forEach((item) => {
     const newsItem = document.createElement('div');
     newsItem.classList.add('news-item');
-    newsItem.innerHTML = `
-      <ul>
-        <li>${item.title}</li>
-      </ul>
-    `;
+
+    if (pathname.includes('index.html')) {
+      newsItem.innerHTML = `
+        <ul>
+          <li><a href="./src/pages/news.html?new=${item.id}">${item.title}</li>
+          <hr></hr>
+        </ul>
+      `;
+    }
+    if (pathname.includes('news.html') || pathname.includes('games.html')) {
+      newsItem.innerHTML = `
+        <ul>
+          <li><a href="./news.html?new=${item.id}">${item.title}</li>
+          <hr></hr>
+        </ul>
+      `;
+    }
+
     modalContent.appendChild(newsItem);
   });
 }
