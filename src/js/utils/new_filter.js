@@ -40,7 +40,7 @@ document.querySelector('#send').addEventListener('click', (event) => {
 })
 
 /** 
- * Funcao que mostra o modal com as noticias filtradas
+ * Funcao que mostra o modal com as notícias filtradas
  * @param {Array} news - Array de objetos de notícias filtradas
  */
 function showNews(news) {
@@ -60,7 +60,7 @@ function showNews(news) {
         </ul>
       `;
     }
-    if (pathname.includes('news.html') || pathname.includes('games.html')) {
+    if (pathname.includes('news.html') || pathname.includes('games.html') || pathname.includes('players.html') || pathname.includes('data.html')) {
       newsItem.innerHTML = `
         <ul>
           <li><a href="./news.html?new=${item.id}">${item.title}</li>
