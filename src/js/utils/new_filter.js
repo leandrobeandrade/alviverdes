@@ -12,14 +12,11 @@ async function filterNews() {
   .like('title', `%${getValueFilter()}%`)
 
   if (error) {
-    alert('Erro ao buscar notícias!');
-    console.error(error);
+    showModalNewsError();
   } if (news.length === 0) {
-    alert('Nenhuma notícia encontrada!');
-    console.log('Nenhuma notícia encontrada!');
+    showModalNewsNotFound();
   } else {
-    showNews(news);
-    console.log(news);
+    showModalNews(news);
   }
 }
 
@@ -31,8 +28,10 @@ function getValueFilter() {
 
 // Funcao que dispara os filtros 
 document.querySelector('#send').addEventListener('click', (event) => {
+  clearModal();
+  
   if (getValueFilter() === '') {
-    alert('Digite algo no campo de busca!');
+    showModalEmptyField();
   } else {
     filterNews();
   }
@@ -40,22 +39,20 @@ document.querySelector('#send').addEventListener('click', (event) => {
 })
 
 /** 
- * Funcao que mostra o modal com as notícias filtradas
+ * Mostra o modal com as notícias filtradas
  * @param {Array} news - Array de objetos de notícias filtradas
  */
-function showNews(news) {
+function showModalNews(news) {
   const modalContent = document.querySelector('#modalFilterBody');
-  pathname = window.location.pathname;
-  let aTag;  
+  const pathname = window.location.pathname;
 
   news.forEach((item) => {
     const newsItem = document.createElement('div');
-    newsItem.classList.add('news-item');
 
     if (pathname.includes('index.html')) {
       newsItem.innerHTML = `
         <ul>
-          <li><a href="./src/pages/news.html?new=${item.id}">${item.title}</li>
+          <li><a href="./src/pages/news.html?new=${item.id}">${item.title}</a></li>
           <hr></hr>
         </ul>
       `;
@@ -63,7 +60,7 @@ function showNews(news) {
     if (pathname.includes('news.html') || pathname.includes('games.html') || pathname.includes('players.html') || pathname.includes('data.html')) {
       newsItem.innerHTML = `
         <ul>
-          <li><a href="./news.html?new=${item.id}">${item.title}</li>
+          <li><a href="./news.html?new=${item.id}">${item.title}</a></li>
           <hr></hr>
         </ul>
       `;
@@ -71,4 +68,40 @@ function showNews(news) {
 
     modalContent.appendChild(newsItem);
   });
+}
+
+// Mostra o modal com a mensagem de campo de busca vazio
+function showModalEmptyField() {
+  const modalContent = document.querySelector('#modalFilterBody');
+  const newsItem = document.createElement('div');
+  newsItem.innerHTML = `
+    <p>Digite algo no campo de busca e tente novamente!</p>
+  `;
+  modalContent.appendChild(newsItem);
+}
+
+// Mostra o modal com a mensagem de erro ao buscar notícias
+function showModalNewsError() {
+  const modalContent = document.querySelector('#modalFilterBody');
+  const newsItem = document.createElement('div');
+  newsItem.innerHTML = `
+    <p>Ocorreu algum erro ao buscar notícias!</p>
+  `;
+  modalContent.appendChild(newsItem);
+}
+
+// Mostra o modal com a mensagem de notícias não encontradas com os filtros passados
+function showModalNewsNotFound() {
+  const modalContent = document.querySelector('#modalFilterBody');
+  const newsItem = document.createElement('div');
+  newsItem.innerHTML = `
+    <p>Notícia(s) não encontrada(s)!</p>
+  `;
+  modalContent.appendChild(newsItem);
+}
+
+// Limpa o modal ao abrir
+function clearModal() {
+  const modalContent = document.querySelector('#modalFilterBody');
+  modalContent.innerHTML = '';
 }
