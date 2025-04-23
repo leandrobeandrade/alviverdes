@@ -1,8 +1,7 @@
 /* ===== FONTS ===== */
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Vibur&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Sriracha&display=swap');
 
 /*title*/
 .righteous-regular {
@@ -12,23 +11,16 @@
 }
 
 /*footer news*/
-.akaya-telivigala-regular {
-  font-family: "Akaya Telivigala", system-ui;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.dongle-regular {
-  font-family: "Dongle", sans-serif;
+.aladin-regular {
+  font-family: "Aladin", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
-
 /*others*/
-.zain-extralight {
-  font-family: "Zain", sans-serif;
-  font-weight: 200;
+.sriracha-regular {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -165,6 +157,10 @@ main .bg-body-tertiary {
   margin-top: 1vh;
   border-top: 1px solid #e3e3e4;
   font-size: 0.9rem;
+}
+
+main .bg-body-tertiary .dates {
+  margin-left: 13%;
 }
 
 .footer-main {
