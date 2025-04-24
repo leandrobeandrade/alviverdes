@@ -49,7 +49,7 @@ function showModalNews(news) {
   news.forEach((item) => {
     const newsItem = document.createElement('div');
 
-    if (pathname.includes('index.html')) {
+    if (pathname.includes('index.html') || pathname.includes('/')) {
       newsItem.innerHTML = `
         <ul>
           <li><a href="./src/pages/news.html?new=${item.id}">${item.title}</a></li>
