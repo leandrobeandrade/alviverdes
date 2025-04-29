@@ -95,7 +95,7 @@ function showModalNewsNotFound() {
   const modalContent = document.querySelector('#modalFilterBody');
   const newsItem = document.createElement('div');
   newsItem.innerHTML = `
-    <p>Notícia(s) não encontrada(s)!</p>
+    <p>Nenhuma notícia relacionada ao termo buscado!</p>
   `;
   modalContent.appendChild(newsItem);
 }

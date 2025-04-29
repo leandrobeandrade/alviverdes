@@ -234,7 +234,7 @@ async function viewsCount(agent) {
   }
 }
 
-// Função para compartilhar a notícia no navegador
+// Compartilhar a notícia no navegador
 function share() {
 	if (navigator.share !== undefined) {
 		navigator.share({
@@ -247,7 +247,7 @@ function share() {
 	}
 }
 
-// Função para exibir o loader
+// Exibe o loader
 function loader() {
   setTimeout(() => {
     document.querySelectorAll('.main-new')[0].hidden = false;
@@ -263,9 +263,9 @@ function showToaster() {
 
   toast({
     text: 'Erro ao buscar notícias! Tente novamente mais tarde.',
-    duration: -1,
+    duration: 4000, //-1
     position: 'center',
-    style: { background: 'linear-gradient(to right, #45A43B, #1C4B17)', color: '#ffffff', marginTop: '50vh' }
+    style: { background: 'linear-gradient(to right, #45A43B, #1C4B17)', color: '#ffffff', marginTop: '25vh' }
   }).showToast();
 
   document.querySelector('main').style.opacity = 0.1;
