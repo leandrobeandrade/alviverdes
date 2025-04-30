@@ -12,7 +12,7 @@ Este documento fornece uma visão geral técnica do projeto.
     - [scrollCue](https://prjct-samwest.github.io/scrollCue/)
     - [toastify-js](https://www.npmjs.com/package/toastify-js)
 
-## Estrutura do Projeto
+## :open_file_folder: Estrutura do Projeto
 - **/src**: Contém o código-fonte do projeto.
 - **/docs**: Contém a documentação do projeto.
 
