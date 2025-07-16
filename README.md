@@ -12,7 +12,7 @@ Fique por dentro das últimas novidades, resultados de jogos, transferências e 
 - **Jogos**: Calendário de jogos, resultados e tabelas de classificação.
 - **Elenco**: Informações detalhadas sobre os jogadores do Palmeiras, incluindo estatísticas e histórico de carreira.
 - **Dados**: Um mergulho no rico histórico do Palmeiras a respeito de títulos e marcas significativas para o clube.
-- **Multimídia**: Fotos e vídeos exclusivos dos bastidores, treinos e jogos do Verdão.
+- ~~**Multimídia**: Fotos e vídeos exclusivos dos bastidores, treinos e jogos do Verdão.~~
 
 ## Sobre Nós 💚
 
